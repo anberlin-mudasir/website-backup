@@ -1,0 +1,48 @@
+<?xml version = "1.0" encoding = "utf-8" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns = "http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>餐饮信息查询</title>
+<script type="text/javascript"  src="Javascript/index.js" ></script>
+
+<link href="CSS/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="all">
+<table>
+<tr>
+	<td><ul class="logo"><li><img src="image/logo.gif" /></li></ul></td>
+    <td class="row1"><p>餐饮信息查询系统</p></td>
+</tr>
+<tr>
+	<td>
+	<ul class="pho" onmouseover="Put()">
+	<li>
+	<img class="slide" src="image/yannan_1.jpg" width="330" height="370"/>
+	<img class="slide" src="image/xue1_1.jpg" width="330" height="370"/>
+	<img class="slide" src="image/campus_china_1.jpg" width="330" height="370"/>
+	<img class="slide" src="image/nongyuan_1.jpg" width="330" height="370"/>
+	<img class="slide" src="image/xue5_1.jpg" width="330" height="370"/>
+	</li>
+	</ul>
+	</td>
+	<td>
+	<ul class="link">
+	<form id="form1" action="PHP/Guest/showAllDishes.php" method="post">
+	<input type="hidden" name="start" value="0" />
+	</form>
+	<li onclick="document.getElementById('form1').submit();" style="cursor:hand; color:#00F;">
+        <b>食客查询</b>
+    </li><br />
+	<li><a href="Admin/Admin_log.html"><b>管理员登陆</b></a></li>
+	</ul>
+	</td>
+</tr>
+</table>
+</div>
+</body>
+<script type="text/javascript">
+    Makeshllow();
+</script>
+</html>

@@ -1,0 +1,58 @@
+body 
+{
+	background-image:url(../image/index_back.jpg);
+	text-align:center;
+	background-repeat:no-repeat;
+}
+p
+{
+	font-size:50px; 
+	font-family:STXinwei,STXingkai,SimHei;
+}
+table
+{
+	width:900px;
+	margin-left:auto; 
+	margin-right:auto;
+}
+ul
+{
+	list-style:none;
+}
+a
+{
+	text-decoration:none;
+}
+a:visited
+{
+	color:#00F;
+}
+
+#all
+{
+	width:1005px;
+}
+img.slide
+{
+	filter:alpha(opacity=111);
+}
+ul.logo
+{
+	float:left;
+}
+td.row1
+{
+	filter:glow(color=#FF0,strength=5);
+	padding-left:0px;
+}
+ul.pho
+{
+	float:left; 
+	padding-left:5px; 
+	padding-top:0;
+}
+ul.link
+{
+	font-family:Tahoma; 
+	font-size:34px; 
+}
