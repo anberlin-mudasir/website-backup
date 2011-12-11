@@ -64,15 +64,13 @@
 
 <?php
 //connect to MySql
-$db = mysql_connect("","root","root");
-$query = 'CREATE DATABASE IF NOT EXISTS MEAL';
-mysql_query($query,$db);
-mysql_select_db('MEAL',$db);
+$db = mysql_connect("","se","se");
+mysql_select_db('meal',$db);
 //用户验证
 $useername=$_POST['user'];
-$query='SELECT * FROM admin where name=\"'.$useername.'\"';
+$query='select * from admin where name=\"'.$useername.'\"';
 $query=stripslashes($query);
-$result=mysql_query($query);
+$result=mysql_query($query,$db);
 $num=mysql_num_rows($result);
 if($num==0)
 	echo "<script>window.alert(\"请先登录\");window.location='../../Admin/Admin_log.html';</script>";
@@ -88,7 +86,7 @@ else
 	echo "</td></tr></table>";
 }
 
-$query = 'SELECT* FROM DISHES';
+$query = 'select * from dishes';
 $result = mysql_query($query,$db);
 $totalnum=mysql_num_rows($result);
 $kai=$_POST['start'];

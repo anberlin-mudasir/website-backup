@@ -34,15 +34,13 @@
 <div><h1>北京大学餐饮信息查询系统</h1></div>
 <?php
 //connect to MySql
-$db = mysql_connect("","root","root");
-$query = 'CREATE DATABASE IF NOT EXISTS MEAL';
-mysql_query($query,$db);
-mysql_select_db('MEAL',$db);
+$db = mysql_connect("","se","se");
+mysql_select_db('meal',$db);
 $Number = $_POST['Number'];
 
 //用户验证
 $useername=$_POST['user'];
-$query='SELECT * FROM admin where name=\"'.$useername.'\"';
+$query='select * from admin where name=\"'.$useername.'\"';
 $query=stripslashes($query);
 $result=mysql_query($query);
 $num=mysql_num_rows($result);
@@ -59,7 +57,7 @@ else
 	echo "</td></tr></table>";
 }
 	
-$query = 'SELECT * FROM DISHES WHERE Number = '.$Number;
+$query = 'select * from dishes where Number = '.$Number;
 $result = mysql_query($query,$db);
 
 $style = array("鲁菜","川菜","苏菜","粤菜","浙菜","闽菜","湘菜","徽菜","东北菜","其他");

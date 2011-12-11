@@ -36,33 +36,31 @@ $Dish = $_POST['Dish_number'];
 <br/><br/>
 <?php
 //connect to MySql
-$db = mysql_connect("","root","root");
-$query = 'CREATE DATABASE IF NOT EXISTS MEAL';
-mysql_query($query,$db);
-mysql_select_db('MEAL',$db);
+$db = mysql_connect("","se","se");
+mysql_select_db('meal',$db);
 
-$query = 'SELECT * FROM DISHES WHERE Number = '.$Dish;
+$query = 'select * from dishes where Number = '.$Dish;
 $result = mysql_query($query,$db);
 
 if($row = mysql_fetch_array($result))
 {
 	extract($row);
-	$query = 'UPDATE DISHES SET Grade = ('.$Grade.' * '.$Guest_count.' + '.$newGrade.') / ('.$Guest_count.' + 1) WHERE Number = '.$Dish;
+	$query = 'update dishes set Grade = ('.$Grade.' * '.$Guest_count.' + '.$newGrade.') / ('.$Guest_count.' + 1) where Number = '.$Dish;
 	$result = mysql_query($query,$db);
-	$query = 'UPDATE DISHES SET  Guest_count = ('.$Guest_count.' + 1) WHERE Number = '.$Dish;
+	$query = 'update dishes set Guest_count = ('.$Guest_count.' + 1) WHERE Number = '.$Dish;
 	$result = mysql_query($query,$db);
 	
 	if($newOpinion != NULL){
 		if(NULL == $Opinion_table_name)
 		{
-			$Opinion_table_name = 'GUEST_OPINIONS_'.$Number;
-			$query = 'UPDATE DISHES SET Opinion_table_name = "'.$Opinion_table_name.'" WHERE Number = '.$Dish;
+			$Opinion_table_name = 'guest_opinions_'.$Number;
+			$query = 'update dishes set Opinion_table_name = "'.$Opinion_table_name.'" WHERE Number = '.$Dish;
 			//echo $query;
 			$result = mysql_query($query,$db);
-			$query = 'CREATE TABLE '.$Opinion_table_name.' (Opinion text)';
+			$query = 'create table '.$Opinion_table_name.' (Opinion text)';
 			$result = mysql_query($query,$db);
 		}
-		$query = 'INSERT INTO '.$Opinion_table_name.' VALUES(\''.$newOpinion.'\')';
+		$query = 'insert into '.$Opinion_table_name.' values(\''.$newOpinion.'\')';
 		$result = mysql_query($query,$db);
 	}
 

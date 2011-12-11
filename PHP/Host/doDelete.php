@@ -34,15 +34,13 @@
 
 <?php
 //connect to MySql
-$db = mysql_connect("","root","root");
-$query = 'CREATE DATABASE IF NOT EXISTS MEAL';
-mysql_query($query,$db);
-mysql_select_db('MEAL',$db);
+$db = mysql_connect("","se","se");
+mysql_select_db('meal',$db);
 
 
 //用户验证
 $useername=$_POST['user'];
-$query='SELECT * FROM admin where name=\"'.$useername.'\"';
+$query='select * from admin where name=\"'.$useername.'\"';
 $query=stripslashes($query);
 $result=mysql_query($query);
 $num=mysql_num_rows($result);
@@ -69,7 +67,7 @@ $canteen_tmp=$_POST['deleteNumber'];
 
 for ($i = 0; $i < $canteen_count; $i++)
 {
-	$query = 'SELECT * FROM DISHES WHERE Number = '.$canteen_tmp[$i];
+	$query = 'select * from dishes where Number = '.$canteen_tmp[$i];
 	$result = mysql_query($query,$db);
 	if($row = mysql_fetch_array($result)){
 		extract($row);
@@ -87,7 +85,7 @@ for ($i = 0; $i < $canteen_count; $i++)
 		if(file_exists($filername))
 			unlink($filername);
 	}
-    $query = 'DELETE FROM DISHES WHERE Number = '.$canteen_tmp[$i];
+    $query = 'delete from dishes where Number = '.$canteen_tmp[$i];
 	mysql_query($query,$db);
 }
 

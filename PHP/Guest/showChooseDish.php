@@ -36,14 +36,12 @@
 <form action = "./opinion.php" method = "post">
 <?php
 //connect to MySql
-$db = mysql_connect("","root","root");
-$query = 'CREATE DATABASE IF NOT EXISTS MEAL';
-mysql_query($query,$db);
-mysql_select_db('MEAL',$db);
+$db = mysql_connect("","se","se");
+mysql_select_db('meal',$db);
 
 $Number = $_POST['Number'];
 
-$query = 'SELECT * FROM DISHES WHERE Number = '.$Number;
+$query = 'select * from dishes where Number = '.$Number;
 $result = mysql_query($query,$db);
 
 $style = array("鲁菜","川菜","苏菜","粤菜","浙菜","闽菜","湘菜","徽菜","东北菜","其他");
@@ -123,7 +121,7 @@ echo '<br/><br/><br/><h3 style="text-align:left;font-family:verdana;color:blue">
 
 if(NULL != $Opinion_table_name)
 {
-	$query = 'SELECT * FROM  '.$Opinion_table_name;
+	$query = 'select * from '.$Opinion_table_name;
 	$result = mysql_query($query,$db);
 	$count = 1;
 	echo '<hr/>';

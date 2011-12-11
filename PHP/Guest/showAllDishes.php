@@ -26,7 +26,7 @@
 <div style="text-align:center;">
     <h1 style=" filter:glow(color=#FF0,strength=5);font-size:38px; font-family:STXinwei,STXingkai,SimHei;">北京大学餐饮信息查询系统</h1>
     </div>
-<div style="font-size:24px;"><p style="text-align:center"><a href = "../../../index.html">返回首页</a>
+<div style="font-size:24px;"><p style="text-align:center"><a href = "../../index.html">返回首页</a>
 <a href = "./searchDish.html">高级检索</a></p></div>
 <br/>
 <hr/>
@@ -35,13 +35,11 @@
 
 <?php
 //connect to MySql
-$db = mysql_connect("","root","root");
-$query = 'CREATE DATABASE IF NOT EXISTS MEAL';
-mysql_query($query,$db);
-mysql_select_db('MEAL',$db);
+$db = mysql_connect("","se","se");
+mysql_select_db('meal',$db);
 
 
-$query = 'SELECT* FROM DISHES';
+$query = 'select * from dishes';
 $result = mysql_query($query,$db);
 $totalnum=mysql_num_rows($result);
 $kai=$_POST['start'];

@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns = "http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gdb2312" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>餐饮信息查询系统</title>
 <style>
 body {
@@ -29,12 +29,12 @@ table {
 <?php 
 	error_reporting(E_ALL & ~ E_NOTICE);
 	//连接数据库，并确定database
-	$db = mysql_connect("", "root","root");
-	mysql_select_db('MEAL',$db);
+	$db = mysql_connect("", "se","se");
+	mysql_select_db('meal',$db);
 	//收集数据
-	$useername=$_POST['uesername'];
+	$useername=$_POST['useername'];
 	$password=$_POST['password'];
-	$query='SELECT * FROM admin where name=\"'.$useername.'\"and pass=\"'.$password.'\"';
+    $query='select * from admin where name=\"'.$useername.'\"and pass=\"'.$password.'\"';
 	$query=stripslashes($query);
 	$result=mysql_query($query);
 	$num=mysql_num_rows($result);
@@ -44,7 +44,7 @@ table {
 		if($num==0)
 			echo "<script>window.alert(\"用户名或密码错误\");window.location='../../Admin/Admin_log.html';</script>";
 		else
-			echo "<div style=\"text-align:right; margin-right:50px; color:#606\">欢迎".$useername."</div>";
+			echo "<div style=\"text-align:right; margin-right:50px; color:#606\">你好，".$useername."!</div>";
 	}
 ?>
 <div style="padding:25px">
@@ -52,7 +52,7 @@ table {
     </div>
 <div>
    <table>
-   <tr><td><a href="../../../index.html">注销&nbsp;&nbsp;</a></td>
+   <tr><td><a href="../../index.html">注销&nbsp;&nbsp;</a></td>
    <td>
 <?php
 	echo "<form  id=\"alter\" action=\"./Admin_alter.php\" method=\"post\" style=\"color:#00F\">";

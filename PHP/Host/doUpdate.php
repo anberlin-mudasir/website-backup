@@ -35,15 +35,13 @@
 <?php
 error_reporting(E_ALL & ~ E_NOTICE);
 //connect to MySql
-$db = mysql_connect("","root","root");
-$query = 'CREATE DATABASE IF NOT EXISTS MEAL';
-mysql_query($query,$db);
-mysql_select_db('MEAL',$db);
+$db = mysql_connect("","se","se");
+mysql_select_db('meal',$db);
 
 $number=$_POST['number'];
 //用户验证
 $useername=$_POST['user'];
-$query='SELECT * FROM admin where name=\"'.$useername.'\"';
+$query='select * from admin where name=\"'.$useername.'\"';
 $query=stripslashes($query);
 $result=mysql_query($query);
 $num=mysql_num_rows($result);

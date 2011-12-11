@@ -1,0 +1,1 @@
+create table dishes (ID int not null auto_increment, Name varchar(255), Price decimal(10,2), Taste int, Ingredients varchar(255), Canteen varchar(255), Style int, Grade decimal(10,2), Description varchar(1000), Url_of_image varchar(255), primary key(ID));

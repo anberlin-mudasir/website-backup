@@ -18,8 +18,6 @@
 		}
 		</style>
 	</head> 
-	
-
 <body>
 
 <script language="javascript" type="text/javascript">
@@ -71,16 +69,14 @@
 <div><h1>北京大学餐饮信息查询系统</h1></div>
 
 <?php
-$db = mysql_connect("","root","root");
-$query = 'CREATE DATABASE IF NOT EXISTS MEAL';
-mysql_query($query,$db);
-mysql_select_db('MEAL',$db);
+$db = mysql_connect("","se","se");
+mysql_select_db('meal',$db);
 
 $number = $_POST['modify'];
 
 //用户验证
 $useername=$_POST['user'];
-$query='SELECT * FROM admin where name=\"'.$useername.'\"';
+$query='select * from admin where name=\"'.$useername.'\"';
 $query=stripslashes($query);
 $result=mysql_query($query);
 $num=mysql_num_rows($result);
@@ -105,7 +101,7 @@ $tastearr = array("酸","甜","苦","辣","咸","淡","麻","鲜");
 
 
 
-$query = 'SELECT * FROM DISHES WHERE Number = '.$number;
+$query = 'SELECT * FROM dishes WHERE Number = '.$number;
 $result = mysql_query($query,$db);
 if($row = mysql_fetch_array($result)){
 	extract($row);

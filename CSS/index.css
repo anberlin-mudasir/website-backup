@@ -1,17 +1,19 @@
 body 
 {
-	background-image:url(../image/index_back.jpg);
+	/*background-image:url(../image/index_back.jpg);*/
+	background-image:url(../image/leaf.jpg);
 	text-align:center;
 	background-repeat:no-repeat;
+    background-position: right top;
 }
 p
 {
-	font-size:50px; 
+	font-size:40px; 
 	font-family:STXinwei,STXingkai,SimHei;
 }
 table
 {
-	width:900px;
+	/*width:900px;*/
 	margin-left:auto; 
 	margin-right:auto;
 }
@@ -40,7 +42,7 @@ ul.logo
 {
 	float:left;
 }
-td.row1
+td.title
 {
 	filter:glow(color=#FF0,strength=5);
 	padding-left:0px;

@@ -9,12 +9,12 @@
 <?php
 	error_reporting(E_ALL & ~ E_NOTICE);
 	//连接数据库，并确定database
-	$db = mysql_connect("", "root","root");
-	mysql_select_db('MEAL',$db);
+	$db = mysql_connect("", "se","se");
+	mysql_select_db('meal',$db);
 	$useername=$_POST['user'];
 	$newpassword=$_POST['newpass'];
 	$renewpassword=$_POST['renewpassword'];
-	$query='SELECT * FROM admin where name=\"'.$useername.'\"';
+	$query='select * from admin where name=\"'.$useername.'\"';
 	$query=stripslashes($query);
 	$result=mysql_query($query);
 	$num=mysql_num_rows($result);

@@ -55,25 +55,23 @@ if($_POST['allCanteen'] != ""){
 }
 
 //connect to MySql
-$db = mysql_connect("","root","root");
-$query = 'CREATE DATABASE IF NOT EXISTS MEAL';
-mysql_query($query,$db);
-mysql_select_db('MEAL',$db);
+$db = mysql_connect("","se","se");
+mysql_select_db('meal',$db);
 
 //search
 if($name == "")
 {
 	if($style == 0)  //没选菜系
-		$query = 'SELECT * FROM DISHES WHERE Taste%'.$taste.'=0 and '.$canteen.'%Canteen=0';
+		$query = 'select * from dishes where Taste%'.$taste.'=0 and '.$canteen.'%Canteen=0';
 	else
-		$query = 'SELECT * FROM DISHES WHERE Style='.$style.' and Taste%'.$taste.'=0 and '.$canteen.'%Canteen=0';
+		$query = 'select * from dishes where Style='.$style.' and Taste%'.$taste.'=0 and '.$canteen.'%Canteen=0';
 }
 else
 {
 	if($style == 0)  //没选菜系
-		$query = 'SELECT * FROM DISHES WHERE Name="'.$name.'" and Taste%'.$taste.'=0 and '.$canteen.'%Canteen=0';
+		$query = 'select * from dishes where Name like "%'.$name.'%"  and Taste%'.$taste.'=0 and '.$canteen.'%Canteen=0';
 	else
-		$query = 'SELECT * FROM DISHES WHERE Name="'.$name.'" and Style='.$style.' and Taste%'.$taste.'=0 and '.$canteen.'%Canteen=0';
+		$query = 'select * from dishes where Name like "%'.$name.'%" and Style='.$style.' and Taste%'.$taste.'=0 and '.$canteen.'%Canteen=0';
 }
 $result = mysql_query($query,$db);
 

@@ -30,14 +30,12 @@
 
 <?php
 //connect to MySql
-$db = mysql_connect("","root","root");
-$query = 'CREATE DATABASE IF NOT EXISTS MEAL';
-mysql_query($query,$db);
-mysql_select_db('MEAL',$db);
+$db = mysql_connect("","se","se");
+mysql_select_db('meal',$db);
 
 //用户验证
 $useername=$_POST['user'];
-$query='SELECT * FROM admin where name=\"'.$useername.'\"';
+$query='select * from admin where name=\"'.$useername.'\"';
 $query=stripslashes($query);
 $result=mysql_query($query);
 $num=mysql_num_rows($result);
@@ -84,12 +82,11 @@ if($_POST['allTaste'] != ""){
 	}
 }
 
-
-$query = "INSERT INTO DISHES (Name,Ingredients,Price,Url_of_image,Description,
-			Taste,Style,Canteen)
+$query = "insert into dishes (Name,Ingredients,Price,Url_of_image,Description,
+			Taste,Style,Canteen,Guest_count,Grade)
 	VALUES
 	('$Name','$Ingredients','$Price','$Url_of_image','$Description',
-			'$Taste','$Style','$Canteen')";
+			'$Taste','$Style','$Canteen',0,0)";
 			
 mysql_query($query,$db);
 
