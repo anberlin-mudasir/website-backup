@@ -22,11 +22,19 @@
 	
 
 <body>
+<?php include('common_userinfo.php') ?>
 <div style="text-align:center;">
-    <h1 style=" filter:glow(color=#FF0,strength=5); font-size:38px; font-family:STXinwei,STXingkai,SimHei;">北京大学餐饮信息查询系统</h1>
+    <h2 style=" filter:glow(color=#FF0,strength=5); font-size:38px; font-family:STXinwei,STXingkai,SimHei;">北京大学餐饮信息查询系统</h2>
     </div>
-<h2 style="text-align:right"><a href = "./searchDish.html">返回</a></h2>
-<br/><br/>
+
+	<form id="backSearch" action="./searchDish.php" method="post">
+	<input type="hidden" name="start" value="0" />
+<?php
+	echo "<input type=\"hidden\" name=\"useername\" value=\"".$useername."\" />";
+	echo "<input type=\"hidden\" name=\"password\" value=\"".$password."\" />";
+    echo "<div onclick=\"document.getElementById('backSearch').submit();\" style=\"cursor:hand;\"><a href=\"#\"><p>返回<br /></p></a></div></form>";
+?>
+	</form>
 
 <?php
 $name = trim($_POST['Name']);
@@ -101,7 +109,9 @@ while($row = mysql_fetch_assoc($result))
 	echo '<th>'.$Name.'</a></th>';
 	echo '<th>'.$Price.'</th>';
 	echo '<th>'.round($Grade,2).'</th>';
-	echo '<th ><form action = "./showChooseDish.php" method = "post">';
+    echo '<th ><form action = "./showChooseDish.php" method = "post">';
+	echo "<input type=\"hidden\" name=\"useername\" value=\"".$useername."\" />";
+	echo "<input type=\"hidden\" name=\"password\" value=\"".$password."\" />";
 	echo '<input type = "image" src = "../../image/'.$Url_of_image.'" alt = "" width="249" height="168"/>';
 	echo '<input type = "hidden" name = "Number" value = "'.$Number.'">';
 	echo '</form></th>';

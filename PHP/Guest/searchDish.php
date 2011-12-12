@@ -1,3 +1,4 @@
+
 <?xml version = "1.0" encoding = "utf-8" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns = "http://www.w3.org/1999/xhtml">
@@ -15,13 +16,20 @@
 	
 
 <body>
+<?php include('common_userinfo.php') ?>
 <div style="padding:25px">
-    <h1 style=" filter:glow(color=#FF0,strength=5);font-size:38px; font-family:STXinwei,STXingkai,SimHei;">北京大学餐饮信息查询系统</h1>
+    <h2 style=" filter:glow(color=#FF0,strength=5);font-size:38px; font-family:STXinwei,STXingkai,SimHei;">北京大学餐饮信息查询系统</h2>
     </div>
+
 	<form id="form1" action="./showAllDishes.php" method="post">
 	<input type="hidden" name="start" value="0" />
+<?php
+	echo "<input type=\"hidden\" name=\"useername\" value=\"".$useername."\" />";
+	echo "<input type=\"hidden\" name=\"password\" value=\"".$password."\" />";
+    echo "<div onclick=\"document.getElementById('form1').submit();\" style=\"cursor:hand;\"><a href=\"#\"><p>返回<br /></p></a></div></form>";
+?>
 	</form>
-<div onclick="document.getElementById('form1').submit();" style="cursor:hand; color:#00F;font-size:24px;">返回</div>
+
 <br/>
 <hr/>
 
@@ -147,6 +155,10 @@
 <input type = "submit"  value = "确定" />
 <input type = "reset"  value = "重置" />
 </p>
+<?php
+	echo "<input type=\"hidden\" name=\"useername\" value=\"".$useername."\" />";
+    echo "<input type=\"hidden\" name=\"password\" value=\"".$password."\" />";
+?>
 </form>
 
 <hr />

@@ -17,18 +17,51 @@
 	{	
 		color:#00F;
 	}
-	</style>
-	</head> 
-	
+    </style>
+<script type="text/javascript">
+function mark(name,num)
+{
+    var req="name="+name+"&number="+num;
+    if (window.XMLHttpRequest)
+    {// code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {// code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    xmlhttp.onreadystatechange=function() {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+            if (xmlhttp.responseText=="succeed")
+            {
+                alert('收藏成功!');
+                document.getElementById('mark_button').value="您已收藏";
+                document.getElementById('mark_button').disabled="disabled";
+            }
+        }
+    }
+    xmlhttp.open("POST","mark_append.php",true);
+    xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xmlhttp.send(req);
+}
+</script>
+</head>
 
 <body>
+<?php include('common_userinfo.php') ?>
 <div style="text-align:center;">
-    <h1 style=" filter:glow(color=#FF0,strength=5);font-size:38px; font-family:STXinwei,STXingkai,SimHei;">北京大学餐饮信息查询系统</h1>
+    <h2 style=" filter:glow(color=#FF0,strength=5);font-size:38px; font-family:STXinwei,STXingkai,SimHei;">北京大学餐饮信息查询系统</h2>
     </div>
-		<form id="form1" action="./showAllDishes.php" method="post">
+        <form id="form1" action="./showAllDishes.php" method="post">
 	<input type="hidden" name="start" value="0" />
+<?php
+	echo "<input type=\"hidden\" name=\"useername\" value=\"".$useername."\" />";
+	echo "<input type=\"hidden\" name=\"password\" value=\"".$password."\" />";
+?>
 	</form>
-<div onclick="document.getElementById('form1').submit();" style="cursor:hand; color:#00F;text-align:right;font-size:24px;">返回</div>
+<div onclick="document.getElementById('form1').submit();" style="cursor:hand; color:#00F;text-align:right;font-size:24px;">返回菜肴列表</div>
 <br/>
 <hr/>
 
@@ -113,7 +146,30 @@ $row = mysql_fetch_array($result);
 	echo '<tr>';
 	echo '<th>描述</th>';
 	echo '<th>'.$Description.'</th>';
-	echo '</tr>';	
+    echo '</tr>';	
+
+    if ($useername!="guest")
+    {
+        echo '<tr>';
+        echo '<td></td>';
+        echo '<td style="text-align:center"><input id="mark_button" ';
+
+        $query2 = 'select * from mark where User="'.$useername.'" and Number='.$Number;
+        $result2 = mysql_query($query2,$db);
+        $num=mysql_num_rows($result2);
+        if ($num!=0)
+        {
+            echo 'type="button" value="您已收藏" ';
+            echo 'disabled="disabled"';
+        }
+        else
+        {
+            echo 'type="button" value="加入收藏" ';
+            echo 'onclick="javascript:mark(\''.$useername.'\','.$Number.')" ';
+        }
+        echo '/></td>';
+        echo '</tr>';
+    }
 }
 echo '</table>';
 //展示评论
@@ -128,15 +184,16 @@ if(NULL != $Opinion_table_name)
 	while($row2 = mysql_fetch_array($result))
 	{
 		extract($row2);
-		echo '<p><h4 style = "color:blue">'.$count.'.</h4>';
-		echo $Opinion;
+		echo '<p><h4 style = "color:blue">'.$count.'.'.$Time.'</h4>';
+		echo "<b>".$User."</b> 说：".$Opinion;
 		echo '</p>';
 		echo '<hr/>';
 		$count ++;
 	}
 }
-
 echo '<input type = "hidden" name = Dish_number value = "'.$Number.'" >';
+echo "<input type=\"hidden\" name=\"useername\" value=\"".$useername."\" />";
+echo "<input type=\"hidden\" name=\"password\" value=\"".$password."\" />";
 
 ?>
 

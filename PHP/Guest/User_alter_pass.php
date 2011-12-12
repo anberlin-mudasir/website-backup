@@ -14,7 +14,7 @@
 	$useername=$_POST['user'];
 	$newpassword=$_POST['newpass'];
 	$renewpassword=$_POST['renewpassword'];
-	$query='select * from admin where name=\"'.$useername.'\"';
+	$query='select * from user where name=\"'.$useername.'\"';
 	$query=stripslashes($query);
 	$result=mysql_query($query);
 	$num=mysql_num_rows($result);
@@ -22,19 +22,19 @@
 		echo "<script>window.alert(\"请先登录\");window.location='../../Admin/Admin_log.html';</script>";
 	else
 	{
-		echo "<form  id=\"form1\" action=\"./Admin_alter.php\" method=\"post\">";
+		echo "<form  id=\"form1\" action=\"./User_alter.php\" method=\"post\">";
 		echo "<input type=\"hidden\" name=\"user\" value=\"".$useername."\" /></form>";
 		if(strcmp($newpassword,$renewpassword)!=0)
 			echo "<script>window.alert(\"操作失败，请重新输入\");document.getElementById('form1').submit();</script>";
 		else
 		{
-			$query='update admin set pass=\"'.$newpassword.'\" where name=\"'.$useername.'\"';
+			$query='update user set pass=\"'.$newpassword.'\" where name=\"'.$useername.'\"';
 			$query=stripslashes($query);
 			$result=mysql_query($query);
-			echo "<form  id=\"form2\" action=\"./Admin_log.php\" method=\"post\">";
+			echo "<form  id=\"form2\" action=\"./User_log.php\" method=\"post\">";
 			echo "<input type=\"hidden\" name=\"test\" value=\"true\" />";
 			echo "<input type=\"hidden\" name=\"useername\" value=\"".$useername."\" />";
-			echo "<input type=\"hidden\" name=\"password\" value=\" \" />";
+			echo "<input type=\"hidden\" name=\"password\" value=\"".$newpassword."\" />";
 			echo "</form>";
 			echo "<script>window.alert(\"修改成功\");document.getElementById('form2').submit();</script>";
 		}

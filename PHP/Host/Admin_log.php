@@ -51,21 +51,6 @@ table {
     <h1 style=" filter:glow(color=#FF0,strength=5);font-size:38px; font-family:STXinwei,STXingkai,SimHei;">北京大学餐饮信息查询系统</h1>
     </div>
 <div>
-   <table>
-   <tr><td><a href="../../index.html">注销&nbsp;&nbsp;</a></td>
-   <td>
-<?php
-	echo "<form  id=\"alter\" action=\"./Admin_alter.php\" method=\"post\" style=\"color:#00F\">";
-	echo "<input type=\"hidden\" name=\"user\" value=\"".$useername."\" />";
-	echo "<div onclick=\"document.getElementById('alter').submit();\" style=\"cursor:hand;\">&nbsp;&nbsp;修改密码</div></form>";
-?>
-	</td>
-   </tr>
-</table>
-<br />
-<br />
-</div>
-<div>
 <table>
 <tr>
 <td style="text-align:left;">请选择您所需的操作<br /><br /></td>
@@ -92,6 +77,16 @@ table {
 	echo "<div onclick=\"document.getElementById('del').submit();\" style=\"cursor:hand;\"><p>删改菜肴<br /></p></div></form>";
 ?>
 </td></tr>
+<tr><td>
+<?php
+	echo "<form  id=\"alter\" action=\"./Admin_alter.php\" method=\"post\" style=\"color:#00F\">";
+	echo "<input type=\"hidden\" name=\"user\" value=\"".$useername."\" />";
+	echo "<div onclick=\"document.getElementById('alter').submit();\" style=\"cursor:hand;\"><p>修改密码<br /></p></div></form>";
+?>
+</td></tr>
+<tr><td><a href="../../index.html"><p>注销</p></a></td>
+
+
 </table>
 </div>
 </body>

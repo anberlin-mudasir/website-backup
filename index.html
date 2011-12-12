@@ -51,7 +51,7 @@ function autologin()
 <div> <h1>北京大学餐饮信息查询系统</h1></div>
 <br /> <br /> <br /> <br /> <br /> <br />
 <div>
-<form name="loginform" action="PHP/Host/Admin_log.php" method="post">
+<form name="loginform" action="PHP/login_redict.php" method="post">
 <input type="hidden" name="test" value="false" />
 <table>
 <tr>
@@ -72,7 +72,7 @@ function autologin()
 <input type="submit" value="确定" />
 <table>
 <tr>
-<td><a href="#">用户注册</a></td>
+<td><a href="PHP/Guest/User_reg.php">用户注册</a></td>
 <td>  </td>
 <td><a href="#loginform" onclick="autologin()">匿名登录</a></td>
 </tr>

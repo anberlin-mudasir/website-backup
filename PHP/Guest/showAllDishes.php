@@ -1,3 +1,4 @@
+
 <?xml version = "1.0" encoding = "utf-8" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns = "http://www.w3.org/1999/xhtml">
@@ -23,20 +24,38 @@
 	
 
 <body>
+<?php include('common_userinfo.php') ?>
 <div style="text-align:center;">
-    <h1 style=" filter:glow(color=#FF0,strength=5);font-size:38px; font-family:STXinwei,STXingkai,SimHei;">北京大学餐饮信息查询系统</h1>
+    <h2 style=" filter:glow(color=#FF0,strength=5);font-size:38px; font-family:STXinwei,STXingkai,SimHei;">北京大学餐饮信息查询系统</h2>
     </div>
-<div style="font-size:24px;"><p style="text-align:center"><a href = "../../index.html">返回首页</a>
-<a href = "./searchDish.html">高级检索</a></p></div>
+<table>
+<tr><td>
+<?php
+    echo "<form  id=\"back\" action=\"./User_log.php\" method=\"post\" style=\"color:#00F\">";
+	echo "<input type=\"hidden\" name=\"useername\" value=\"".$useername."\" />";
+	echo "<input type=\"hidden\" name=\"password\" value=\"".$password."\" />";
+	echo "<input type=\"hidden\" name=\"test\" value=\"false\" />";
+    echo "<div onclick=\"document.getElementById('back').submit();\" style=\"cursor:hand;\"><a href=\"#\"><p>用户面板<br /></p></a></div></form>";
+?>
+</td><td>
+<?php
+    echo "<form  id=\"search\" action=\"./searchDish.php\" method=\"post\" style=\"color:#00F\">";
+	echo "<input type=\"hidden\" name=\"useername\" value=\"".$useername."\" />";
+	echo "<input type=\"hidden\" name=\"password\" value=\"".$password."\" />";
+    echo "<div onclick=\"document.getElementById('search').submit();\" style=\"cursor:hand;\"><a href=\"#\"><p>高级检索<br /></p></a></div></form>";
+?>
+</td></tr>
+</table>
+
 <br/>
 <hr/>
-
 
 
 <?php
 //connect to MySql
 $db = mysql_connect("","se","se");
 mysql_select_db('meal',$db);
+
 
 
 $query = 'select * from dishes';
@@ -71,6 +90,8 @@ while($row = mysql_fetch_assoc($result))
 	echo '<th>'.round($Grade,2).'</th>';
 	echo '<th ><form action = "./showChooseDish.php" method = "post">';
 	echo '<input type = "image" src = "../../image/'.$Url_of_image.'" alt = ""  width="249" height="168"/>';
+    echo "<input type=\"hidden\" name=\"useername\" value=\"".$useername."\" />";
+    echo "<input type=\"hidden\" name=\"password\" value=\"".$password."\" />";
 	echo '<input type = "hidden" name = "Number" value = "'.$Number.'">';
 	echo '</form></th>';
 	echo '</tr>';
@@ -94,6 +115,8 @@ while($count_i<$totalnum)
 	else
 		echo "<td onclick=\"document.getElementById('".$count_j."').submit();\" style=\"cursor:hand;color:#F0F\" >\n";
 	echo "<form id=\"".$count_j."\" action=\"showAllDishes.php\" method=\"post\">\n";
+    echo "<input type=\"hidden\" name=\"useername\" value=\"".$useername."\" />";
+    echo "<input type=\"hidden\" name=\"password\" value=\"".$password."\" />";
 	echo "<input type=\"hidden\" name=\"start\" value=\"".$count_i."\" />";
 	echo "</form>&nbsp;&nbsp;".$count_j."</td>";
 	$count_j++;
@@ -103,6 +126,8 @@ while($count_i<$totalnum)
 echo "<td onclick=\"document.getElementById('next').submit();\" style=\"cursor:hand;\" >\n";
 echo "<form id=\"next\" action=\"showAllDishes.php\" method=\"post\">\n";
 $current=$current*$limit;
+echo "<input type=\"hidden\" name=\"useername\" value=\"".$useername."\" />";
+echo "<input type=\"hidden\" name=\"password\" value=\"".$password."\" />";
 echo "<input type=\"hidden\" name=\"start\" value=\"".$current."\" />";
 echo "&nbsp;&nbsp;<input type=\"submit\" value=\"下一页\" />";
 echo "</form></td>";

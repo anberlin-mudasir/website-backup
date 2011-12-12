@@ -109,7 +109,7 @@ echo '<p style = "text-align:center">食堂:'.$canteenarr[$primenum[$Canteen]].'
 	echo "<p><form  id=\"remain\" action=\"./Admin_log.php\" method=\"post\" style=\"color:#00F\">";
 	echo "<input type=\"hidden\" name=\"user\" value=\"".$useername."\" />";
 	echo "<input type=\"hidden\" name=\"test\" value=\"true\" />";
-	echo "<input type=\"hidden\" name=\"uesername\" value=\"".$useername."\" />";
+	echo "<input type=\"hidden\" name=\"useername\" value=\"".$useername."\" />";
 	echo "<input type=\"hidden\" name=\"password\" value=\"\" />";
 	echo "<div onclick=\"document.getElementById('remain').submit();\" style=\"cursor:hand;\"><p>返回菜单<br /></p></div></form></p>";
 ?>

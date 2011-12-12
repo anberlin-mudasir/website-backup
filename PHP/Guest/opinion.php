@@ -11,7 +11,7 @@
 	
 
 <body>
-
+<?php include('common_userinfo.php') ?>
 
 
 <?php
@@ -21,12 +21,14 @@ $newOpinion = $_POST['Opinion'];
 $Dish = $_POST['Dish_number'];
 ?>
 <div style="text-align:center;">
-    <h1 style=" filter:glow(color=#FF0,strength=5);font-size:38px; font-family:STXinwei,STXingkai,SimHei;">北京大学餐饮信息查询系统</h1>
+    <h2 style=" filter:glow(color=#FF0,strength=5);font-size:38px; font-family:STXinwei,STXingkai,SimHei;">北京大学餐饮信息查询系统</h2>
     </div>
     </div>
 		<form id="form1" action="./showChooseDish.php" method="post">
 <?php
-	echo '<input type="hidden" name="Number" value="'.$Dish.'" />';
+echo '<input type="hidden" name="Number" value="'.$Dish.'" />';
+echo "<input type=\"hidden\" name=\"useername\" value=\"".$useername."\" />";
+echo "<input type=\"hidden\" name=\"password\" value=\"".$password."\" />";
 ?>
 	</form>
 <div onclick="document.getElementById('form1').submit();" style="cursor:hand; color:#00F;text-align:right;">返回</div>
@@ -57,17 +59,16 @@ if($row = mysql_fetch_array($result))
 			$query = 'update dishes set Opinion_table_name = "'.$Opinion_table_name.'" WHERE Number = '.$Dish;
 			//echo $query;
 			$result = mysql_query($query,$db);
-			$query = 'create table '.$Opinion_table_name.' (Opinion text)';
+			$query = 'create table '.$Opinion_table_name.' (User varchar(255),Opinion text, Time datetime)';
 			$result = mysql_query($query,$db);
-		}
-		$query = 'insert into '.$Opinion_table_name.' values(\''.$newOpinion.'\')';
+        }
+        date_default_timezone_set('Asia/Chongqing');
+        $query = 'insert into '.$Opinion_table_name.' values("'.$useername.'","'.$newOpinion.'","'.date("Y-m-d H:i:s").'")';
 		$result = mysql_query($query,$db);
 	}
 
 }
-
 echo '<p style = "text-align:center;color:blue">评论成功！'.$Number.'</p>';
-
 ?>
 
 

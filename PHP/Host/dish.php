@@ -86,7 +86,7 @@
 		echo "<div style=\"color:#039\">欢迎".$useername."</div></td";
 		echo "<td><form  id=\"return\" action=\"./Admin_log.php\" method=\"post\" style=\"color:#039\">";
 		echo "<input type=\"hidden\" name=\"test\" value=\"true\" />";
-		echo "<input type=\"hidden\" name=\"uesername\" value=\"".$useername."\" />";
+		echo "<input type=\"hidden\" name=\"useername\" value=\"".$useername."\" />";
 		echo "<input type=\"hidden\" name=\"password\" value=\"\" />";
 		echo "<div onclick=\"document.getElementById('return').submit();\" style=\"cursor:hand;\">&nbsp;&nbsp;返回</div></form>";
 		echo "</td></tr></table>";

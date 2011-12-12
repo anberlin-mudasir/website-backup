@@ -1,0 +1,74 @@
+<?xml version = "1.0" encoding = "utf-8" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns = "http://www.w3.org/1999/xhtml">
+	<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>查询结果</title> 
+			<style>
+	body {
+		text-align:center;
+		background-image:url(../../image/doSearch_back.gif);
+	}
+	a:visited
+	{	
+		color:#00F;
+	}
+	table {
+		margin-left:auto;
+		margin-right:auto;
+	}
+	</style>
+	</head> 
+	
+
+<body>
+<?php include('common_userinfo.php') ?>
+<div style="text-align:center;">
+    <h1 style=" filter:glow(color=#FF0,strength=5); font-size:38px; font-family:STXinwei,STXingkai,SimHei;">北京大学餐饮信息查询系统</h1>
+    </div>
+
+	<form id="return" action="./User_log.php" method="post">
+	<input type="hidden" name="start" value="0" />
+<?php
+	echo "<input type=\"hidden\" name=\"useername\" value=\"".$useername."\" />";
+	echo "<input type=\"hidden\" name=\"password\" value=\"".$password."\" />";
+	echo "<input type=\"hidden\" name=\"test\" value=\"false\" />";
+    echo "<div onclick=\"document.getElementById('return').submit();\" style=\"cursor:hand;\"><a href=\"#\"><p>返回<br /></p></a></div></form>";
+?>
+	</form>
+
+<?php
+//connect to MySql
+$db = mysql_connect("","se","se");
+mysql_select_db('meal',$db);
+
+$query = 'select Number from mark where User="'.$useername.'"';
+$result = mysql_query($query,$db);
+
+//展示查询结果
+echo '<table border = "border">';
+echo '<tr><th>菜名</th><th>价格</th><th>得分</th><th>图片</th></tr>';
+while($row = mysql_fetch_assoc($result))
+{
+    extract($row);
+    $query2 = 'select * from dishes where Number='.$Number;
+    $result2 = mysql_query($query2,$db);
+    $row2 = mysql_fetch_assoc($result2);
+    extract($row2);
+	echo '<tr>';
+	echo '<td>'.$Name.'</a></td>';
+	echo '<td>'.$Price.'</td>';
+	echo '<td>'.round($Grade,2).'</td>';
+    echo '<td ><form action = "./showChooseDish.php" method = "post">';
+	echo "<input type=\"hidden\" name=\"useername\" value=\"".$useername."\" />";
+	echo "<input type=\"hidden\" name=\"password\" value=\"".$password."\" />";
+	echo '<input type = "image" src = "../../image/'.$Url_of_image.'" alt = "" width="249" height="168"/>';
+	echo '<input type = "hidden" name = "Number" value = "'.$Number.'">';
+	echo '</form></td>';
+	echo '</tr>';
+}
+echo '</table>';
+?>
+
+</body>
+</html>
