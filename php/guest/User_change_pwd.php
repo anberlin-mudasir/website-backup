@@ -45,7 +45,7 @@
 	$result=mysql_query($query);
 	$num=mysql_num_rows($result);
 	if($num==0)
-		echo "<script>window.alert(\"请先登录\");window.location='../../Admin/Admin_log.html';</script>";
+		echo "<script>window.alert(\"请先登录\");window.location='../../index.html';</script>";
 ?>
 <?php
     if ($useername!="guest")

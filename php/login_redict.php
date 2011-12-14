@@ -13,12 +13,12 @@
     if ($num!=0) // 登录者有管理员身份
     {
         echo "正在转向管理员界面...";
-        echo "<form action='Host/Admin_log.php' method='post' name='frm'>";
+        echo "<form action='admin/Admin_log.php' method='post' name='frm'>";
     }
     else
     {
         echo "正在转向用户界面...";
-        echo "<form action='Guest/User_log.php' method='post' name='frm'>";
+        echo "<form action='guest/User_log.php' method='post' name='frm'>";
     }
 
 

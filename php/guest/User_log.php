@@ -8,16 +8,13 @@
   <link href="../../css/user.css" type="text/css" rel="stylesheet"/>
   <link href="../../css/shop-min.css" type="text/css" rel="stylesheet"/>
   <title>用户界面</title>
-
 </head>
 <body>
 <?php include("common_userinfo.php"); ?>
 <?php 
 	error_reporting(E_ALL & ~ E_NOTICE);
-	//连接数据库，并确定database
 	$db = mysql_connect("", "se","se");
 	mysql_select_db('meal',$db);
-	//收集数据
     $query='select * from user where name=\"'.$useername.'\"and pass=\"'.$password.'\"';
 	$query=stripslashes($query);
 	$result=mysql_query($query);
@@ -25,8 +22,11 @@
 	$test=$_POST['test'];
 	if($test!="true")
 	{
-		if($num==0)
-			echo "<script>window.alert(\"用户名或密码错误\");window.location='../../index.html';</script>";
+        if($num==0)
+        {
+            echo "<script>window.alert(\"用户名或密码错误\");window.location='../../index.html';</script>";
+            die('');
+        }
 	}
 ?>
 

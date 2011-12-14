@@ -64,12 +64,6 @@
 <body>
 <?php include('common_userinfo.php') ?>
 <?php
-    if ($useername!="guest")
-        include('header_user.php');
-    else
-        include('header_guest.php');
-?>
-<?php
 $db = mysql_connect("","se","se");
 mysql_select_db('meal',$db);
 $useername=$_POST['useername'];
@@ -78,9 +72,14 @@ $query=stripslashes($query);
 $result=mysql_query($query,$db);
 $num=mysql_num_rows($result);
 if($num==0)
-    echo "<script>window.alert(\"请先登录\");window.location='../../Admin/Admin_log.html';</script>";
+    echo "<script>window.alert(\"请先登录\");window.location='../../index.html';</script>";
 ?>
-
+<?php
+    if ($useername!="guest")
+        include('header_user.php');
+    else
+        include('header_guest.php');
+?>
 
 <?php
 $query = 'select dishes.Number Number,Name,Price,Taste,Ingredients,Canteen,Style,Grade,Description,Url_of_image from (dishes join mark on dishes.Number=mark.Number) where User="'.$useername.'"';
@@ -123,7 +122,7 @@ if ($num!=0)
 ?>
         <div class="min-del-box">
           <a class="min-del" href="javascript:del('<?php echo $useername; ?>')">
-            取消选中的收蔵</a>
+            删除选中的收蔵</a>
         </div>
 <?php
 }
