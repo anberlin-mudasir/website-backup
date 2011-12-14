@@ -34,12 +34,14 @@
   </script>
 </head>
 <body>
-<?php include('common_userinfo.php'); ?>
+<?php include('common_admininfo.php'); ?>
 <?php
 	error_reporting(E_ALL & ~ E_NOTICE);
 	$db = mysql_connect("", "se","se");
 	mysql_select_db('meal',$db);
-	$query='select * from user where name=\"'.$useername.'\"';
+	$useername=$_POST['useername'];
+	$password=$_POST['password'];
+	$query='select * from admin where name="'.$useername.'" and pass="'.$password.'"';
 	$query=stripslashes($query);
 	$result=mysql_query($query);
 	$num=mysql_num_rows($result);
@@ -49,12 +51,7 @@
         die('');
     }
 ?>
-<?php
-    if ($useername!="guest")
-        include('header_user.php');
-    else
-        include('header_guest.php');
-?>
+<?php include('header_admin.php');?>
 
 <div class="main_w">
   <br />
@@ -66,7 +63,7 @@
       <div class="section">
         <div id="cont-reg" class="block login-form">
           <div class="pop-win-inner">
-            <form id="contents" name="contents" method="post" action="./User_change_pwd_result.php">
+            <form id="contents" name="contents" method="post" action="./Admin_change_pwd_result.php">
             <?php include('common_post.php');?> 
               <div class="form-block">
                 <label class="label" for="authpassword">新密码:</label>
@@ -92,31 +89,15 @@
   <div class="asider_n">
     <div class="box tools">
       <p>
-        <form name="search" action="./User_search.php" method="post">
+        <form name="add" action="./Admin_add_dish.php" method="post">
         <?php include('common_post.php');?>
         </form>
-        <span class="item itoolsBox">
-          <a class="B" href="javascript:document.search.submit()">查找菜肴</a>
+        <span class="item itoolsUpface">
+          <a class="B" href="javascript:document.add.submit()">添加菜肴</a>
         </span>
       </p>
-<?php
-if ($useername!='guest')
-{
-?>
       <p>
-        <form name="mark" action="./User_showmark.php" method="post">
-        <?php include('common_post.php');?>
-        </form>
-        <span class="item itoolsFavorite">
-          <a class="B" href="javascript:document.mark.submit()">查看收藏</a>
-        </span>
-      </p>
-<?php
-}
-?>
-
-      <p>
-        <form name="back" action="./User_log.php" method="post">
+        <form name="back" action="./Admin_log.php" method="post">
         <?php include('common_post.php');?>
         </form>
         <span class="item itoolsStyle">
@@ -127,6 +108,5 @@ if ($useername!='guest')
     </div>
   </div>
 </div>
-
 </body>
 </html>

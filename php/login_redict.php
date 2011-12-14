@@ -14,13 +14,14 @@
     {
         echo "正在转向管理员界面...";
         echo "<form action='admin/Admin_log.php' method='post' name='frm'>";
+        echo "<input type='hidden' name='test' value='true'/>";
     }
     else
     {
         echo "正在转向用户界面...";
         echo "<form action='guest/User_log.php' method='post' name='frm'>";
+        echo "<input type='hidden' name='test' value='false'/>";
     }
-
 
 // Here pass all post values to redicted pages
     foreach ($_POST as $a => $b) {

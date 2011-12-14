@@ -8,6 +8,57 @@
   <link href="../../css/user.css" type="text/css" rel="stylesheet"/>
   <link href="../../css/shop-min.css" type="text/css" rel="stylesheet"/>
   <title>管理员界面</title>
+  <script language="javascript">
+	function check(){
+		var i;
+		var bok = false;
+		var q = document.getElementsByName("deleteNumber[]");
+		var qq = document.getElementById("contents");
+		var length = q.length;
+		for(i=0;i < length;i++){
+		     if(q[i].checked == true)
+				bok = true;
+		}
+		if(false == bok){
+			window.alert("没有删除项");
+			return false;
+		}
+        return true; 
+		
+    } 
+    function del(name)
+    {
+        if (check()==false)
+            return;
+		var q = document.getElementsByName("deleteNumber[]");
+        var req="useername="+name;
+        for (var i=0; i<q.length; i++)
+            if (q[i].checked==true)
+                req+="&deleteNumber[]="+q[i].value;
+        if (window.XMLHttpRequest)
+        {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+        }
+        else
+        {// code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        xmlhttp.onreadystatechange=function() {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+                if (xmlhttp.responseText=="succeed")
+                {
+                    alert('删除成功！');
+                    document.getElementById('refresh').submit();
+                }
+            }
+        }
+        xmlhttp.open("POST","Admin_del_dish.php",true);
+        xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xmlhttp.send(req);
+    }
+  </script>
 </head>
 <body>
 <?php include("common_admininfo.php"); ?>
@@ -15,20 +66,16 @@
 	error_reporting(E_ALL & ~ E_NOTICE);
 	$db = mysql_connect("", "se","se");
 	mysql_select_db('meal',$db);
-    $query='select * from admin where name=\"'.$useername.'\"and pass=\"'.$password.'\"';
+    $query='select * from admin where name="'.$useername.'"and pass="'.$password.'"';
 	$query=stripslashes($query);
 	$result=mysql_query($query);
 	$num=mysql_num_rows($result);
 	$test=$_POST['test'];
-	if($test!="true")
-	{
-        if($num==0)
-        {
-            echo "<script>window.alert(\"用户名或密码错误\");window.location='../../index.html';</script>";
-            die('');
-        }
-
-	}
+	if($test!="true" || $num==0)
+    {
+        echo "<script>window.alert(\"用户名或密码错误\");window.location='../../index.html';</script>";
+        die('');
+    }
 ?>
 <?php include('header_admin.php'); ?>
 
@@ -86,7 +133,7 @@ while($row = mysql_fetch_assoc($result))
       <table class="min-table">
       <tr>
         <td rowspan="4">
-        <form action="./Admin_showdish.php" method="post">
+        <form action="./Admin_show_dish.php" method="post">
         <?php include('common_post.php');?>
 <?php
     echo '<input width="249" type="image" height="168" alt="" src="../../image/'.$Url_of_image.'"/>';
@@ -105,7 +152,7 @@ while($row = mysql_fetch_assoc($result))
       <tr><td>
         <div class="min-del-pick">
         <input type="checkbox" value="<?php echo $Number?>" name="deleteNumber[]"/>
-         <span class="min-del">取消收藏</span>
+         <span class="min-del">选中删除</span>
         </div>
       </td></tr>
       </table>
@@ -168,11 +215,19 @@ while($count_i<$totalnum)
   <div class="asider_n">
     <div class="box tools">
       <p>
-        <form name="back" action="./User_log.php" method="post">
+        <form name="alter" action="./Admin_change_pwd.php" method="post">
         <?php include('common_post.php');?>
         </form>
-        <span class="item itoolsStyle">
-          <a class="B" href="javascript:document.back.submit()">返回主面板</a>
+        <span class="item itoolsSet">
+          <a class="B" href="javascript:document.alter.submit();">修改密码</a>
+        </span>
+      </p>
+      <p>
+        <form name="add" action="./Admin_add_dish.php" method="post">
+        <?php include('common_post.php');?>
+        </form>
+        <span class="item itoolsUpface">
+          <a class="B" href="javascript:document.add.submit();">添加菜肴</a>
         </span>
       </p>
     </div>
@@ -180,52 +235,10 @@ while($count_i<$totalnum)
 </div>
 
 
-
 <form id="refresh" action="#" method="post"/>
   <input type="hidden" name="start" value="0" />
   <?php include('common_post.php');?>
 </form>
 
-
-
-<div>
-<table>
-<tr>
-<td style="text-align:left;">请选择您所需的操作<br /><br /></td>
-</tr>
-<tr><td>
-<?php
-	echo "<form  id=\"add\" action=\"./dish.php\" method=\"post\" style=\"color:#00F\">";
-	echo "<input type=\"hidden\" name=\"user\" value=\"".$useername."\" />";
-	echo "<div onclick=\"document.getElementById('add').submit();\" style=\"cursor:hand;\"><p>添加菜肴<br /></p></div></form>";
-?>
-</td></tr>
-<!--<tr><td>
-<?php
-	echo "<form  id=\"revise\" action=\"./updateDish.php\" method=\"post\" style=\"color:#00F\">";
-	echo "<input type=\"hidden\" name=\"user\" value=\"".$useername."\" />";
-	echo "<div onclick=\"document.getElementById('revise').submit();\" style=\"cursor:hand;\"><p>修改菜肴<br /></p></div></form>";
-?>
-</td></tr>-->
-<tr><td>
-<?php
-	echo "<form  id=\"del\" action=\"./deleteDish.php\" method=\"post\" style=\"color:#00F\">";
-	echo "<input type=\"hidden\" name=\"user\" value=\"".$useername."\" />";
-	echo '<input type="hidden" name="start" value="0" />';
-	echo "<div onclick=\"document.getElementById('del').submit();\" style=\"cursor:hand;\"><p>删改菜肴<br /></p></div></form>";
-?>
-</td></tr>
-<tr><td>
-<?php
-	echo "<form  id=\"alter\" action=\"./Admin_alter.php\" method=\"post\" style=\"color:#00F\">";
-	echo "<input type=\"hidden\" name=\"user\" value=\"".$useername."\" />";
-	echo "<div onclick=\"document.getElementById('alter').submit();\" style=\"cursor:hand;\"><p>修改密码<br /></p></div></form>";
-?>
-</td></tr>
-<tr><td><a href="../../index.html"><p>注销</p></a></td>
-
-
-</table>
-</div>
 </body>
 </html>

@@ -10,7 +10,7 @@
   <link href="../../css/shop-min.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-<?php include('common_userinfo.php'); ?>
+<?php include('common_admininfo.php'); ?>
 <?php
 	error_reporting(E_ALL & ~ E_NOTICE);
 	//连接数据库，并确定database
@@ -20,19 +20,14 @@
     $password=$_POST['password'];
 	$newpassword=$_POST['authpassword'];
 	$renewpassword=$_POST['reauthpassword'];
-	$query='select * from user where name="'.$useername.'" and pass="'.$password.'"';
+	$query='select * from admin where name="'.$useername.'" and pass="'.$password.'"';
     $query=stripslashes($query);
 	$result=mysql_query($query);
 	$num=mysql_num_rows($result);
 	if($num==0)
         echo "<script>window.alert(\"请先登录\");window.location='../../index.html';</script>";
 ?>
-<?php
-    if ($useername!="guest")
-        include('header_user.php');
-    else
-        include('header_guest.php');
-?>
+<?php include('header_admin.php'); ?>
 
 
 <div class="main_w">
@@ -45,12 +40,12 @@
 <?php
 if(strcmp($newpassword,$renewpassword)==0)
 {
-    $query='update user set pass=\"'.$newpassword.'\" where name=\"'.$useername.'\"';
+    $query='update admin set pass=\"'.$newpassword.'\" where name=\"'.$useername.'\"';
     $query=stripslashes($query);
     mysql_query($query);
     $password=$renewpassword; // important!
 ?>
-      <div class="feedTip min-succeed"><p>修改成功!请返回<a href="javascript:document.back.submit()">用户面板</a></p></div>
+      <div class="feedTip min-succeed"><p>修改成功!请返回<a href="javascript:document.back.submit()">管理员面板</a></p></div>
 <?php
 }
 else
@@ -74,10 +69,10 @@ else
 </div>
 
 
-<form class="Hide" name="back" action="./User_log.php" method="post">
+<form class="Hide" name="back" action="./Admin_log.php" method="post">
 <?php include('common_post.php');?>
 </form>
-<form class="Hide" name="change" action="./User_change_pwd.php" method="post">
+<form class="Hide" name="change" action="./Admin_change_pwd.php" method="post">
 <?php include('common_post.php');?>
 </form>
 

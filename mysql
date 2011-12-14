@@ -1,1 +1,66 @@
+database: meal
++-------------------+
+| Tables_in_meal    |
++-------------------+
+| admin             |
+| dishes            |
+| mark              |
+| opinion           |
+| user              |
++-------------------+
+
+admin
++-------+--------------+------+-----+---------+-------
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| name  | varchar(255) | YES  |     | NULL    |       |
+| pass  | varchar(255) | YES  |     | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+
+user:
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| name  | varchar(255) | YES  |     | NULL    |       |
+| pass  | varchar(255) | YES  |     | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+
+dishes:
++--------------------+---------------+------+-----+---------+----------------+
+| Field              | Type          | Null | Key | Default | Extra          |
++--------------------+---------------+------+-----+---------+----------------+
+| Number             | int(11)       | NO   | PRI | NULL    | auto_increment |
+| Name               | varchar(255)  | YES  |     | NULL    |                |
+| Price              | decimal(10,2) | YES  |     | NULL    |                |
+| Taste              | int(11)       | YES  |     | NULL    |                |
+| Ingredients        | varchar(255)  | YES  |     | NULL    |                |
+| Canteen            | int(11)       | YES  |     | NULL    |                |
+| Style              | int(11)       | YES  |     | NULL    |                |
+| Grade              | decimal(10,2) | YES  |     | NULL    |                |
+| Description        | varchar(1000) | YES  |     | NULL    |                |
+| Url_of_image       | varchar(255)  | YES  |     | NULL    |                |
+| Guest_count        | int(11)       | YES  |     | NULL    |                |
+| Opinion_table_name | varchar(255)  | YES  |     | NULL    |                |
++--------------------+---------------+------+-----+---------+----------------+
+
+mark
++--------+--------------+------+-----+---------+-------+
+| Field  | Type         | Null | Key | Default | Extra |
++--------+--------------+------+-----+---------+-------+
+| User   | varchar(255) | YES  | MUL | NULL    |       |
+| Number | int(11)      | YES  |     | NULL    |       |
++--------+--------------+------+-----+---------+-------+
+
+opinion
++---------+--------------+------+-----+---------+-------+
+| Field   | Type         | Null | Key | Default | Extra |
++---------+--------------+------+-----+---------+-------+
+| User    | varchar(255) | YES  |     | NULL    |       |
+| Opinion | text         | YES  |     | NULL    |       |
+| Time    | datetime     | YES  |     | NULL    |       |
++---------+--------------+------+-----+---------+-------+
+
+
+
+
 create table dishes (ID int not null auto_increment, Name varchar(255), Price decimal(10,2), Taste int, Ingredients varchar(255), Canteen varchar(255), Style int, Grade decimal(10,2), Description varchar(1000), Url_of_image varchar(255), primary key(ID));
