@@ -2,83 +2,89 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns = "http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>登陆</title>
-<style>
-body {
-	background-image:url(image/admin_log_h_back.jpg);
-	text-align:center;
-	background-repeat:no-repeat;
-}
-h1 {
-	filter:glow(color=#FF0,strength=5);
-	font-size:38px; 
-	font-family:STXinwei,STXingkai,SimHei;
-	padding-top:50px;
-}
-table {
-	text-align:center;
-	margin-left:auto;
-	margin-right:auto;
-}
-a.box:link,a.box:visited
-{
-    display:block;
-    font-weight:bold;
-    color:#FFFFFF;
-    background-color:#000080;
-    width:100px;
-    text-align:center;
-    padding:4px;
-    text-decoration:none;
-    font-size:0.8em;
-}
-a.box:hover,a.box:active
-{
-    background-color:#333399;
-}
-</style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>北京大学餐饮信息管理系统--用户登录</title>
+  <link href="css/base.css" type="text/css" rel="stylesheet"/>
+  <link href="css/index.css" type="text/css" rel="stylesheet"/>
+  <script type="text/javascript">
+    function fixPos()
+    {
+       var width=400;
+       var up=100;
+       document.getElementById("pop").style.width=width+"px";
+       document.getElementById("pop").style.left=((document.body.clientWidth-width)/2)+"px";
+       document.getElementById("pop").style.top=up+"px";
+    }
+    function autologin()
+    {
+        document.getElementById('authuser').value="guest";
+        document.getElementById('authpassword').value="guest";
+        document.loginform.submit();
+    }
+    function checkSubmit()
+    {
+        if (document.loginform.useername.value!="" && 
+            document.loginform.password.value!="")    
+            return true;
+        else
+            return false;
+    }
+    window.onload=fixPos;
+    window.onresize=fixPos;
+  </script>
+  <style type="text/css">
+  body
+  {
+    background-image:url(css/peking.png);
+    background-repeat:no-repeat;
+    background-position:;
+  }
+  </style>
 </head>
 <body>
-<script type="text/javascript">
-function autologin()
-{
-    document.getElementById('user').value="guest";
-    document.getElementById('pwd').value="guest";
-    document.loginform.submit();
-}
-</script>
-<div> <h1>北京大学餐饮信息查询系统</h1></div>
-<br /> <br /> <br /> <br /> <br /> <br />
-<div>
-<form name="loginform" action="PHP/login_redict.php" method="post">
-<input type="hidden" name="test" value="false" />
-<table>
-<tr>
-	<td><b>用户名：</b></td>
-	<td>
-	<input id="user" type="text" name="useername"/>
-	</td>
-</tr>
-<tr>
-	<td><b>密码：</b></td>
-	<td>
-    <input id="pwd" type="password" name="password" />
-    </td>
-</tr>
-</table>
-<p>
-<br />
-<input type="submit" value="确定" />
-<table>
-<tr>
-<td><a href="PHP/Guest/User_reg.php">用户注册</a></td>
-<td>  </td>
-<td><a href="#loginform" onclick="autologin()">匿名登录</a></td>
-</tr>
-</table>
-</p>
-</form>
+
+<div class="header-bar">
+  <div class="inner Fix">
+    <span class="tagline">北京大学餐饮信息查询系统欢迎您</span>
+  </div>
 </div>
+
+<div id="pop" class="pop-win pop-login " style="width: 400px; left: 431px; top: 100px;">
+  <div class="ele-wrap wrap" style="visibility: visible;">
+    <div class="dialog-title">北京大学餐饮信息查询系统
+      <span class="title-misc">用户登录 </span>
+    </div>
+  <div class="dialog-cont">
+    <div class="pop-win-inner">
+      <form name="loginform" method="post" action="PHP/login_redict.php">
+      <input type="hidden" name="test" value="false" />
+      <div class="form-block">
+        <label class="label" for="authuser">帐号：</label>
+        <input id="authuser" name="useername" class="form-txt form-default" type="text" placeholder="" tabindex="1">
+      </div>
+      <div class="form-block">
+        <label class="label" for="authpassword">密码：</label>
+        <input id="authpassword" name="password" class="form-txt" type="password" tabindex="2">
+      </div>
+      <div class="form-btn-block">
+        <span class="btn-type-b btn-fn-c">
+          <a class="form-btn" tabindex="4" href="javascript:if(checkSubmit()==true)document.loginform.submit()">登录</a>
+        </span>
+      </div>
+      <div class="pop-win-misc">
+        <span class="note">
+          <a href="PHP/Guest/User_reg.php">注册用户</a>
+        </span>
+        或
+        <span class="note">
+          <a href="#pop" onclick="autologin()">游客登录</a>
+        </span>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
 </body>
 </html>

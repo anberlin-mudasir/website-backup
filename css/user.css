@@ -1,0 +1,2059 @@
+.asider_m0, .asider_m1, .content_m, .content_n, .asider_n, .asider_o0, .asider_o1, .content_o {
+    display: inline;
+    float: left;
+    overflow: hidden;
+}
+.asider_m0 {
+    width: 228px;
+}
+.asider_m1, .asider_n, .asider_o1 {
+    float: right;
+    width: 210px;
+}
+.content_m {
+    margin-left: 11px;
+    width: 500px;
+}
+.content_n {
+    display: inline;
+    float: left;
+    width: 730px;
+}
+.asider_o0 {
+    width: 150px;
+}
+.asider_o1 {
+    margin-left: 10px;
+    width: 210px;
+}
+.content_o {
+    margin-left: 10px;
+    width: 560px;
+}
+.colA, .colB {
+    float: left;
+    width: 355px;
+}
+.colA {
+    margin-right: 20px;
+}
+.mhdNav:after, .mhdNav .chl:after, .mhdNav .fn:after, .mhdTab:after, .photoList:after, .tools p:after, .modifyImg:after, .changeStyle ul:after, .themeSelect li:after, .friendMag ul:after, .friendsList .fList li dl:after, .changeFace:after, .itoolsTips:after, .channel p:after, .memberBox h3:after, .memberBox h2:after, .categoryTab:after, .ItemCont:after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+}
+.mhdNav, .mhdNav .chl:after, .mhdNav .fn, .mhdTab, .photoList, .tools p, .modifyImg, .changeStyle, .themeSelect li, .friendMag ul, .friendsList .fList li dl, .changeFace, .itoolsTips, .channel p, .memberBox h3, .memberBox h2, .categoryTab, .ItemCont {
+}
+.mhdNav, .mhdNav .chl, .mhdNav .fn, .isflower1, .isflower2, .isflower3, .isflower4, .isflower5, .ifeed5, .ifeed10, .ifeed20, .ionfeed5, .ionfeed10, .ionfeed20, .ifeed50, .ifeed100, .ionfeed50, .ionfeed100, .ireview, .itools, .iupface, .istyle, .iset, .iedittag, .ieditfirend, .itoolsFlower, .itoolsBox, .itoolsSet, .itoolsUpface, .itoolsStyle, .itoolsFeed, .itoolsReview, .itoolsFavorite, .memberInfo .det, .memberInfo .offdet, .manaplus, .ionbtn, .ioffbtn, .batche p, .asideFn li, .batche p, .newRemark .title .switch, .newRemark .title .onswitch, .asideNav li, .asideNav li.on, .themeSelect li .con .fn, .setNav li, .noteList td.title, .mhdNav .food a, .mhdNav .manage a, .memberBox .snsBind .snsUnbind, .reportErrorList .title .switch, .reportErrorList .title .onswitch, .rpErrorIco, .gallery-list .gallery-info h4 .device {
+    background-image: url("buttons-8.png");
+    background-repeat: no-repeat;
+}
+.myListBox ul li, td.del, span.del, .together dl dt, .itoolsTips .close, .categoryTab, .categoryTab ul, .categoryTab li.on a, .categoryTab li.on a em, .categoryTab li a:hover, .categoryTab li a:hover em, .categoryTab li.first, .categoryTab li.mark, .idelBtn {
+    background-image: url("buttons-9.png");
+    background-repeat: no-repeat;
+}
+.memberBox .sort {
+    background-image: url("newsearch.png");
+    background-repeat: no-repeat;
+}
+.ibadge, .iadminIcon {
+    background-image: url("buttons-10.png");
+    background-repeat: no-repeat;
+}
+.memberInfo .bn a.addFriend, .memberInfo .bn a.sendMsg, .uList li, .memberInfo .bn a.oldFriend, .iflower1, .iflower2, .iflower3, .iflower4, .iflower5, .isflower1, .isflower2, .isflower3, .isflower4, .isflower5, .ifeed5, .ifeed10, .ifeed20, .ionfeed5, .ionfeed10, .ionfeed20, .ifeed50, .ifeed100, .ionfeed50, .ionfeed100, .ireview, .itools, .iupface, .istyle, .iset, .iedittag, .ieditfirend, span.del, .ibadge, .iadminIcon, .idelBtn {
+    display: inline-block;
+    position: relative;
+    vertical-align: text-top;
+}
+.isflower1, .isflower2, .isflower3, .isflower4, .isflower5 {
+    height: 15px;
+    width: 15px;
+}
+.ireview, .itools, .iupface, .istyle, .iset, .iedittag, .ieditfirend {
+    height: 16px;
+    width: 16px;
+}
+.ifeed5, .ifeed10, .ifeed20, .ionfeed5, .ionfeed10, .ionfeed20, .ifeed50, .ifeed100, .ionfeed50, .ionfeed100 {
+    cursor: pointer;
+    height: 13px;
+    margin-right: 3px;
+    width: 26px;
+}
+.ionbtn, .ioffbtn {
+    cursor: pointer;
+    float: right;
+    height: 9px;
+    margin: 8px 10px 0 0;
+    width: 9px;
+}
+.iflower1, .iflower2, .iflower3, .iflower4, .iflower5 {
+    height: 23px;
+    width: 23px;
+}
+span.del {
+    background-position: 3px -407px;
+    height: 16px;
+    width: 16px;
+}
+.iflower1 {
+    background-position: 0 -520px;
+}
+.iflower2 {
+    background-position: 0 -560px;
+}
+.iflower3 {
+    background-position: 0 -600px;
+}
+.iflower4 {
+    background-position: 0 -640px;
+}
+.iflower5 {
+    background-position: 0 -680px;
+}
+.isflower1 {
+    background-position: 0 -240px;
+}
+.isflower2 {
+    background-position: 0 -280px;
+}
+.isflower3 {
+    background-position: 0 -320px;
+}
+.isflower4 {
+    background-position: 0 -360px;
+}
+.isflower5 {
+    background-position: 0 -400px;
+}
+.ifeed5 {
+    background-position: 0 -440px;
+}
+.ionfeed5 {
+    background-position: 0 -480px;
+}
+.ifeed10 {
+    background-position: 0 -520px;
+}
+.ionfeed10 {
+    background-position: 0 -560px;
+}
+.ifeed20 {
+    background-position: 0 -600px;
+}
+.ionfeed20 {
+    background-position: 0 -640px;
+}
+.ifeed50 {
+    background-position: right -440px;
+}
+.ifeed100 {
+    background-position: right -520px;
+}
+.ionfeed50 {
+    background-position: right -480px;
+}
+.ionfeed100 {
+    background-position: right -560px;
+}
+.ireview {
+    background-position: 0 -680px;
+}
+.itools {
+    background-position: 0 -720px;
+}
+.iupface {
+    background-position: 0 -760px;
+}
+.istyle {
+    background-position: 0 -800px;
+}
+.iset {
+    background-position: 0 -840px;
+}
+.iedittag {
+    background-position: 0 -880px;
+}
+.ieditfirend {
+    background-position: 0 -1000px;
+}
+.ionbtn {
+    background-position: 0 -1040px;
+}
+.ioffbtn {
+    background-position: 0 -1080px;
+}
+.itoolsFlower {
+    background-position: 0 -679px;
+}
+.itoolsBox {
+    background-position: 0 -716px;
+}
+.itoolsSet {
+    background-position: 0 -838px;
+}
+.itoolsUpface {
+    background-position: 0 -758px;
+}
+.itoolsStyle {
+    background-position: 0 -798px;
+}
+.itoolsFeed {
+    background-position: 0 -1320px;
+}
+.itoolsReview {
+    background-position: 0 -1357px;
+}
+.itoolsFavorite {
+    background-position: 0 -1397px;
+}
+.ibadge {
+    background-position: right -961px;
+    height: 18px;
+    margin-right: 4px;
+    width: 16px;
+}
+.iadminIcon {
+    background-position: right -138px;
+    height: 18px;
+    margin-right: 4px;
+    width: 16px;
+}
+.manaplus {
+    background-position: right -195px;
+    padding-right: 15px;
+}
+a.sort {
+    background-position: right -433px;
+    color: #6666CC;
+    float: right;
+    padding-right: 10px;
+}
+.mhdNav .fn li a.newMail, .mhdNav .fn li a.newMail:link, .mhdNav .fn li a.newMail:visited, .mhdNav .fn li a.newMail:hover, .mhdNav .fn li a.newMail:active {
+    background: url("http://i1.dpfile.com/s/css/img/icn_newmail.v201110111446.gif") no-repeat scroll right 4px transparent;
+    padding-right: 15px;
+}
+a.btnAddMyList {
+    background: url("http://i2.dpfile.com/s/css/img/addmylist.v201110111446.gif") repeat scroll 0 0 transparent;
+    display: block;
+    height: 30px;
+    margin: 10px auto;
+    width: 140px;
+}
+a.btnAddMyList:hover {
+    background-position: 0 -30px;
+}
+a.btnAddMyList:active {
+    background-position: 0 -60px;
+}
+a.btnAddPhoto {
+    background-image: url("loading-1.png");
+    background-position: -40px -170px;
+    display: block;
+    font-size: 1.1em;
+    font-weight: bold;
+    height: 35px;
+    line-height: 32px;
+    margin: 10px auto;
+    text-indent: 50px;
+    width: 140px;
+}
+a.btnAddvideo {
+    background: url("http://i3.dpfile.com/s/css/img/uploadimage.v10111801.gif") repeat scroll 0 -90px transparent;
+    display: block;
+    height: 30px;
+    margin: 10px auto;
+    width: 140px;
+}
+a.btnAddvideo:hover {
+    background-position: 0 -120px;
+}
+a.btnAddvideo:active {
+    background-position: 0 -150px;
+}
+.bind-setting .bind-summary li, .btn-fn-d, .btn-fn-d .form-btn, .btn-fn-d .txt, .bind-setting .func-block .bindbtn, .bind-setting .func-block .cancelbtn {
+    background-image: url("buttons-11.png");
+    background-repeat: no-repeat;
+}
+.uList {
+    overflow: hidden;
+}
+.uList li {
+    padding: 2px 10px;
+    text-align: center;
+}
+.uList li dd a {
+    background: none repeat scroll 0 0 transparent;
+    display: block;
+}
+.uList li dd a:hover {
+    background: none repeat scroll 0 0 transparent;
+}
+.uList li dd img {
+    border: medium none;
+}
+.uList li dt {
+    margin-top: 5px;
+    overflow: hidden;
+    width: 6em;
+}
+.newsList {
+    color: #6666CC;
+}
+.newsList .info {
+    color: #999999;
+    padding-left: 10px;
+}
+.memberBox {
+    margin-bottom: 15px;
+}
+.memberBox h3, .memberBox h2 {
+    border-bottom: 1px solid #CCCCCC;
+    color: #CC0000;
+    margin-bottom: 7px;
+    padding: 4px 0;
+    position: relative;
+}
+.memberBox h3 strong {
+    font-weight: normal;
+}
+.memberBox h3 .other {
+    color: #999999;
+    margin-left: 5px;
+}
+.memberBox h3 .fn, .memberBox h3 .fn:link, .emberBox h3 .fn:visited, .memberBox h3 .fn:active, .memberBox h2 .fn {
+    float: right;
+}
+.memberBox h3 .fn:hover {
+    background: none repeat scroll 0 0 #6666CC;
+    color: #FFFFFF;
+    float: right;
+}
+.memberBox h3 .sort {
+    color: #000000;
+    float: right;
+}
+.memberBox h2 .tip, .memberBox h3 .tip {
+    color: #999999;
+    margin-left: 2px;
+}
+.memberBox ul {
+    margin-bottom: 8px;
+    padding-left: 3px;
+}
+.memberBox ul li .dot {
+    color: #6666CC;
+}
+.memberBox .more {
+    margin-left: 1em;
+}
+.memberBox .sort {
+    background-position: right -433px;
+    color: #6666CC;
+    float: right;
+    padding-right: 10px;
+}
+.memberBox .sort a {
+    color: #6666CC;
+}
+.memberBox .date {
+    color: #999999;
+}
+.memberBox p.date {
+    padding-left: 1em;
+}
+.memberBox .nav {
+    padding: 5px 0 8px;
+}
+.memberBox table tr.odd, .memberBox table tr.even {
+    background: none repeat scroll 0 0 #EFEFEF;
+}
+.memberBox table th, .memberBox table td {
+    color: #999999;
+    padding: 3px 0 3px 7px;
+    text-align: left;
+}
+.memberBox table th {
+    padding-top: 0;
+}
+.pageNum {
+    font-size: 12px;
+}
+.memberBox table td cite {
+    display: block;
+}
+.memberBox table.info td {
+    color: #000000;
+    padding: 5px 0 5px 7px;
+}
+.memberBox table.info td input.con, .memberBox table.info td textarea {
+    border: 1px solid #787878;
+}
+.memberBox table.info td.lab {
+    width: 110px;
+}
+.sMemberBox {
+    border: 1px solid #CCCCCC;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+.sMemberBox h3 {
+    border-bottom: 1px solid #CCCCCC;
+    color: #CC0000;
+    font-size: 13px;
+    margin-bottom: 10px;
+    padding-bottom: 2px;
+    position: relative;
+}
+.sMemberBox h3 img {
+    bottom: 2px;
+    left: 0;
+    position: absolute;
+}
+.sMemberBox .asideList li img {
+    position: relative;
+    top: 4px;
+}
+.asideNav {
+    margin-top: 15px;
+    padding: 5px;
+}
+.asideNav li {
+    background-position: 0 -1239px;
+    margin-bottom: 5px;
+    padding-left: 15px;
+}
+.asideNav li.on {
+    background-position: 0 -1199px;
+}
+.toolsBox {
+    margin-bottom: 10px;
+}
+.toolsBox h3 {
+    background: none repeat scroll 0 0 #EFEFEF;
+    color: #CC0000;
+    overflow: hidden;
+    padding: 4px 8px;
+}
+.toolsBox h3 .fn {
+    color: #999999;
+    cursor: pointer;
+    float: right;
+}
+.toolsBox .con {
+    padding: 5px 0 0 8px;
+}
+.toolsBox .con ul li {
+    color: #6666CC;
+    margin-bottom: 3px;
+}
+.toolsBox .con ul li .tip {
+    color: #999999;
+    margin-left: 3px;
+}
+.setNav {
+    margin-bottom: 3px;
+}
+.setNav h4 {
+    font-weight: bold;
+}
+.setNav ul {
+    padding-left: 8px;
+}
+.setNav li {
+    background-position: 0 -953px;
+    padding-left: 12px;
+}
+.setNav li.on {
+    background-position: 0 -913px;
+}
+.flower h4 {
+    border-bottom: 1px solid #CCCCCC;
+    color: #CC0000;
+    padding: 5px;
+}
+.flower ul {
+    overflow: hidden;
+    padding: 0 5px;
+}
+.flower ul li {
+    color: #999999;
+    float: left;
+    padding: 5px 1px;
+    text-align: center;
+    width: 36px;
+}
+.noteList .title {
+    padding-left: 25px;
+}
+.noteList td.title {
+    background-position: 5px -1155px;
+}
+.noteList .count {
+    padding-left: 0;
+    text-align: center;
+}
+.noteList .del {
+    background-position: 5px -401px;
+    cursor: pointer;
+}
+.mhd0, .mhd1, .mhd2, .mhd3, .mhd4, .mhd5, .mhd6, .mhd7, .mhd8, .mhd9, .mhd10, .mhd11, .mhd12, .mhd13, .mhd51, .mhd52, .mhd53, .mhd54, .mhd55, .mhd56 {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-position: 0 33px;
+    background-repeat: no-repeat;
+    border-color: -moz-use-text-color;
+    border-style: solid;
+    border-width: 0 1px 1px;
+    height: 133px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.mhd0 {
+    border-color: #999999;
+}
+.mhd0 .mhdTab li {
+    background: none repeat scroll 0 0 #FAFAFA;
+    border: 1px solid #999999;
+}
+.mhd0 .mhdTab li a strong, .mhd0 .mhdTab li a em {
+    border-top: 1px solid #999999;
+}
+.mhd1 {
+    border-color: #FF99FF;
+}
+.mhd1 .mhdTab li {
+    background: none repeat scroll 0 0 #FFCCCC;
+    border: 1px solid #FF99FF;
+}
+.mhd1 .mhdTab li a strong, .mhd1 .mhdTab li a em {
+    border-top: 1px solid #FF99FF;
+}
+.mhd2 {
+    border-color: #FF9999;
+}
+.mhd2 .mhdTab li {
+    background: none repeat scroll 0 0 #FFCCCC;
+    border: 1px solid #FF9999;
+}
+.mhd2 .mhdTab li a strong, .mhd2 .mhdTab li a em {
+    border-top: 1px solid #FF9999;
+}
+.mhd3 {
+    border-color: #669966;
+}
+.mhd3 .mhdTab li {
+    background: none repeat scroll 0 0 #E0FBA4;
+    border: 1px solid #669966;
+}
+.mhd3 .mhdTab li a strong, .mhd3 .mhdTab li a em {
+    border-top: 1px solid #669966;
+}
+.mhd4 {
+    border-color: #FF6600;
+}
+.mhd4 .mhdTab li {
+    background: none repeat scroll 0 0 #FFFEAB;
+    border: 1px solid #FF6600;
+}
+.mhd4 .mhdTab li a strong, .mhd4 .mhdTab li a em {
+    border-top: 1px solid #FF6600;
+}
+.mhd5 {
+    border-color: #778CAB;
+}
+.mhd5 .mhdTab li {
+    background: none repeat scroll 0 0 #E7E9E4;
+    border: 1px solid #778CAB;
+}
+.mhd5 .mhdTab li a strong, .mhd5 .mhdTab li a em {
+    border-top: 1px solid #778CAB;
+}
+.mhd6 {
+    border-color: #D17301;
+}
+.mhd6 .mhdTab li {
+    background: none repeat scroll 0 0 #FFEDDD;
+    border: 1px solid #D17301;
+}
+.mhd6 .mhdTab li a strong, .mhd6 .mhdTab li a em {
+    border-top: 1px solid #D17301;
+}
+.mhd7 {
+    border-color: #879C59;
+}
+.mhd7 .mhdTab li {
+    background: none repeat scroll 0 0 #E5ECA9;
+    border: 1px solid #879C59;
+}
+.mhd7 .mhdTab li a strong, .mhd7 .mhdTab li a em {
+    border-top: 1px solid #879C59;
+}
+.mhd8 {
+    border-color: #D17301;
+}
+.mhd8 .mhdTab li {
+    background: none repeat scroll 0 0 #FFEDDD;
+    border: 1px solid #D17301;
+}
+.mhd8 .mhdTab li a strong, .mhd8 .mhdTab li a em {
+    border-top: 1px solid #D17301;
+}
+.mhd9 {
+    border-color: #996633;
+}
+.mhd9 .mhdTab li {
+    background: none repeat scroll 0 0 #FFFF99;
+    border: 1px solid #996633;
+}
+.mhd9 .mhdTab li a strong, .mhd9 .mhdTab li a em {
+    border-top: 1px solid #996633;
+}
+.mhd10 {
+    border-color: #C1B7D9;
+}
+.mhd10 .mhdTab li {
+    background: none repeat scroll 0 0 #FEEEB0;
+    border: 1px solid #C1B7D9;
+}
+.mhd10 .mhdTab li a strong, .mhd10 .mhdTab li a em {
+    border-top: 1px solid #C1B7D9;
+}
+.mhd11 {
+    border-color: #3E8C1C;
+}
+.mhd11 .mhdTab li {
+    background: none repeat scroll 0 0 #D5FFBB;
+    border: 1px solid #3E8C1C;
+}
+.mhd11 .mhdTab li a strong, .mhd11.mhdTab li a em {
+    border-top: 1px solid #3E8C1C;
+}
+.mhd12 {
+    border-color: #164B5B;
+}
+.mhd12 .mhdTab li {
+    background: none repeat scroll 0 0 #C3FCFF;
+    border: 1px solid #164B5B;
+}
+.mhd12 .mhdTab li a strong, .mhd12 .mhdTab li a em {
+    border-top: 1px solid #164B5B;
+}
+.mhd13 {
+    border-color: #BF7E17;
+}
+.mhd13 .mhdTab li {
+    background: none repeat scroll 0 0 #FFEABE;
+    border: 1px solid #BF7E17;
+}
+.mhd13 .mhdTab li a strong, .mhd13 .mhdTab li a em {
+    border-top: 1px solid #BF7E17;
+}
+.mhd51 {
+    border-color: #879C59;
+}
+.mhd51 .mhdTab li {
+    background: none repeat scroll 0 0 #E5ECA9;
+    border: 1px solid #879C59;
+}
+.mhd51 .mhdTab li a strong, .mhd51 .mhdTab li a em {
+    border-top: 1px solid #879C59;
+}
+.mhd52 {
+    border-color: #FF6600;
+}
+.mhd52 .mhdTab li {
+    background: none repeat scroll 0 0 #FFFEAB;
+    border: 1px solid #FF6600;
+}
+.mhd52 .mhdTab li a strong, .mhd52 .mhdTab li a em {
+    border-top: 1px solid #FF6600;
+}
+.mhd53 {
+    border-color: #996633;
+}
+.mhd53 .mhdTab li {
+    background: none repeat scroll 0 0 #FFFF99;
+    border: 1px solid #996633;
+}
+.mhd53 .mhdTab li a strong, .mhd53 .mhdTab li a em {
+    border-top: 1px solid #996633;
+}
+.mhd54 {
+    border-color: #FF9999;
+}
+.mhd54 .mhdTab li {
+    background: none repeat scroll 0 0 #FFCCCC;
+    border: 1px solid #FF9999;
+}
+.mhd54 .mhdTab li a strong, .mhd54 .mhdTab li a em {
+    border-top: 1px solid #FF9999;
+}
+.mhd55 {
+    border-color: #999999;
+}
+.mhd55 .mhdTab li {
+    background: none repeat scroll 0 0 #FAFAFA;
+    border: 1px solid #999999;
+}
+.mhd55 .mhdTab li a strong, .mhd55 .mhdTab li a em {
+    border-top: 1px solid #999999;
+}
+.mhd56 {
+    border-color: #778CAB;
+}
+.mhd56 .mhdTab li {
+    background: none repeat scroll 0 0 #E7E9E4;
+    border: 1px solid #778CAB;
+}
+.mhd56 .mhdTab li a strong, .mhd56 .mhdTab li a em {
+    border-top: 1px solid #778CAB;
+}
+.mhd0 .mhdTab li, .mhd1 .mhdTab li, .mhd2 .mhdTab li, .mhd3 .mhdTab li, .mhd4 .mhdTab li, .mhd5 .mhdTab li, .mhd6 .mhdTab li, .mhd7 .mhdTab li, .mhd8 .mhdTab li, .mhd9 .mhdTab li, .mhd10 .mhdTab li, .mhd11 .mhdTab li, .mhd11 .mhdTab li, .mhd12 .mhdTab li, .mhd13 .mhdTab li .mhd51 .mhdTab li, .mhd52 .mhdTab li, .mhd53 .mhdTab li, .mhd54 .mhdTab li, .mhd55 .mhdTab li, .mhd56 .mhdTab li {
+    border-top: 0 none;
+}
+.btn-fn-d {
+    background-position: 0 0;
+}
+.btn-fn-d .form-btn, .btn-fn-d .txt {
+    background-color: #E7E7E7;
+    background-position: right 0;
+    color: #61646E;
+}
+.btn-type-d {
+    display: inline-block;
+    font-size: 1em;
+    height: 33px;
+    padding: 0 0 0 2px;
+}
+.btn-type-d .form-btn, .btn-type-d .txt {
+    border: medium none;
+    float: left;
+    font-weight: bold;
+    height: 34px;
+    margin: 0;
+    padding: 0 15px 3px 13px;
+}
+.mhdNav {
+    background-position: 0 -40px;
+    background-repeat: repeat-x;
+    font-size: 13px;
+    height: 33px;
+    margin: 0 8px;
+    position: relative;
+}
+.mhdNav ul {
+    height: 33px;
+    position: absolute;
+}
+.mhdNav ul li {
+    color: #CCCCCC;
+    display: inline;
+    float: left;
+    margin: 7px 5px 0;
+}
+.mhdNav ul li a, .mhdNav ul li a:link, .mhdNav ul li a:visited, .mhdNav ul li a:active {
+    color: #FFFFFF;
+    padding: 2px 1px 0;
+}
+.mhdNav ul li a:hover {
+    padding: 2px 1px 0;
+    text-decoration: underline;
+}
+.mhdNav .food a, .mhdNav ul .food a:link, .mhdNav .food a:visited, .mhdNav .food a:hover, .mhdNav .food a:active .mhdNav .manage a, .mhdNav ul .manage a:link, .mhdNav .manage a:visited, .mhdNav .manage a:hover, .mhdNav .manage a:active {
+    padding: 2px 15px 0 1px;
+}
+.mhdNav .chl {
+    left: -9px;
+    padding-left: 100px;
+}
+.mhdNav .fn {
+    background-position: right -80px;
+    padding-right: 5px;
+    right: -9px;
+}
+.mhdNav .logo {
+    height: 33px;
+    left: 0;
+    position: absolute;
+    text-indent: -9999px;
+    width: 100px;
+    z-index: 999;
+}
+.mhdNav .food a, .mhdNav .manage a {
+    background-position: right -1273px;
+}
+.mhdName {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 30px 0 22px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.mhdTab {
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.mhdTab li {
+    background-position: 0 -200px;
+    border-bottom: 1px solid #FDA535;
+    display: inline-block;
+    margin-right: 2px;
+    position: relative;
+    top: 1px;
+}
+.mhdTab li.on {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+}
+.mhdTab li a {
+    display: block;
+}
+.mhdTab li a strong, .mhdTab li a em {
+    cursor: pointer;
+    display: block;
+    font-weight: normal;
+    padding: 5px 10px 2px;
+    position: relative;
+    top: -1px;
+}
+.mhdTab li a strong:after, .mhdTab li a em:after {
+    content: " ";
+}
+.favorite .favoriteList {
+    padding: 8px;
+    position: relative;
+}
+.favorite .favoriteList .fn {
+    bottom: 8px;
+    position: absolute;
+    right: 8px;
+}
+.favorite .odd {
+    background: none repeat scroll 0 0 #EFEFEF;
+}
+.BodyMsg {
+    font-size: 13px;
+    font-weight: bold;
+    padding: 20px 0;
+    text-align: center;
+}
+.photoList li {
+    display: inline;
+    float: left;
+    padding: 10px 0 0;
+    text-align: center;
+    width: 180px;
+}
+.photoList li a.pic {
+    display: block;
+}
+.photoList li img {
+    border: 1px solid #EEEEEE;
+    padding: 1px;
+}
+.photoList li .fn {
+    height: 22px;
+    margin-top: 3px;
+    padding-top: 2px;
+}
+.photoList li .fn * {
+    display: none;
+}
+.photoList li.on {
+    background: none repeat scroll 0 0 #EFEFEF;
+}
+.photoList li.on .fn {
+    background: none repeat scroll 0 0 #CCCCCC;
+}
+.photoList li.on .fn * {
+    display: inline;
+}
+.gallery-list {
+    clear: both;
+    margin: 0;
+    padding-bottom: 10px;
+    width: 720px;
+}
+.gallery-list .gallery-item {
+    display: inline;
+    float: left;
+    margin: 15px 0 0 50px;
+    position: relative;
+    width: 310px;
+}
+.gallery-list .gallery-title {
+    border: medium none;
+    color: #333333;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.gallery-list .gallery-title strong {
+    float: left;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.gallery-list .gallery-title span {
+    color: #999999;
+    font-size: 1em;
+    font-weight: normal;
+}
+.gallery-list .gallery-title em {
+    color: #999999;
+    float: left;
+    font-size: 0.8em;
+    margin: 3px 10px 0;
+}
+.gallery-list .gallery-title .item-rank-rst {
+    margin-top: 5px;
+}
+.gallery-list .gallery-info ul {
+    margin-top: 5px;
+    padding-left: 0;
+}
+.gallery-list .gallery-info h4 {
+    color: #989898;
+    font-weight: normal;
+}
+.gallery-list .gallery-info h4 .device {
+    background-position: 0 -1520px;
+    display: inline-block;
+    height: 12px;
+    margin-left: 6px;
+    position: relative;
+    text-indent: -9999px;
+    top: 2px;
+    width: 8px;
+}
+.gallery-list li {
+    color: #CCCCCC;
+    display: inline;
+    margin-right: 3px;
+}
+.gallery-list li .visited {
+    color: #989898;
+}
+.gallery-list li a, .allery-list li span {
+    margin-right: 5px;
+}
+.gallery-list li span {
+    color: #111111;
+}
+.gallery-list li a span {
+    color: #999999;
+}
+.gallery-list li .note {
+    color: #999999;
+}
+.gallery-list li .txt {
+    color: #666666;
+}
+.gallery-list li a {
+    color: #6666CC;
+}
+.gallery-list li .responses {
+    color: #999999;
+    margin: 0;
+    padding-right: 5px;
+}
+.memberInfo {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CCCCCC;
+    font-size: 13px;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 9px;
+}
+.memberInfo .avatar {
+    clear: both;
+    font-size: 12px;
+    height: auto;
+    overflow: hidden;
+}
+.memberInfo .avatar h4 {
+    font-size: 13px;
+    font-weight: bold;
+}
+.memberInfo .avatar dt {
+    height: 96px;
+    padding-bottom: 5px;
+    width: 96px;
+}
+.memberInfo .avatar dt, .memberInfo .avatar dd {
+    display: inline;
+    float: left;
+    line-height: 1.5em;
+}
+.memberInfo .avatar dd {
+    margin-left: 5px;
+}
+.memberInfo .avatar .uList h4 {
+    font: bold 13px/18px Arial;
+}
+.memberInfo .info {
+    border-top: 1px dashed #CCCCCC;
+    font-size: 12px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    width: 208px;
+}
+.memberInfo .info li {
+    margin-top: 3px;
+}
+.memberInfo .info li #ueditinfo {
+    position: absolute;
+    right: 0;
+}
+.memberInfo .info li .lab {
+    color: #999999;
+}
+.memberInfo .info li img {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.memberInfo .info li.newlocal {
+    position: relative;
+}
+.memberInfo .info .memberInfo .intro {
+    border-top: 1px dotted #000000;
+    margin-top: 10px;
+    padding-top: 5px;
+}
+.memberInfo .info .memberInfo .det {
+    font-size: 13px;
+    text-align: right;
+}
+.memberInfo .info .memberInfo .det img {
+    padding-bottom: 2px;
+}
+.memberInfo .info .memberInfo .det a {
+    text-decoration: underline;
+}
+.memberInfo .det {
+    background-position: 0 -116px;
+    padding-left: 15px;
+}
+.memberInfo .offdet {
+    background-position: 0 -156px;
+    padding-left: 15px;
+}
+.memberInfo .bn a {
+    height: 30px;
+    width: 101px;
+}
+.memberInfo .bn a.addFriend, .memberInfo .bn a.addFriend:hover, .memberInfo .bn a.addFriend:active {
+    background-image: url("http://i2.dpfile.com/s/css/img/addfriend.v201110111446.gif");
+    background-repeat: no-repeat;
+}
+.memberInfo .bn a.oldFriend, .memberInfo .bn a.oldFriend:hover, .memberInfo .bn a.oldFriend:active {
+    background-image: url("http://i3.dpfile.com/s/css/img/addfriend1.v201110111446.gif");
+    background-repeat: no-repeat;
+}
+.memberInfo .bn a.addFriend:hover {
+    background-position: 0 -30px;
+}
+.memberInfo .bn a.addFriend:active {
+    background-position: 0 -60px;
+}
+.memberInfo .bn a.sendMsg, .memberInfo .bn a.sendMsg:hover, .memberInfo .bn a.sendMsg:active {
+    background-image: url("http://i1.dpfile.com/s/css/img/sendmessage.v201110111446.gif");
+    background-repeat: no-repeat;
+}
+.memberInfo .bn a.sendMsg:hover {
+    background-position: 0 -30px;
+}
+.memberInfo .bn a.sendMsg:active {
+    background-position: 0 -60px;
+}
+.memberInfo .detCon {
+    display: none;
+}
+.memberInfo .ondetCon {
+    display: block;
+}
+.memberInfo .newly {
+    margin: 5px 0;
+}
+.memberInfo .newly h4 {
+    border-bottom: 1px solid #CCCCCC;
+    color: #CC0000;
+    margin-bottom: 10px;
+    padding: 5px 0;
+}
+.newRemark h3 {
+    color: #CC0000;
+    margin-bottom: 5px;
+}
+.newRemark .contList-fn .date {
+    color: #999999;
+}
+.newRemark .more {
+    float: right;
+}
+.trends li {
+    color: #999999;
+    line-height: 1.7;
+    margin-bottom: 5px;
+}
+.trends li a:link, .trends li a:visited {
+    color: #6666CC;
+    padding: 2px 1px 0;
+    text-decoration: none;
+}
+.trends li a:hover, .trends li a:active {
+    background: none repeat scroll 0 0 #6666CC;
+    color: #FFFFFF;
+    padding: 2px 1px 0;
+    text-decoration: none;
+}
+.sendTopics .more, .reviewTopics .more, .myGropus .more {
+    float: right;
+    margin-top: 5px;
+}
+.batche {
+    background: none repeat scroll 0 0 #EFEFEF;
+    padding: 3px 5px;
+}
+.batche p {
+    background-position: 0 -1118px;
+    padding-left: 20px;
+}
+.batche p.batcheFriends {
+    background-position: 0 -999px;
+}
+.weather {
+    background: none repeat scroll 0 0 #EFEFEF;
+    margin-bottom: 10px;
+    padding: 2px 5px;
+    text-align: center;
+}
+.weather .info {
+    color: #CC0000;
+}
+.groupList .uList li {
+    padding: 2px 30px;
+}
+.reviewTopics, .groupList, .myGropus, .sendTopics {
+    margin-bottom: 20px;
+}
+.reviewManage .noteList .response, .reviewManage .noteList .flower, .noteList .pic {
+    text-align: center;
+}
+.reviewManage .noteList th {
+    background: none repeat scroll 0 0 #EFEFEF;
+    color: #000000;
+    padding: 5px 0 5px 7px;
+}
+.reviewManage .noteList .fn {
+    text-align: center;
+}
+.joinGroups td img {
+    margin-right: 10px;
+    position: relative;
+    top: 4px;
+}
+.friendsList .fList {
+    overflow: hidden;
+    padding-left: 10px;
+}
+.friendsList .fList li {
+    float: left;
+    margin-right: 15px;
+    padding: 20px 20px 0;
+    width: 185px;
+}
+.friendsList .fList li.on {
+    background: none repeat scroll 0 0 #F8F8F8;
+}
+.friendsList .fList li.on dd .fn {
+    display: block;
+}
+.friendsList .fList li dt img {
+    border: 1px solid #EFEFEF;
+    padding: 1px;
+}
+.friendsList .fList li dt {
+    margin-right: -60px;
+}
+.friendsList .fList li dt, .friendsList .fList li dd {
+    display: inline;
+    float: left;
+}
+.friendsList .fList li dd {
+    height: 35px;
+    margin-left: 50px;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    position: relative;
+    width: 100%;
+}
+.friendsList .fList li dd img {
+    display: block;
+}
+.friendsList .fList li dd .fn {
+    color: #6666CC;
+    display: none;
+    margin-top: 3px;
+    position: absolute;
+}
+.perList {
+    border-bottom: 1px dotted #CCCCCC;
+    clear: both;
+    overflow: hidden;
+    padding: 10px 0;
+}
+.perList dt cite {
+}
+.perList dt .image {
+    float: left;
+    position: relative;
+    text-align: center;
+}
+.perList dt .image img, .perList dt .image div {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.perList dd {
+    overflow: hidden;
+}
+.perList dd .fn {
+    color: #999999;
+    overflow: hidden;
+}
+.perList dd .fn li {
+    float: left;
+    margin-right: 5px;
+}
+.perList dd .con .reason {
+    margin-top: 10px;
+}
+.perList dt cite, .perList dd {
+    margin-left: 128px;
+}
+.perList .con .intro {
+    height: 20px;
+}
+.myListBox {
+    background: none repeat scroll 0 0 #FCFBDD;
+    border: 1px solid #EFEFEF;
+    margin-top: 5px;
+    padding: 10px;
+}
+.myListBox h3 {
+    font-size: 14.8px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+.myListBox ul li {
+    background-position: 0 -435px;
+    font-size: 13px;
+    margin: 5px 0;
+    padding-left: 18px;
+}
+.tools, .channel {
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+.channel {
+    border-bottom: 1px solid #CCCCCC;
+    font-weight: bold;
+}
+.tools p, .channel p {
+    margin-bottom: 5px;
+}
+.tools .item, .channel .item {
+    float: left;
+    padding-left: 20px;
+    width: 80px;
+}
+.newRemark {
+    margin-bottom: 5px;
+}
+.newRemark .title {
+    background: none repeat scroll 0 0 #EFEFEF;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.8;
+    padding-left: 5px;
+    position: relative;
+}
+.newRemark .title .time {
+    color: #999999;
+    margin-left: 4px;
+}
+.newRemark .title .switch, .newRemark .title .onswitch {
+    background-position: 0 -1038px;
+    display: block;
+    height: 14px;
+    position: absolute;
+    right: 12px;
+    top: 6px;
+    width: 21px;
+}
+.newRemark .title .onswitch {
+    background-position: 0 -1076px;
+}
+.newRemark .contList {
+    margin-bottom: 5px;
+}
+.newRemark .contList dd {
+    display: none;
+}
+.newRemark .contList-fn li {
+    color: #999999;
+}
+.modifyImg {
+    margin: 15px 0 20px;
+}
+.modifyImg .tool {
+    background: none repeat scroll 0 0 #EFEFEF;
+    display: inline;
+    float: left;
+    height: 415px;
+    width: 465px;
+}
+.modifyImg .fn {
+    display: inline;
+    float: right;
+    width: 240px;
+}
+.modifyImg .fn h4 {
+    border-bottom: 1px solid #CCCCCC;
+    margin-bottom: 8px;
+    padding: 5px;
+    text-align: center;
+}
+.modifyImg .fn p {
+    margin-bottom: 8px;
+}
+.modifyImg .fn .tip {
+    color: #999999;
+    text-align: center;
+}
+.modifyImg .fn .fntip {
+    color: #999999;
+}
+.changeStyle ul li {
+    border: 1px solid #FFFFFF;
+    float: left;
+    margin: 10px 5px;
+    padding: 20px 20px 45px;
+    position: relative;
+}
+.changeStyle ul li label {
+    color: #6666CC;
+    display: block;
+    left: 80px;
+    position: absolute;
+    top: 50px;
+}
+.changeStyle #saveStyle {
+    display: block;
+    margin: 0 auto;
+    padding: 2px 5px;
+}
+.themeSelect li {
+    border: 1px solid #FFFFFF;
+    margin-bottom: 8px;
+    padding: 13px;
+}
+.themeSelect li img {
+    float: left;
+}
+.themeSelect li .con {
+    display: inline;
+    float: left;
+    padding: 10px 0 0 15px;
+}
+.themeSelect li .con h4 {
+    font-size: 14.8px;
+    font-weight: bold;
+}
+.themeSelect li .con .fn {
+    display: none;
+}
+.themeSelect li.on {
+    background: none repeat scroll 0 0 #F8F8F8;
+    border: 1px solid #CCCCCC;
+}
+.themeSelect li.on .con .fn {
+    background-position: 0 -1276px;
+    display: block;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+.feedBox h3 {
+    border-bottom: 1px dashed #CCCCCC;
+    color: #CC0000;
+    margin-bottom: 7px;
+    padding: 4px 0;
+}
+.feedList {
+    border-bottom: 1px dashed #CCCCCC;
+    clear: both;
+    overflow: hidden;
+    padding: 10px 0;
+}
+.feedList .img {
+    border: 1px solid #CCCCCC;
+    float: left;
+    height: 48px;
+    padding: 1px;
+    width: 48px;
+}
+.feedList ul {
+    float: left;
+    margin-bottom: 0;
+    padding-left: 15px;
+}
+.feedList ul li {
+    padding-bottom: 10px;
+}
+.feedList ul li .time {
+    color: #999999;
+    margin-left: 20px;
+}
+#feedhtml {
+    margin-bottom: 10px;
+}
+.feedTip {
+    background: none repeat scroll 0 0 #FFF4D2;
+    margin-bottom: 10px;
+    padding: 10px 25px 0;
+}
+.feedTip p {
+    padding-bottom: 10px;
+}
+.userInfo p {
+    margin-bottom: 3px;
+}
+.userInfo .oldInfo h4 {
+    border-top: 1px dashed #CCCCCC;
+    color: #CC0000;
+    margin: 5px 0 2px;
+    padding: 4px 0;
+}
+.friendMag .fn {
+    background: none repeat scroll 0 0 #EFEFEF;
+    margin-bottom: 5px;
+    padding: 8px 10px 6px;
+}
+.friendMag .fn li {
+    float: left;
+    font-weight: bold;
+    margin-right: 15px;
+}
+.friendMag .fn li label {
+    font-weight: normal;
+}
+.friendMag .fn li.del {
+    float: right;
+    margin: 0;
+}
+.friendMag .con {
+    padding-left: 10px;
+}
+.friendMag .con li {
+    display: inline;
+    float: left;
+    margin: 10px 2px 0;
+    white-space: nowrap;
+    width: 173px;
+}
+.baseInfo {
+    clear: both;
+}
+.baseInfo textarea {
+    height: 100px;
+    width: 325px;
+}
+.baseInfo p {
+    margin-bottom: 3px;
+}
+.baseInfo .btn {
+    margin-right: 5px;
+}
+.changeFace {
+    margin-top: 10px;
+}
+.changeFace img {
+    float: left;
+    margin-right: -60px;
+}
+.changeFace .addImg {
+    display: inline;
+    float: left;
+    margin-left: 70px;
+}
+.changeFace p {
+    clear: left;
+    margin-left: 50px;
+    padding: 20px 0;
+    text-align: center;
+    width: 400px;
+}
+.SMuchBigger_1 {
+    font-size: 14.8px;
+}
+.Bold {
+    font-weight: bold;
+}
+.TBigger_1 {
+    color: #C51100;
+    font-size: 13px;
+}
+.TBigger_2 {
+    color: #6665CB;
+    font-size: 13px;
+}
+.TColor2 {
+    color: #AAAAAA;
+}
+.Gray {
+    color: #6666CC;
+}
+.TColor10 {
+    color: #6665CB;
+}
+#textareaInfo span {
+    color: Green;
+    font-weight: bold;
+}
+#textareaInterest span {
+    color: Green;
+    font-weight: bold;
+}
+#textareaMovie span {
+    color: Green;
+    font-weight: bold;
+}
+#textareaMusic span {
+    color: Green;
+    font-weight: bold;
+}
+#textareaBook span {
+    color: Green;
+    font-weight: bold;
+}
+#textareaDish span {
+    color: Green;
+    font-weight: bold;
+}
+.SuccessDiv {
+    background: url("http://i3.dpfile.com/s/css/img/success.v201110111446.gif") no-repeat scroll 2px 0 transparent;
+    border: 1px solid #33CC00;
+    color: #33CC00;
+    float: left;
+    padding: 2px 2px 2px 30px;
+}
+.ErrorDiv {
+    background: url("http://i1.dpfile.com/s/css/img/sorry.v201110111446.gif") no-repeat scroll 8px 4px transparent;
+    border: 1px solid #FF0000;
+    color: #FF0000;
+    float: left;
+    padding: 2px 2px 2px 30px;
+}
+.BodilyformDisplay {
+    display: none;
+}
+#rblBox td {
+    color: Black;
+    padding: 10px;
+}
+.memberBox .Title {
+    color: #C51100;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.memberBox .ItemList {
+    line-height: 20px;
+    padding: 0 0 0 15px;
+}
+.memberBox .ItemTitle {
+    margin: 15px 0 10px;
+}
+.memberBox .SetupBtn {
+    padding-top: 10px;
+}
+.memberBox .ItemList td {
+    color: Black;
+}
+.memberBox .ItemCont {
+    color: #333333;
+    margin-bottom: 10px;
+}
+.memberBox .renrenNotBind {
+    padding-left: 25px;
+}
+.memberBox .renrenBind {
+    margin: 10px 0;
+    padding-left: 25px;
+}
+.memberBox .mar {
+    margin: 10px 0;
+}
+.memberBox .login {
+    display: block;
+    margin: 0 0 10px;
+}
+.memberBox .divNotBind .notbindcon {
+    border: 1px solid #787878;
+}
+.showMore {
+    background: none repeat scroll 0 0 #FFFFCC;
+    border: 1px solid #CCCCCC;
+    padding: 3px;
+}
+.memberBox a.linkfr:link, .memberBox a.linkfr:visited, .memberBox a.linkfr:hover, .memberBox a.linkfr:active, .memberBox a.linkfl:link, .memberBox a.linkfl:visited, .memberBox a.linkfl:hover, .memberBox a.linkfl:active {
+    background-color: #D4EEED;
+    border: 1px solid #99CCFC;
+    color: #336699;
+    display: block;
+    float: left;
+    margin-bottom: 2px;
+    padding: 1px;
+}
+.memberBox .linkfl {
+    margin-left: 5px;
+}
+.memberBox .linksp {
+    border: 1px none;
+    bottom: 0;
+    display: block;
+    position: absolute;
+    right: 0;
+}
+.memberBox .snsBind {
+    border: 2px solid #D1DBDD;
+    border-radius: 2px 2px 2px 2px;
+    margin-top: 20px;
+    padding: 4px 7px;
+}
+.memberBox .snsBind .Color7 {
+    color: #999999;
+}
+.memberBox .snsBind .ItemTitle {
+    margin-top: 0;
+}
+.memberBox .snsBind .ItemCont {
+    padding-left: 17px;
+}
+.memberBox .snsBind .snsUser {
+    color: #CC6600;
+    font-size: 15px;
+    font-weight: bold;
+}
+.memberBox .snsBind .snsUnbind {
+    background-position: 0 -1435px;
+    margin-left: 20px;
+    padding-left: 15px;
+}
+.memberBox .bind-setting {
+    float: left;
+    width: 100%;
+}
+.together {
+    border: 1px solid #CCCCCC;
+    padding: 10px;
+}
+.together dl dt {
+    background-position: -10px -197px;
+    color: #999999;
+    line-height: 25px;
+    padding-left: 15px;
+}
+.together dl dd {
+    color: #5552CB;
+    line-height: 25px;
+    padding-left: 12px;
+}
+.together dl dd.bun a {
+    background: none repeat scroll 0 0 #FFFFCC;
+    border: 1px solid #CCCCCC;
+    cursor: pointer;
+    padding: 3px;
+}
+.together dl dd.bun a:hover {
+    background: none repeat scroll 0 0 #5552CB;
+    border: 1px solid #CCCCCC;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 3px;
+}
+.itoolsTips {
+    background: none repeat scroll 0 0 #FFF0E1;
+    color: #666666;
+    font-size: 12px;
+    padding: 5px 25px 5px 10px;
+    position: relative;
+}
+.itoolsTips .close {
+    background-color: #FFFFFF;
+    background-position: 4px -407px;
+    border: 1px solid #FFCC66;
+    cursor: pointer;
+    display: block;
+    height: 15px;
+    padding: 1px;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    width: 15px;
+}
+.msstar0, .msstar5, .msstar10, .msstar20, .msstar30, .msstar35, .msstar40, .msstar45, .msstar50 {
+    background-image: url("stars-2.png");
+    background-repeat: no-repeat;
+}
+.msstar0, .msstar5, .msstar10, .msstar20, .msstar30, .msstar35, .msstar40, .msstar45, .msstar50 {
+    display: inline-block;
+    font-size: 0;
+    position: relative;
+    vertical-align: middle;
+}
+.msstar0, .msstar5, .msstar10, .msstar20, .msstar30, .msstar35, .msstar40, .msstar45, .msstar50 {
+    height: 12px;
+    width: 64px;
+}
+.msstar0 {
+    background-position: -199px -1105px;
+}
+.msstar5 {
+    background-position: 0 -1142px;
+}
+.msstar10 {
+    background-position: -199px -1071px;
+}
+.msstar20 {
+    background-position: -199px -1037px;
+}
+.msstar30 {
+    background-position: -199px -1003px;
+}
+.msstar35 {
+    background-position: 0 -1107px;
+}
+.msstar40 {
+    background-position: 0 -1073px;
+}
+.msstar45 {
+    background-position: 0 -1038px;
+}
+.msstar50 {
+    background-position: 0 -1003px;
+}
+.categoryTab {
+    background-position: 0 -1112px;
+    background-repeat: repeat-x;
+    font-size: 13px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.categoryTab ul {
+    background-position: right -1162px;
+    height: 33px;
+    overflow: hidden;
+    padding-right: 5px;
+}
+.categoryTab li {
+    float: left;
+}
+.categoryTab li.first {
+    background-position: 0 -1063px;
+    padding-left: 5px;
+}
+.categoryTab li a, .categoryTab li a:link, .categoryTab li a:visited, .categoryTab li a:active {
+    color: #666666;
+    display: block;
+    padding: 0 0 0 15px;
+}
+.categoryTab li a em {
+    display: block;
+    padding: 8px 15px 5px 0;
+    text-shadow: 1px 1px 1px #FFFFFF;
+}
+.categoryTab li.on a, .categoryTab li a:hover {
+    background-position: 0 -1211px;
+}
+.categoryTab li.on a em, .categoryTab li a:hover em {
+    background-position: right -1260px;
+    color: #666666;
+}
+.categoryTab li.on a em {
+    font-weight: bold;
+}
+.categoryTab li.mark {
+    background-position: 0 -1308px;
+    margin-left: 5px;
+    padding-left: 7px;
+}
+.noteList .btn {
+    padding-left: 15px;
+}
+.favoriteRank {
+    margin: 5px 0;
+    padding: 5px 50px 5px 10px;
+    position: relative;
+}
+.favoriteRank .idelBtn {
+    position: absolute;
+    right: 15px;
+    top: 30px;
+}
+.favoriteRank p {
+    margin-bottom: 5px;
+}
+.favoriteRank h4 {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.even {
+    background: none repeat scroll 0 0 #EFEFEF;
+}
+.idelBtn {
+    background-position: 0 -1359px;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+}
+.delRank .idelBtn {
+    top: 8px;
+}
+.remark .idelBtn {
+    float: right;
+    margin-top: 2px;
+}
+.contList-fn li.flowerBtn {
+    background: url("http://i1.dpfile.com/s/css/img/ficon.v201110111446.gif") no-repeat scroll left center transparent;
+    padding-left: 16px;
+}
+.reportErrorbox .rbox {
+    margin-bottom: 15px;
+}
+.reportErrorbox h2 {
+    border-bottom: 1px solid #CCCCCC;
+    color: #CC0000;
+    margin-bottom: 7px;
+    padding: 4px 0;
+}
+.reportErrorList .title {
+    background: none repeat scroll 0 0 #EFEFEF;
+    cursor: pointer;
+    line-height: 1.8;
+    margin: 15px 0;
+    padding-left: 5px;
+    position: relative;
+}
+.reportErrorList .title .time {
+    color: #999999;
+    margin-left: 4px;
+}
+.reportErrorList .title .switch, .reportErrorList .title .onswitch {
+    background-position: 0 -1038px;
+    display: block;
+    height: 14px;
+    position: absolute;
+    right: 12px;
+    top: 6px;
+    width: 21px;
+}
+.reportErrorList .title .onswitch {
+    background-position: 0 -1076px;
+}
+.reportErrorList dd.hander {
+    display: none;
+}
+.reportErrorList .contList {
+    margin-bottom: 20px;
+}
+.reportErrorList .contList .contList-fn {
+    margin-bottom: 10px;
+}
+.reportErrorList .report {
+    background-color: #F0EFEF;
+    display: none;
+    padding: 15px 20px;
+}
+.reportErrorList .report textarea {
+    border: 1px solid #7E9EB7;
+    display: block;
+    height: 150px;
+    width: 100%;
+}
+.reportErrorList .report .btnField {
+    margin-top: 15px;
+    text-align: right;
+}
+.rpErrorIco {
+    background-position: 1px -1470px;
+    border-top: 1px solid #CCCCCC;
+    padding: 8px 0 4px 20px;
+}
+.margin-prompt {
+    margin-bottom: 30px;
+}
+.gallery-list .gallery-item {
+    display: inline;
+    float: left;
+    height: 335px;
+    margin: 15px 50px 0 0;
+    overflow: hidden;
+    position: relative;
+    width: 310px;
+}
+.memberBox h3 {
+    border-bottom: 1px solid #E0E0E0;
+    color: #999999;
+}
+.memberBox h3 em {
+    color: #CC0000;
+    font-weight: bold;
+}
+.memberBox h3 .sep {
+    color: #CCCCCC;
+    margin: 0 8px;
+}
+.memberBox h3 a, .memberBox h4 a {
+    color: #6666CC;
+}
+.memberBox h3 a:hover, .memberBox h4 a:hover {
+    background: none repeat scroll 0 0 #6666CC;
+    color: #FFFFFF;
+}
+.memberBox h4 {
+    font-weight: bold;
+}
+.bind-setting .bind-summary li {
+    background-position: -130px -40px;
+}
+.btn-fn-d, .btn-fn-d .form-btn, .btn-fn-d .txt {
+    background-position: 0 0;
+}
+.bind-setting .func-block .bindbtn {
+    background-position: 0 -70px;
+    border: 1px solid #A8BBC4;
+    cursor: pointer;
+    height: 28px;
+    width: 84px;
+}
+.bind-setting .func-block .cancelbtn {
+    background-position: 0 -70px;
+    border: 1px solid #A8BBC4;
+    cursor: pointer;
+    height: 28px;
+    width: 58px;
+}
+.bind-setting {
+    float: left;
+    padding: 10px 0 0 20px;
+}
+.bind-setting h4 {
+    color: #777777;
+    font-size: 12px;
+    margin: 0 0 30px;
+    padding: 0;
+}
+.bind-setting .bind-list {
+    float: left;
+    padding-right: 20px;
+    width: 155px;
+}
+.bind-setting .bind-list label {
+    line-height: 20px;
+}
+.bind-setting .bind-list li {
+    margin: 0 0 6px 15px;
+}
+.bind-setting .bind-list .list-title {
+    background-color: #F3F3F3;
+    color: #111111;
+    font-weight: bold;
+    height: 35px;
+    line-height: 35px;
+    margin-left: 0;
+    text-indent: 15px;
+}
+.bind-setting .bind-summary {
+    color: #777777;
+    margin-bottom: 20px;
+}
+.bind-setting .bind-summary li {
+    height: 20px;
+    line-height: 20px;
+    padding-left: 8px;
+}
+.bind-setting .website-list li {
+    display: inline;
+    float: left;
+    height: 135px;
+    margin: 0 20px 20px 0;
+    width: 110px;
+}
+.bind-setting .website-list .unbind strong {
+    color: #777777;
+}
+.bind-setting .list-icon {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #ECECEC;
+    height: 95px;
+    padding-top: 15px;
+    text-align: center;
+}
+.bind-setting .list-icon .imgbox {
+    display: table-cell;
+    height: 60px;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    width: 110px;
+}
+.bind-setting .list-icon img {
+    vertical-align: middle;
+}
+.bind-setting .list-icon strong {
+    color: #111111;
+    font-weight: normal;
+}
+.bind-setting .bind-func {
+    color: #CCCCCC;
+    padding: 5px 0;
+    text-align: center;
+}
+.bind-setting .bind-func a {
+    font-size: 12px;
+    margin: 0;
+    width: 55px;
+}
+.bind-setting .setbind, .bind-setting .synchro {
+    color: #6666CC;
+    padding-right: 4px;
+}
+.bind-setting .setbind:hover, .bind-setting .synchro:hover {
+    background-color: #6666CC;
+    color: #FFFFFF;
+}
+.bind-setting .cancelbind {
+    color: #999999;
+    padding-left: 5px;
+}
+.bind-setting .cancelbind:hover {
+    background-color: #FFFFFF;
+    color: #CC0000;
+    text-decoration: none;
+}
+.bind-setting .func-block {
+    clear: both;
+    padding-top: 20px;
+}
+.bind-setting .btn-fn-b .form-btn {
+    font-size: 12px;
+    line-height: 24px;
+}

@@ -7,6 +7,4 @@
         $password=$_POST['password'];
     else
         $password="guest";
-    if ($useername != "guest")
-        echo "<div style=\"text-align:right; margin-right:50px; color:#606\">你好，".$useername."!</div>";
 ?>

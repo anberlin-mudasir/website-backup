@@ -6,7 +6,7 @@
 	//收集数据
 	$useername=$_POST['useername'];
 	$password=$_POST['password'];
-    $query='select * from admin where name=\"'.$useername.'\"and pass=\"'.$password.'\"';
+    $query='select * from admin where name=\"'.$useername.'\" and pass=\"'.$password.'\"';
 	$query=stripslashes($query);
     $result=mysql_query($query);
     $num=mysql_num_rows($result);
@@ -24,7 +24,7 @@
 
 // Here pass all post values to redicted pages
     foreach ($_POST as $a => $b) {
-        echo "<input type='hidden' name='".$a."' value='".$b."'>";
+        echo "<input type='hidden' name='".$a."' value='".$b."'/>";
     }
     echo "</form>";
     echo "<script type=\"text/javascript\">";

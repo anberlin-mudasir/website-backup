@@ -101,7 +101,7 @@
 <h4>原料:<input type="text" name="Ingredients" value=""/></h4>
 <p>如果有多种原料，以空格分开</p>
 <h4>价格:<input type="text" name="Price" value=""/></h4>
-<h4>图片描述:<input type="file" name="Url_of_image" value=""/></h4>
+<h4>图片描述:<input type="file" name="Url_of_image" value="" /></h4>
 <h4>菜肴描述:</h4>
 <p>
 <textarea name="Description" rows="15" cols = "60">

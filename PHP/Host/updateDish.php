@@ -101,7 +101,7 @@ $tastearr = array("酸","甜","苦","辣","咸","淡","麻","鲜");
 
 
 
-$query = 'SELECT * FROM dishes WHERE Number = '.$number;
+$query = 'select * from dishes where Number = '.$number;
 $result = mysql_query($query,$db);
 if($row = mysql_fetch_array($result)){
 	extract($row);

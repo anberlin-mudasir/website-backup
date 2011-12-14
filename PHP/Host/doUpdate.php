@@ -34,7 +34,6 @@
 
 <?php
 error_reporting(E_ALL & ~ E_NOTICE);
-//connect to MySql
 $db = mysql_connect("","se","se");
 mysql_select_db('meal',$db);
 
