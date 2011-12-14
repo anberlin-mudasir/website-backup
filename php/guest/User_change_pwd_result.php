@@ -1,4 +1,3 @@
-<?xml version = "1.0" encoding = "utf-8" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns = "http://www.w3.org/1999/xhtml">
 <head>
@@ -12,12 +11,9 @@
 <body>
 <?php include('common_userinfo.php'); ?>
 <?php
-	error_reporting(E_ALL & ~ E_NOTICE);
-	//连接数据库，并确定database
-	$db = mysql_connect("", "se","se");
-	mysql_select_db('meal',$db);
-    $useername=$_POST['useername'];
-    $password=$_POST['password'];
+    error_reporting(E_ALL & ~ E_NOTICE);
+    include('mysql_db.php');
+
 	$newpassword=$_POST['authpassword'];
 	$renewpassword=$_POST['reauthpassword'];
 	$query='select * from user where name="'.$useername.'" and pass="'.$password.'"';

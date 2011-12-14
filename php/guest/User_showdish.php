@@ -1,4 +1,3 @@
-<?xml version = "1.0" encoding = "utf-8" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns = "http://www.w3.org/1999/xhtml">
 <head> 
@@ -76,9 +75,16 @@
   <br />
   <div class="content_n">
     <div class="memberBox">
+<?php
+if ($useername!='guest')
+{
+?>
       <div class="box feedBox">
         <div class="feedTip"><p>点击按钮收藏下它吧!</p></div>
       </div>
+<?php
+}
+?>
       <h3>菜肴信息</h3>
     </div>
 
@@ -96,8 +102,8 @@ $primenum = array(0,1,0,1,4,2,6,3,8,9,10,4,12,5,14,15,16,6,18,7,20);
 $canteenarr = array("学一","学五","艺园","家园","农园","燕南","康博思","佟园");
 $tastearr = array("酸","甜","苦","辣","咸","淡","麻","鲜");
 
-$db = mysql_connect("","se","se");
-mysql_select_db('meal',$db);
+include('mysql_db.php');
+
 $query = 'select * from dishes where Number = '.$Number;
 $result = mysql_query($query,$db);
 $row = mysql_fetch_array($result);
@@ -175,6 +181,10 @@ if ($useername!="guest")
 <!--Tool box-->
   <div class="asider_n">
     <div class="box tools">
+<?php
+if ($useername!='guest')
+{
+?>
       <p>
         <form name="mark" action="./User_showmark.php" method="post">
         <?php include('common_post.php');?>
@@ -183,6 +193,9 @@ if ($useername!="guest")
           <a class="B" href="javascript:document.mark.submit()">查看收藏</a>
         </span>
       </p>
+<?php
+}
+?>
       <p>
         <form name="back" action="./User_log.php" method="post">
         <?php include('common_post.php');?>

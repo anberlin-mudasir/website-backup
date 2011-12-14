@@ -1,6 +1,5 @@
 <?php
-$db = mysql_connect("","se","se");
-mysql_select_db('meal',$db);
+include('mysql_db.php');
 
 $useername=$_POST['useername'];
 $query='select * from admin where name="'.$useername.'"';

@@ -3,8 +3,8 @@
 <?php include('common_post.php'); ?>
 
 <?php
-$db = mysql_connect("","se","se");
-mysql_select_db('meal',$db);
+include('mysql_db.php');
+
 
 $query='select * from admin where name="'.$useername.'" and pass="'.$password.'"';
 $query=stripslashes($query);

@@ -1,4 +1,3 @@
-<?xml version = "1.0" encoding = "utf-8" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns = "http://www.w3.org/1999/xhtml">
 <head>
@@ -12,9 +11,9 @@
 <body>
 <?php include("common_userinfo.php"); ?>
 <?php 
-	error_reporting(E_ALL & ~ E_NOTICE);
-	$db = mysql_connect("", "se","se");
-	mysql_select_db('meal',$db);
+    error_reporting(E_ALL & ~ E_NOTICE);
+    include('mysql_db.php');
+
     $query='select * from user where name=\"'.$useername.'\"and pass=\"'.$password.'\"';
 	$query=stripslashes($query);
 	$result=mysql_query($query);
@@ -47,8 +46,6 @@
       <h3>菜肴列表</h3>
     </div>
 <?php
-$db = mysql_connect("","se","se");
-mysql_select_db('meal',$db);
 $query = 'select * from dishes';
 $result = mysql_query($query,$db);
 $totalnum=mysql_num_rows($result);

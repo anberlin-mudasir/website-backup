@@ -1,6 +1,6 @@
 <div class="header-bar">
   <div class="inner Fix">
-    <span class="tagline">北京大学餐饮信息查询系统欢迎您 ,</span>
+    <span class="tagline">北京大学餐饮信息查询系统欢迎您, </span>
     <ul class="user-action hd-menu">
       <li class="user-login first mi">
 <?php echo $useername; ?>

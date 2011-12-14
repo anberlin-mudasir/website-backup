@@ -1,6 +1,5 @@
 <?php
-$db = mysql_connect("","se","se");
-mysql_select_db('meal',$db);
+include('mysql_db.php');
 
 $useername=$_POST['name'];
 $canteen_count = count($_POST['deleteNumber']);

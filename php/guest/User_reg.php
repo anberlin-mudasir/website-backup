@@ -1,4 +1,3 @@
-<?xml version = "1.0" encoding = "utf-8" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns = "http://www.w3.org/1999/xhtml">
 <head>
@@ -59,6 +58,7 @@
                     {
                         document.getElementById("name-note").style.display='none';
                         document.getElementById("name-err-1").style.display='none';
+                        document.redict.useername.value=name;
                         document.redict.submit();
                     }
                     else
@@ -115,7 +115,7 @@
               </div>
               <div class="block form-btn-block form-block form-content-block">
                 <span class="btn-type-b btn-fn-c">
-                  <a class="form-btn" href="javascript:if(checkSubmit())document.getElementById('contents').submit()">确认</a>
+                  <a class="form-btn" href="javascript:if(checkSubmit());">确认</a>
                 </span>
               </div>
             </form>

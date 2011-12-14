@@ -1,4 +1,3 @@
-<?xml version = "1.0" encoding = "utf-8" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns = "http://www.w3.org/1999/xhtml">
 <head>
@@ -56,9 +55,9 @@
 <body>
 <?php include('common_admininfo.php'); ?>
 <?php
-	error_reporting(E_ALL & ~ E_NOTICE);
-	$db = mysql_connect("", "se","se");
-	mysql_select_db('meal',$db);
+    error_reporting(E_ALL & ~ E_NOTICE);
+    include('mysql_db.php');
+
 	$query='select * from admin where name="'.$useername.'" and pass="'.$password.'"';
     $query=stripslashes($query);
 	$result=mysql_query($query);
@@ -105,7 +104,7 @@
 
               <div class="form-block">
                 <label class="label" for="description">描述：</label>
-                <textarea rows="4" name="Description" id="description" class="form-default"> </textarea>
+                <textarea rows="4" name="Description" id="description" class="form-default"></textarea>
               </div>
               <div class="form-block">
                 <label class="label" for="taste">口味：</label>

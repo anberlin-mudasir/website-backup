@@ -1,4 +1,3 @@
-<?xml version = "1.0" encoding = "utf-8" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns = "http://www.w3.org/1999/xhtml">
 <head> 
@@ -43,8 +42,8 @@ if($_POST['allCanteen'] != ""){
 		$canteen *= $canteen_tmp[$i];
 	}
 }
-$db = mysql_connect("","se","se");
-mysql_select_db('meal',$db);
+include('mysql_db.php');
+
 
 if($name == "")
 {
@@ -61,23 +60,22 @@ else
 		$query = 'select * from dishes where Name like "%'.$name.'%" and Style='.$style.' and Taste%'.$taste.'=0 and '.$canteen.'%Canteen=0';
 }
 $result = mysql_query($query,$db);
-$num=mysql_num_rows($result);
 ?>
 
 <div class="main_w">
   <br />
   <div class="content_n">
     <div class="memberBox">
-      <h3>检索结果(共<?php echo $num; ?> 条)</h3>
+      <h3>检索结果</h3>
     </div>
 
 <?php
-if ($num==0)
-    echo '没有找到匹配菜肴!';
 
+$num=0;
 while($row = mysql_fetch_assoc($result))
 {
     extract($row);
+    $num++;
     // 对原料筛选
 	if($ingredients != ""){
 		$ingre_input = explode(" ", $ingredients);
@@ -128,6 +126,8 @@ while($row = mysql_fetch_assoc($result))
     </div>
 <?php
 }
+if ($num==0)
+    echo '没有找到匹配菜肴!';
 ?>
   </div>
 
