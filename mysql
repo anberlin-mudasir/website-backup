@@ -17,6 +17,7 @@ admin
 | pass  | varchar(255) | YES  |     | NULL    |       |
 +-------+--------------+------+-----+---------+-------+
 
+
 user:
 +-------+--------------+------+-----+---------+-------+
 | Field | Type         | Null | Key | Default | Extra |
@@ -62,5 +63,10 @@ opinion
 
 
 
+create database meal;
+create table admin(name varchar(255), pass varchar(255),primary key(name));
+create table user(name varchar(255), pass varchar(255),primary key(name));
+create table dishes (Number int not null auto_increment, Name varchar(255), Price decimal(10,2), Taste int, Ingredients varchar(255), Canteen int, Style int, Grade decimal(10,2), Description varchar(1000),Url_of_image varchar(255), Guest_count int, Opinion_table_name varchar(255), primary key(Number));
+create table mark (User varchar(255), Number int, unique(User,Number));
+create table opinion(User varchar(255), Opinion text, Time datetime);
 
-create table dishes (ID int not null auto_increment, Name varchar(255), Price decimal(10,2), Taste int, Ingredients varchar(255), Canteen varchar(255), Style int, Grade decimal(10,2), Description varchar(1000), Url_of_image varchar(255), primary key(ID));
