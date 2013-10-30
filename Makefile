@@ -1,7 +1,7 @@
 CC	:= g++
 V	:= @
 RM	+= -r
-LIBS += ./lib/libNLPIR.so
+LIBS += ./lib/libNLPIR.so -lpthread
 USER_FLAGS+= -Wall -m64 -DOS_LINUX -O2 -I .
 OBJ := ./obj/
 
@@ -42,8 +42,21 @@ $(foreach bdir,$(dirctry),$(eval $(call make-intermediate,$(bdir))))
 trim:
 	@./obj/trim < remote/phone.ori > remote/phone.trim
 
-seg:
-	@./obj/main < remote/phone.trim > remote/phone.seg
+run:
+	@./obj/main 12345 3
+
+test: test1 test2 test3 test4 test5
+
+test1:
+	@head -1 data/pku_test.txt | tail -1 | ./obj/client localhost 12345 
+test2:
+	@head -2 data/pku_test.txt | tail -1 | ./obj/client localhost 12345 
+test3:
+	@head -3 data/pku_test.txt | tail -1 | ./obj/client localhost 12345 
+test4:
+	@head -4 data/pku_test.txt | tail -1 | ./obj/client localhost 12345 
+test5:
+	@head -5 data/pku_test.txt | tail -1 | ./obj/client localhost 12345 
 
 train-dict-clear:
 	@rm include/Data -rf

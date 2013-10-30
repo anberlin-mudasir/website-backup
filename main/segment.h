@@ -40,7 +40,7 @@ int unicode(int utf8) {
 // 0x2013 ~ 0x2014 po zhe hao
 // 0x25CB chinese 'zero'
 //
-void trim(string &s, int f, int t) {
+inline void trim(string &s, int f, int t) {
   for (int i = f; i < t; i++) s[i] = ' ';
 }
 // remove shits
@@ -70,12 +70,22 @@ void trim(string &s) {
   }
 }
 
-bool env_init() {
+void strip(string &s) {
+  int n = s.length();
+  if (n == 0) return;
+  while (n > 1 && isspace(s[n-1])) n--;
+  s = s.substr(0, n);
+}
+
+bool envInit() {
   return NLPIR_Init("./include", UTF8_CODE);
 }
-void env_exit() {
+void envExit() {
   NLPIR_Exit();
 }
 const char *segment(string &str, bool postag) {
   return NLPIR_ParagraphProcess(str.c_str(), postag);
+}
+const char *segment(CNLPIR *util, string &str, bool postag) {
+  return util->ParagraphProcess(str.c_str(), postag);
 }

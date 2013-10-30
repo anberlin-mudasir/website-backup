@@ -1,7 +1,7 @@
 #include "segment.h"
 
 int main(int argc, char** argvs) {
-  if (!env_init()) {
+  if (!envInit()) {
     printf("Init fails\n");  
     return 0;
   }
@@ -11,6 +11,6 @@ int main(int argc, char** argvs) {
     result = segment(str, 0);
     cout << result << endl;
   }
-  env_exit();
+  envExit();
   return 0;
 }
