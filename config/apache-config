@@ -1,0 +1,25 @@
+How to setup and configure an Apache server?
+
+    Execute PUTTY.EXE. Specify the Host Name to 162.105.203.19, Port to 22, Protocal to SSH.
+
+    After login with Putty, you should see a file named "httpd-2.0.54.tar.gz" in the working directory.
+
+    Run "tar -xzf httpd-2.0.54.tar.gz" to extract the file. The letter "x" means to extract this file. "z"says that this tarball is compressed in some way(the file name suffix ".gz" tells that it is compressed) letter "f" precedes the name of the file to extract.
+
+    You then get a directory "httpd-2.0.54", go into it, read the README and INSTALL and more in "docs" if you want to be an expert of Apache or you may just continue with the following steps..
+
+    Go back to you home directory by run a command "cd", create a directory "apache" by runing "mkdir apache" under your home directory.
+
+    Go to directory "/home/year/username/httpd-2.0.54" again, run "./configure --prefix=/home/year/username/apache". year should be this year, username is the name of the user with which you login. By doing this, you are telling Apache where is the "server root directory". Because the tar file comes in source code, " configure" does some preparing jobs for compiling and building an Apache server. "apache" is the directory you have created in step 2.
+
+    Go to directory "/home/year/username/httpd-2.0.54", run "make" ,the building of apache is done. Wait in patience.
+
+    Go to directory "/home/year/username/httpd-2.0.54", run "make install" to put Apache into correct position.
+
+    Now we need to config Apache. Edit the file "/home/year/username/apache/conf/httpd.conf". Change the "Listen 80" to "Listen 8000+group_num", group_num is the unique number assigned to you by the tutor. For example, if your unique number is 5, then change it to"Listen 8005". Have a look at the Directive "DocumentRoot", that is where your all WWW document will locate. It should be "/home/year/username/apache/htdocs".
+
+    Goto directory /home/year/username/apache/htdocs, run "mv index.html.en index.html", this command changes the name of file index.html.en to index.html.
+
+    Run "/home/year/username/apache/bin/apachectl start" to start your Apache. apachectl is the command to start, stop or restart the Apache server. Take "stop", "restart" as input parameter respectively.
+
+    Test your installation by pointing any Web browser at http://162.105.203.19:8000+group_num/ and see what you have performed.
