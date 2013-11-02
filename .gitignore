@@ -1,3 +1,4 @@
 *.log
 *.swp
 *.class
+examples/upload/incoming/*.*
