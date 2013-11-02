@@ -1,0 +1,38 @@
+<html>
+<head>
+<script type="text/javascript">
+var c1=0;
+var c2=0;
+var timer_is_on=0;
+
+function timedCount1()
+{
+document.getElementById('txt1').value=c1;
+c1=c1+1;
+setTimeout("timedCount1()",0);
+}
+function timedCount2()
+{
+document.getElementById('txt2').value=c2;
+c2=c2+1;
+setTimeout("timedCount2()",0);
+}
+
+function doTimer()
+{
+  timedCount1();
+  setTimeout("timedCount2()",500);
+}
+</script>
+</head>
+
+<body>
+<form>
+<input type="button" value="Start count!" onclick="doTimer()" />
+<input type="text" id="txt1" />
+<input type="text" id="txt2" />
+</form>
+</body>
+</html>
+
+

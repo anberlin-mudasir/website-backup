@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>Test</title>
+    <script src=" http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=4220242800" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+    <p>Login page, button next says 'login with weibo account'</p>
+    <div id="wb_connect_btn"></div>
+    <!-- type: x,y
+         x indicates how widget looks like before login
+           1: big pic (200x50px)
+           2: med pic (140x33px)
+           3: small pic (100x25px)
+           4: mini pic (86x10px)
+           5: logo + href link
+           6: logo(withframe) + href link
+           7: href link
+         y indicates how widget looks like after login
+           1: pic+name+watch+fans
+           2: pic+name
+           3: logo+name
+           4: logo(withframe)+name
+           5: name
+    -->
+    <script>
+      WB2.anyWhere(function(W){
+        W.widget.connectButton({
+          id: "wb_connect_btn",  
+          type:'3,5',
+          callback : {
+            login:function(o){
+              document.getElementById('sub').style.display='block'
+            },
+            logout:function(){
+              document.getElementById('sub').style.display='none'
+            }
+          }
+        });
+      });
+    </script>
+    <br>
+    <div id="sub" style="display:none">
+     <p>The first link points to the weibo page. the second is 'logout'.</p>
+     <p>Jump to <a href="subdir/">another page</a> now.</p>
+    </div>
+    <hr>
+    <p><a href="../">back</a></p>
+  </body>
+</html>

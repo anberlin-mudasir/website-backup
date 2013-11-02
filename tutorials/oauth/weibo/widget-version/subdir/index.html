@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Sub</title>
+    <script src=" http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=4220242800" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+    <p>This page should show user information</p>
+    <div id="wb_connect_btn"></div>
+    <script>
+      WB2.anyWhere(function(W){
+        W.widget.connectButton({
+          id: "wb_connect_btn",  
+          type:'3,1',
+          callback : {
+            login:function(o){
+              //alert("login: "+o.screen_name+o)  
+            },
+            logout:function(){
+              //alert('logout');
+            }
+          }
+        });
+      });
+    </script>
+    <hr>
+    <a href="../">back</a>
+  </body>
+</html>

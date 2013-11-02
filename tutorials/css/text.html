@@ -1,0 +1,86 @@
+<html>
+<head>
+<style type="text/css" >
+body
+{
+    /* properties available: */
+    /********
+    color           Sets the color of text
+    direction       Specifies the text direction/writing direction
+    letter-spacing  Increases or decreases the space between characters in a text
+    line-height     Sets the line height
+    text-align      Specifies the horizontal alignment of text
+    text-decoration Specifies the decoration added to text
+    text-indent     Specifies the indentation of the first line in a text-block
+    text-shadow     Specifies the shadow effect added to text
+    text-transform  Controls the capitalization of text
+    vertical-align  Sets the vertical alignment of an element
+    white-space     Specifies how white-space inside an element is handled
+    word-spacing    Increases or decreases the space between words in a text
+    ********/
+    color: red;
+}
+h1
+{
+    text-align: center;
+    color: orange;
+    text-decoration: line-through;
+}
+h2
+{
+    color: green;
+    text-decoration: overline;
+}
+h3
+{
+    text-decoration: underline; 
+}
+p
+{
+    color: gray; 
+    /* indent for first line */
+    /* text-indent: 20px; */
+}
+/* control the capitalize method */
+p.uppercase {text-transform:uppercase;}
+p.lowercase {text-transform:lowercase;}
+p.capitalize {text-transform:capitalize;}
+/* space between two ajacent letters, or words*/
+p.narrow {letter-spacing:-1.5px;} 
+p.word-wide {word-spacing:15px;} 
+/* space between two lines */
+p.small {line-height:70%;}
+p.big {line-height:200%;}
+/* no wrap */
+p.nowrap{white-space:nowrap;}
+/* mix with img */
+img.top {vertical-align:text-top;}
+img.bottom {vertical-align:text-bottom;}
+a
+{
+    /* remove underline in hyperlink */
+    text-decoration: none;
+}
+
+</style>
+</head>
+<body>
+<h1>title-with-middle-line</h1>
+<h2>sub-title-with-over-line</h2>
+<h3>sub-sub-title-with-under-line</h3>
+<p>hello world</p>
+<p>this is a <a href="http://www.google.com">link</a>, but no underline. </p>
+<p class="uppercase"> all text uppercased </p>
+<p class="lowercase"> All Text LOWERCASED </p>
+<p class="capitalize"> the first letter is uppercase, always. </p>
+<p class="narrow"> Quite narrow and ugly...</p>
+<p class="big"> Lines are far from each other,<br> line 2 </p>
+<p class="small"> lines are quite close to each other, <br> line 2</p>
+<p class="word-wide"> Words are quite far away from each other</p>
+<p class="nowrap">I have to write a lot of information for this line to see the no-wrap effect,  well, what about pi? pi=3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034...</p>
+<p> Also, I have to write a lot of information for this line to see the wrap effect,  well, let us repeat pi! pi=3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034...</p>
+<p>An <img src="img/w3schools_logo.gif" alt="W3Schools" width="270" height="50" /> image with a default alignment.</p> 
+<p>An <img class="top" src="img/w3schools_logo.gif" alt="W3Schools" width="270" height="50" /> image with a text-top alignment.</p> 
+<p>An <img class="bottom" src="img/w3schools_logo.gif" alt="W3Schools" width="270" height="50" /> image with a text-bottom alignment.</p>
+</body>
+</html>

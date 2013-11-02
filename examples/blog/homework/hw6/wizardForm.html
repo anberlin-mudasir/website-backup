@@ -1,0 +1,112 @@
+<HTML>
+<HEAD>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<script language="javascript">
+<!--
+// Investigating a Form
+// 
+function noValue(val) {
+    if (val.search(/\w/) == -1) {
+        return true;
+    }
+    return false;
+}
+function validate() {
+    var q=document.quiz;
+    if (noValue(q.Personal_FirstName.value)) {
+        alert("Please, you forgot your first name.");
+        return false;
+    }
+    if (noValue(q.Personal_LastName.value)) {
+        alert("Come on, you forgot your last name.");
+        return false;
+    }
+    var age=q.Personal_Age.value;
+    if (noValue(age)) {
+        alert("Ah, remember to fill in your age?");
+        return false;
+    }
+    if (!age.match(new RegExp("^[0-9]+$"))) {
+        alert("Your age should be a number~");    
+        return false;
+    }
+    if (!(age>5 && age <150)) {
+        alert("Well, I expect you to be 5~150");    
+        return false;
+    }
+    if (noValue(q.Personal_IDNumber.value)) {
+        alert("The last task, please fill in your ID Number");
+        return false;
+    }
+}
+-->
+</script>
+<TITLE>Form 2 Wizard</TITLE>
+</HEAD>
+<BODY>
+<H1>Form 2 Wizard</H1>
+<HR>
+<H2>A dummy form created with MS FrontPage</H2>
+<p>(Handlers added by hand)</p>
+
+<form onsubmit="return validate()" action="/cgi-bin/dump.pl" method="GET" name="quiz">
+<OL>
+<LI><P>Please identify and describe yourself:</P>
+<TABLE>
+<TR>
+<TD ALIGN="right"><EM>First Name</EM></TD>
+<TD><INPUT TYPE=TEXT NAME="Personal_FirstName" SIZE=25></TD>
+</TR><TR>
+<TD ALIGN="right"><EM>Last Name</EM></TD>
+<TD><INPUT TYPE=TEXT NAME="Personal_LastName" SIZE=25></TD>
+</TR><TR>
+<TD ALIGN="right"><EM>Age</EM></TD>
+<TD><INPUT TYPE=TEXT NAME="Personal_Age" SIZE=3 MAXLENGTH=3></TD>
+</TR><TR>
+<TD ALIGN="right"><EM>Sex</EM></TD>
+<TD><INPUT TYPE=RADIO NAME="Personal_Sex" VALUE="Male" CHECKED>Male 
+<INPUT TYPE=RADIO NAME="Personal_Sex" VALUE="Female">Female</TD>
+</TR><TR>
+<TD ALIGN="right"><EM>ID Number</EM></TD>
+<TD><INPUT TYPE=TEXT NAME="Personal_IDNumber" SIZE=16 MAXLENGTH=16></TD>
+</TR>
+</TABLE>
+
+<LI><P>Choose one of the following options:</P>
+<P><INPUT TYPE=RADIO NAME="watch" VALUE="Dunno" CHECKED> I don't know?!
+<BR><INPUT TYPE=RADIO NAME="watch" VALUE="Radio"> Radio
+<BR><INPUT TYPE=RADIO NAME="watch" VALUE="TV"> TV
+<BR><INPUT TYPE=RADIO NAME="watch" VALUE="Film"> Film
+<BR><BR>
+</P>
+
+<LI><P>Choose one of the following options:</P>
+<P><SELECT NAME="holiday">
+  <OPTION value="Greece" SELECTED>Greece <OPTION value="Italy">Italy 
+  <OPTION value="France">France <OPTION value="Spain">Spain
+</SELECT>
+<BR>
+</P>
+<LI><P>How would you rate your knowledge of JavaScript?</P>
+<P>
+  <INPUT TYPE=RADIO NAME="knowledge" VALUE="1" >1
+  <INPUT TYPE=RADIO NAME="knowledge" VALUE="2" >2
+  <INPUT TYPE=RADIO NAME="knowledge" VALUE="3" CHECKED>3
+  <INPUT TYPE=RADIO NAME="knowledge" VALUE="4">4
+  <INPUT TYPE=RADIO NAME="knowledge" VALUE="5">5 
+  <BR></P>
+</OL>
+<p />
+<textarea name="chat" rows=5 cols=20></textarea><p />
+<INPUT TYPE=button VALUE="Don't Push Me" name="push" >
+<INPUT TYPE=SUBMIT VALUE="Submit Form">
+<INPUT TYPE=RESET VALUE="Reset Form" >
+
+</FORM>
+
+<HR>
+<H5>Jazz Jezebel.<br>Copyright © 1909 [Ten Bellies]. No rights reserved.<BR>Revised: 2002</H5>
+</BODY>
+</HTML>
+

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Google LocalSearch</title>
+<script src="http://maps.google.com/?file=api&v=2&key=ABQIAAAA9fM6Vg1sNheq6r5IMI6kZRRm2SEPmOspzCQkeVrFMcw587AklxRT0Qzdzdr9LaKyM502xxyDjs6lrA&sensor=false" type="text/javascript"></script>
+<script type="text/javascript">
+var map;
+var orizoom;
+var clng;
+var clat;
+onload=function(){
+if (document.getElementsByClassName == undefined) {
+	document.getElementsByClassName = function(className)
+	{
+		var hasClassName = new RegExp("(?:^|\\s)" + className + "(?:$|\\s)");
+		var allElements = document.getElementsByTagName("*");
+		var results = [];
+		var element;
+		for (var i = 0; (element = allElements[i]) != null; i++) {
+			var elementClass = element.className;
+			if (elementClass && elementClass.indexOf(className) != -1 && hasClassName.test(elementClass))
+				results.push(element);
+		}
+		return results;
+	}
+}
+}
+function doSearchCompleteCallback()
+{
+    var a=document.getElementById(":0:adId");
+    var b=document.getElementById(":0:controlsId");
+    if (a)
+        a.style.display='none';
+    if (b)
+        b.style.display='none';
+}
+function confirm_result() {
+    var title=document.getElementsByClassName('gels-title-link')[0].innerHTML;
+    var addrs=document.getElementsByClassName('gels-addresslines')[0].childNodes;
+    var addr=[];
+    for (var i=0; i<addrs.length; i++)
+        addr.push(addrs[i].innerHTML);
+    if(!addr.length)
+        addr.push("null");
+    var phones=document.getElementsByClassName('gels-phone');
+    var phone=[];
+    for (var i=0; i<phones.length; i++)
+        phone.push(phones[i].innerHTML);
+    if(!phones.length || phone[0]=="")
+        phone[0]="null";
+    var txt=[   title,
+                addr.join(":"),
+                clng,
+                clat,
+                phone.join(":") ];
+    var query=[ "title="+title,
+                "addr=" +addr.join(":"),
+                "lng="  +clng,
+                "lat="  +clat,
+                "phone="+phone.join(":") ];
+    alert("用户输入的标准query为:\n"+txt.join("\n"));
+    report(query.join("&"));
+}
+function report(str)
+{
+    xmlhttp=new XMLHttpRequest();
+    xmlhttp.onreadystatechange=function() {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+            alert("Result:\n"+xmlhttp.responseText);
+        }
+    }
+    xmlhttp.open("POST","google_query.cgi",true);
+    xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xmlhttp.send(str);
+}
+function doGenMarkerCallback(marker,html,result) {
+    clng=result.lng;
+    clat=result.lat;
+    var marks=html.getElementsByClassName('gels-directions');
+    for (var i=0; i<marks.length; i++)
+        marks[i].innerHTML='<input type="button" value="Choose it" onclick="confirm_result()"/>';
+    var links=html.getElementsByClassName('gels-title-link');
+    for (var i=0; i<links.length; i++)
+    {
+        links[i].href='javascript:confirm_result()';
+        links[i].target='';
+    }
+    return html;
+}
+
+function initialize() {
+    if (GBrowserIsCompatible()) {
+        var mapOptions = {
+            googleBarOptions : {
+                style : "new",
+                onGenerateMarkerHtmlCallback : doGenMarkerCallback, 
+                onSearchCompleteCallback : doSearchCompleteCallback,
+                resultList : G_GOOGLEBAR_RESULT_LIST_SUPPRESS,
+                //resultList : G_GOOGLEBAR_RESULT_LIST_INLINE,
+                //suppressInitialResultSelection : true,
+            }
+        }
+        map = new GMap2(document.getElementById("map_canvas"), mapOptions);
+        map.setCenter(new GLatLng(39.918022,116.397057), 11);
+        map.enableGoogleBar();
+        map.enableScrollWheelZoom();
+        map.disableDoubleClickZoom();
+        map.addControl(new GSmallMapControl());
+    }
+}
+</script>
+</head>
+<body onload="initialize()" onunload="GUnload()">
+<div id="map_canvas" style="width: 500px; height: 500px"></div>
+</body>
+</html>
+

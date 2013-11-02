@@ -1,0 +1,36 @@
+
+坐标定位比较:
+------------------------------------
+Google with zoomin and out hack:
+金河堤碑
+116.28318339586258,39.9755682692015
+六合人家万泉河路店
+116.30171075463295,39.976394545579424
+
+Google with callback hack:
+金河堤碑
+116.283196,39.975533
+六合人家万泉河路店
+116.301723,39.97636
+
+convert to baidu from google:
+金河堤碑
+116.28957889661,39.9819170162
+六合人家万泉河路店
+116.30817463545,39.982546189156
+
+baidu from database:
+金河堤碑
+116.289591,39.981880
+六合人家万泉河路店
+116.308235,39.982521
+
+gps from database:
+金河堤碑
+116.277142,40.974292
+六合人家万泉河路店
+116.295691,39.975107
+
+----------------------------------
+
+<!--script src="//maps.google.com/maps?file=api&amp;v=2.x&amp;key=ABQIAAAAzr2EBOXUKnm_jVnk0OJI7xSosDVG8KKPE1-m51RBrvYughuyMxQ-i1QfUnH94QxWIa6N4U6MouMmBA"

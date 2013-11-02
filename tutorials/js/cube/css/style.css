@@ -1,0 +1,130 @@
+/*
+For JSBin compo
+Author: Kushagra Gour @chinchang457
+http://i.imgur.com/iGkKiOu.gif
+*/
+
+body {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  background: #343438;
+}
+
+.scene {
+  position: absolute;
+  display: inline-block;
+  margin-top: 150px;
+  width: 50px;
+  height: 50px;
+}
+
+.cube {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  transform-style: preserve-3d;
+  transform: rotateX(-35.3deg) rotateY(45deg) rotateZ(0deg);
+  animation: rotatesmall ease 4s infinite 2s;
+}
+
+.cube-face {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  border: 1px solid white;
+}
+
+.cube-face-front {
+  transform: translate3d(0, 0, 25px);
+}
+
+.cube-face-back {
+  transform: rotateY(180deg) translate3d(0, 0, 25px);
+}
+
+.cube-face-left {
+  transform: rotateY(-90deg) translate3d(0, 0, 25px);
+}
+
+.cube-face-right {
+  transform: rotateY(90deg) translate3d(0, 0, 25px);
+}
+
+.cube-face-top {
+  transform: rotateX(90deg) translate3d(0, 0, 25px);
+}
+
+.cube-face-bottom {
+  transform: rotateX(-90deg) translate3d(0, 0, 25px);
+}
+
+/* big cube */
+
+#cube2 {
+  width: 150px;
+  height: 150px;
+  left: -50px;
+  top: -50px;
+  transform: rotateX(-35.3deg) rotateY(45deg) rotateZ(0deg);
+  animation: rotatebig ease 4s infinite 2s;
+}
+
+#cube2 .cube-face {
+  border-color: red;
+  
+  /*
+  Checkerboard pattern. 
+  Thanks to awesome article by Lea Verou (http://lea.verou.me/2010/12/checkered-stripes-other-background-patterns-with-css3-gradients/)
+  */
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(33%, transparent), color-stop(33%, #f55), color-stop(34%, #f55), color-stop(34%, transparent), color-stop(65%, transparent), color-stop(65%, #f55), color-stop(67%, #f55), color-stop(67%, transparent)),
+    -webkit-gradient(linear, left top, left bottom, color-stop(32%, transparent), color-stop(32%, #f55), color-stop(34%, #f55), color-stop(34%, transparent), color-stop(65%, transparent), color-stop(65%, #f55), color-stop(67%, #f55), color-stop(67%, transparent));
+}
+
+#cube2 .cube-face-front {
+  transform: translate3d(0, 0, 75px);
+}
+
+#cube2 .cube-face-back {
+  transform: rotateY(180deg) translate3d(0, 0, 75px);
+}
+
+#cube2 .cube-face-left {
+  transform: rotateY(-90deg) translate3d(0, 0, 75px);
+}
+
+#cube2 .cube-face-right {
+  transform: rotateY(90deg) translate3d(0, 0, 75px);
+}
+
+#cube2 .cube-face-top {
+  transform: rotateX(90deg) translate3d(0, 0, 75px);
+}
+
+#cube2 .cube-face-bottom {
+  transform: rotateX(-90deg) translate3d(0, 0, 75px);
+}
+
+@keyframes rotatesmall {
+  from {
+    transform: rotateX(-35.3deg) rotateY(45deg) rotateZ(0deg);
+  }
+  90% {
+    transform: rotateX(-215.3deg) rotateY(-45deg) rotateZ(360deg);
+  }  
+  to {
+    transform: rotateX(-215.3deg) rotateY(-45deg) rotateZ(360deg);
+  } 
+}
+
+@keyframes rotatebig {
+  from {
+    transform: rotateX(-35.3deg) rotateY(45deg) rotateZ(0deg);
+  }
+  90% {
+    transform: rotateX(-215.3deg) rotateY(-45deg) rotateZ(-360deg);
+  }  
+  to {
+    transform: rotateX(-215.3deg) rotateY(-45deg) rotateZ(-360deg);
+  }       
+}

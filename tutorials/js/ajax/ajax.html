@@ -1,0 +1,23 @@
+<html>
+<head>
+    <script src="jquery.js"></script>
+    <script type="text/javascript">
+    var callback=
+    $.post('ajax.php',
+           {'msg':'hello', 'user':'billybob'},
+           function(resp){$("#post").html(resp)});
+    $.get('ajax.php',
+           {'msg':'world', 'user':'lcc'},
+           function(resp){$("#get").html(resp)});
+    </script>
+</head>
+<body>
+
+<h2>POST:</h2>
+<div id="post"> </div>
+
+<h2>GET:</h2>
+<div id="get"> </div>
+
+</body>
+</html>

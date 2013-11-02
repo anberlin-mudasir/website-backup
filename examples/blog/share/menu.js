@@ -1,0 +1,11 @@
+document.write("<ul id=\"main_menu\" class=\"menu\">");
+document.write("<li>");
+document.write("<a href=\"../home\">home</a>");
+document.write("</li>");
+document.write("<li>");
+document.write("<a href=\"../homework/index.php\">homework</a>");
+document.write("</li>");
+document.write("<li>");
+document.write("<a href=\"../misc\">misc</a>");
+document.write("</li>");
+document.write("</ul>");

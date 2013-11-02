@@ -1,0 +1,758 @@
+.page-home .quick-search:after, .logged-status .row:after, .b-tuan li h4:after, .b-tuan .tuan-wrapper:after, .b-tuan .tuan-wrapper .price:after, .coupon-block .block-inner:after, .coupon-block .primary:after, .coupon-block .secondary:after, .aside-right .banner-block:after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+}
+.page-home .quick-search, .logged-status .row, .b-tuan li h4, .b-tuan .tuan-wrapper, .b-tuan .tuan-wrapper .price, .coupon-block .block-inner, .coupon-block .primary, .coupon-block .secondary, .aside-right .banner-block {
+}
+.login-status .intro .comment, .login-status .intro .discount, .logged-status .actions li, .logged-status .actions a, .logged-status .actions a:hover, .tuan-slider .nav, .b-tuan .tuan-wrapper .price span, .aside-right .b-add .form-btn {
+    background-image: url("buttons-5.png");
+    background-repeat: no-repeat;
+}
+.ms-bot-close {
+    background-image: url("buttons-6.png");
+}
+.ms-bot-pushup {
+    background-image: url("color-1.png");
+}
+.aside-right .b-app a {
+}
+.page-home .section-inner {
+    padding-top: 113px;
+    position: relative;
+    z-index: 0;
+}
+.page-home .index-noad {
+    padding-top: 0;
+}
+.section .popular-nav {
+    margin-bottom: 0;
+}
+.section .popular-nav .block-inner {
+    margin-top: -10px;
+}
+.section .popular-nav .term-list-item .term {
+    color: #111111;
+}
+.section .popular-nav .term-list-item .desc li a {
+    color: #6666CC;
+}
+.section .popular-nav .term-list-item .desc li a:hover {
+    background-color: #6666CC;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.section .popular-nav .term-list-item .desc li .more {
+    color: #999999;
+}
+.section .popular-nav .term-list-item .desc li .more:hover {
+    background-color: #FFFFFF;
+    color: #CC0000;
+    text-decoration: none;
+}
+.page-home .section .block {
+    margin-bottom: 14px;
+}
+.page-home .section .block-title {
+    background: none repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #E0E0E0;
+    margin: 0 0 15px;
+    padding-left: 10px;
+}
+.page-home .section .popular-nav {
+    margin-bottom: 0;
+}
+.page-home .section .popular-nav .block-title {
+    margin-top: 0;
+}
+.ep-channels-wrapper {
+    background: none repeat scroll 0 0 #F5EEE8;
+    margin-top: -2px;
+    padding: 0 0 5px 5px;
+}
+.page-home .ep-channels-wrapper {
+    background: none repeat scroll 0 0 #F5EEE8;
+    float: left;
+    margin-top: -12px;
+    padding: 0 5px 5px;
+    position: relative;
+    z-index: 510;
+}
+.page-home .pp_channels {
+    left: 0;
+    margin-top: -9px;
+    position: relative;
+    top: 0;
+    visibility: visible;
+}
+.page-home .term-list-item .desc {
+    float: right;
+    margin-left: 0;
+    overflow: hidden;
+    width: 486px;
+}
+.page-home .quick-search {
+    display: block;
+    height: 38px;
+    padding-top: 6px;
+    width: 520px;
+}
+.page-home .quick-search .btn-type-a {
+    float: left;
+}
+.aside-right .b-app {
+    margin-bottom: 10px;
+}
+.aside-right .b-app a {
+    display: block;
+    height: 100px;
+    text-indent: -9999px;
+    width: 240px;
+}
+.aside-right .b-app a:hover {
+    background-position: 0 -100px;
+}
+.aside-right .logged-status, .aside-right .login-status {
+    color: #999999;
+    padding: 10px 11px 7px;
+}
+.logged-status .avatar {
+    float: left;
+    height: 48px;
+    overflow: hidden;
+    width: 48px;
+}
+.logged-status .content {
+    color: #DEDEDE;
+    float: right;
+    margin-bottom: 5px;
+    margin-left: -20px;
+    width: 158px;
+}
+.logged-status .content a {
+    color: #6666CC;
+}
+.logged-status .content a:hover {
+    background-color: #6666CC;
+    color: #FFFFFF;
+}
+.logged-status .row {
+    margin-bottom: 2px;
+}
+.logged-status .name {
+    float: left;
+}
+.logged-status .detail {
+    float: right;
+}
+.logged-status .item-rank-rst, .logged-status .user-rank-rst {
+    display: block;
+    margin-right: 4px;
+}
+.logged-status .contr-val {
+    float: left;
+}
+.logged-status .content .rank {
+    color: #666666;
+}
+.logged-status .content ul {
+    float: left;
+}
+.logged-status .content li {
+    margin-bottom: 1px;
+}
+.logged-status .content li span {
+    margin: 0 5px 0 0;
+}
+.logged-status .content li a span {
+    margin: 0 4px;
+}
+.logged-status .actions {
+    clear: both;
+    margin-right: -10px;
+    margin-top: 6px;
+}
+.logged-status .actions li {
+    float: left;
+    margin-right: 6px;
+}
+.logged-status .actions a {
+    color: #61646E;
+    float: left;
+    height: 23px;
+    line-height: 21px;
+    padding-left: 21px;
+    width: 47px;
+}
+.logged-status .actions a:hover {
+    background-color: transparent;
+    color: #CC0000;
+}
+.logged-status .actions .comment a {
+    background-position: 6px -30px;
+}
+.logged-status .actions .discount a {
+    background-position: 6px -50px;
+}
+.logged-status .actions .shop a {
+    background-position: 6px -70px;
+}
+.login-status .intro {
+    color: #61646E;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    padding-left: 35px;
+}
+.login-status .intro dd {
+    padding-left: 18px;
+}
+.login-status .intro .comment {
+    background-position: 0 -30px;
+}
+.login-status .intro .discount {
+    background-position: 0 -50px;
+}
+.login-status .btn-type-a {
+    margin-bottom: 3px;
+}
+.login-status .btn-fn-a {
+    margin: 0 5px 3px 44px;
+}
+.index-switcher, .index-switcher .track li, .index-switcher .track img {
+    display: block;
+    height: 100px;
+    width: 550px;
+}
+.index-switcher, .index-switcher .track {
+    background: none repeat scroll 0 0 #F3F3F3;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 550px;
+}
+.index-switcher, .index-switcher .track li {
+    overflow: hidden;
+}
+.index-switcher .track {
+    z-index: 10;
+}
+.index-switcher .ctrl-tabs {
+    bottom: 4px;
+    position: absolute;
+    right: 0;
+    z-index: 20;
+}
+.index-switcher .tab {
+    background: none repeat scroll 0 0 #000000;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font: 11px/1 Verdana,arial;
+    margin-right: 5px;
+    opacity: 0.7;
+    padding: 2px 4px;
+    text-align: center;
+}
+.index-switcher .on {
+    background: none repeat scroll 0 0 #FF6900;
+}
+.secondary .term-list-item {
+    border: medium none;
+}
+.secondary .term-list-item .term {
+    width: 60px;
+}
+.secondary .term-list-item .desc {
+    margin-left: 60px;
+}
+.secondary .term-list-item .desc li {
+    margin-right: 0;
+    width: 35px;
+}
+.secondary .term-list-item .desc .m {
+    width: 48px;
+}
+.secondary .term-list-item .desc .w {
+    width: 58px;
+}
+.secondary .term-list-item .more {
+    color: #6666CC;
+}
+.secondary .term-list-item .more:hover {
+    background-color: #6666CC;
+    color: #FFFFFF;
+}
+.aside-left .block {
+    clear: both;
+}
+.aside-right .more {
+    margin-top: 8px;
+    text-align: left;
+}
+.quick-search {
+    background: none repeat scroll 0 0 #F3F3F3;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 15px;
+}
+.quick-search .legend {
+    color: #61646E;
+    display: block;
+    float: left;
+    margin-right: 9px;
+}
+.quick-search .select {
+    background-position: 0 0;
+    color: #61646E;
+    cursor: pointer;
+    float: left;
+    height: 24px;
+    margin: 4px 4px 0 0;
+    padding-left: 2px;
+    position: relative;
+    z-index: 5;
+}
+.quick-search .select .txt {
+    background-position: right 0;
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 0 0 8px;
+}
+.quick-search .select:hover {
+    color: #61646E;
+}
+.quick-search .channel .txt {
+    width: 76px;
+}
+.quick-search .type .txt {
+    width: 102px;
+}
+.quick-search .region {
+    margin-right: 8px;
+}
+.quick-search .region .txt {
+    width: 122px;
+}
+.quick-search .btn-fn-b, .quick-search .btn-fn-a {
+    margin-top: 4px;
+}
+.ep_quick-search {
+    left: 468px;
+    top: 452px;
+}
+.ep_quick-search a {
+    color: #6666CC;
+}
+.ep_quick-search a:hover {
+    background-color: #6666CC;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.ep_quick-search li {
+    float: left;
+}
+.ep_quick-search .option {
+    cursor: pointer;
+    display: block;
+    float: left;
+    margin-right: 5px;
+    padding: 0 1px;
+    white-space: nowrap;
+}
+.ep_quick-search .option-active {
+    color: #111111;
+    cursor: default;
+    font-weight: bold;
+}
+.ep_quick-search .option-active:hover {
+    background: none repeat scroll 0 0 transparent;
+    color: #111111;
+    text-decoration: none;
+}
+.ep_quick-search .default, .ep_quick-search .list-term, .ep_quick-search dl {
+    float: left;
+    margin-bottom: 7px;
+    width: 100%;
+}
+.ep_quick-search dl a {
+    float: left;
+    padding: 0 1px;
+}
+.ep_quick-search dt {
+    float: left;
+    margin-right: 5px;
+}
+.ep_quick-search dt a {
+    margin-right: 5px;
+}
+.ep_quick-search dd {
+    float: left;
+    width: 510px;
+}
+.ep_quick-search-channels {
+    width: 66px;
+}
+.ep_quick-search-channels li {
+    margin-bottom: 1px;
+    width: 100%;
+}
+.ep_quick-search-channels li a {
+    float: none;
+    margin-right: 0;
+}
+.ep_quick-search-styles, .ep_quick-search-regions {
+    width: 602px;
+}
+.ep_quick-search .ep-close:hover {
+    background-color: #FFFFFF;
+    background-position: -87px -232px;
+}
+.page-home .section .features-list-a {
+    margin-bottom: 23px;
+    margin-top: 14px;
+}
+.page-home .section .features-list-a .thumb, .page-home .section .features-list-a .thumb a {
+    display: block;
+    width: 250px;
+}
+.page-home .section .coupon-block {
+    margin: 14px 0 17px;
+}
+.page-home .features-list-b .thumb a {
+    height: 84px;
+}
+.page-home .features-list-b .thumb h3 a {
+    height: auto;
+}
+.page-home .features-list-b .content {
+    width: 325px;
+}
+.coupon-block .primary {
+    padding-bottom: 15px;
+}
+.coupon-block .primary .coupon-list {
+    float: left;
+    margin: 0 20px 0 -10px;
+    width: 260px;
+}
+.coupon-block .primary .coupon-list li {
+    float: left;
+    padding-left: 10px;
+}
+.coupon-block .primary .coupon-list li a {
+    float: left;
+    height: 90px;
+    width: 120px;
+}
+.coupon-block .primary .coupon-list li a img {
+    height: 90px;
+    width: 120px;
+}
+.coupon-block .primary .content {
+    width: 265px;
+}
+.coupon-block .primary .c-first {
+    margin-right: 5px;
+}
+.coupon-block .secondary {
+    border-top: 1px dashed #E0E0E0;
+    margin: 0;
+    padding-top: 13px;
+    width: auto;
+}
+.coupon-block .content-sub {
+    float: left;
+    width: 265px;
+}
+.coupon-block .cs-first {
+    margin-right: 5px;
+}
+.coupon-block .content-sub li {
+    margin-bottom: 4px;
+}
+.tuan-slider {
+    background: none repeat scroll 0 0 #F3F3F3;
+    float: left;
+    margin-right: 20px;
+    padding: 10px 0;
+    position: relative;
+    width: 192px;
+}
+.tuan-slider a {
+    color: #61646E;
+}
+.tuan-slider a:hover {
+    background-color: transparent;
+    color: #CC0000;
+}
+.tuan-slider .wrap {
+    height: 127px;
+    margin: 0 auto 5px;
+    overflow: hidden;
+    position: relative;
+    width: 145px;
+}
+.tuan-slider .track {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 10000px;
+}
+.tuan-slider li {
+    float: left;
+    height: 127px;
+    width: 145px;
+}
+.tuan-slider .img {
+    display: block;
+    height: 87px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.tuan-slider .nav {
+    display: block;
+    height: 16px;
+    outline: medium none;
+    position: absolute;
+    text-indent: -1000px;
+    top: 45px;
+    width: 16px;
+}
+.tuan-slider .prev {
+    background-position: -27px -98px;
+    left: 5px;
+}
+.tuan-slider .next {
+    background-position: -56px -98px;
+    right: 5px;
+}
+.tuan-slider p strong {
+    margin-right: 5px;
+}
+.page-home .thumb-list li {
+    height: 75px;
+}
+.page-channel .comment-list-a .avatar {
+    cursor: pointer;
+    overflow: hidden;
+}
+.page-channel .comment-list-a .content {
+    width: 630px;
+}
+.page-channel .comment-list-a .shop-name {
+    margin-left: 5px;
+}
+.page-channel .comment-list-a .time {
+    color: #999999;
+    float: right;
+}
+.page-channel .comment-list-a h3 {
+    margin-bottom: 2px;
+}
+.page-channel .comment-list-a h3, .page-channel .comment-list-a .comment-rst, .page-channel .comment-list-a .comment-entry {
+    width: 630px;
+}
+.page-channel .comment-list-a .comment-entry blockquote {
+    background-position: -141px -251px;
+    color: #666666;
+    float: left;
+    line-height: 1.6;
+    padding: 0 0 0 18px;
+    width: 550px;
+}
+.page-channel .comment-list-a .comment-entry .more {
+    background-position: 0 -250px;
+    display: block;
+    float: right;
+    height: 38px;
+    position: relative;
+    width: 60px;
+}
+.page-channel .comment-list-a .comment-entry .more a {
+    bottom: 0;
+    position: absolute;
+    right: 10px;
+}
+.page-channel .comment-list-a .comment-entry .more a:hover {
+    background: none repeat scroll 0 0 transparent;
+    color: #CC0000;
+}
+.page-channel .comment-list-a dt {
+    margin-right: 5px;
+}
+.page-channel .comment-list-a dd {
+    margin-right: 10px;
+}
+#weddingSlideADWrapper {
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    top: -10px;
+    width: 700px;
+}
+#weddingSlideADWrapper a {
+    display: block;
+}
+.aside-left .tab-list {
+    border-color: #EFE0D7;
+}
+.aside-left .tab-list li a {
+    background-color: #FFF9F1;
+    border-color: #EFE0D7;
+}
+.aside-left .tab-list li a:hover {
+    background-color: #FFF9F1;
+}
+.aside-left .tab-list .active a, .aside-left .tab-list .active a:hover {
+    background-color: #FFFFFF;
+}
+.aside-left .tab-list .last {
+    border-color: #EFE0D7;
+}
+.aside-left .tab-panel {
+    border-color: #EFE0D7;
+}
+.aside-right .b-tuan {
+    padding-right: 9px;
+}
+.b-tuan li a {
+    float: left;
+}
+.b-tuan li .note {
+    float: right;
+}
+.b-tuan .tuan-wrapper {
+    background-color: #FFFFFF;
+    margin: 6px 0 10px -8px;
+    padding-left: 8px;
+}
+.b-tuan .tuan-wrapper .thumb {
+    float: left;
+    height: 65px;
+    margin-right: 6px;
+    overflow: hidden;
+    width: 105px;
+}
+.b-tuan .tuan-wrapper .thumb img {
+    height: 65px;
+    width: 105px;
+}
+.b-tuan .tuan-wrapper .content {
+    float: left;
+    width: 98px;
+}
+.b-tuan .tuan-wrapper .price {
+    line-height: 15px;
+    margin-bottom: 2px;
+}
+.b-tuan .tuan-wrapper .price strong {
+    color: #CC0000;
+    float: left;
+    font-weight: normal;
+    margin-right: 5px;
+}
+.b-tuan .tuan-wrapper .price strong em {
+    font-weight: bold;
+}
+.b-tuan .tuan-wrapper .price span {
+    background-color: #FF9A32;
+    background-position: 0 -125px;
+    color: #FFFFFF;
+    float: left;
+    height: 15px;
+    text-align: center;
+    width: 37px;
+}
+.b-tuan .tuan-wrapper .price span em {
+    font-weight: bold;
+}
+.b-tuan .tuan-wrapper .ori {
+    color: #888888;
+    margin-bottom: 6px;
+}
+.b-tuan .tuan-wrapper .btn-type-d a:hover {
+    color: #61646E;
+}
+.aside-right .banner-block {
+    border: medium none;
+    height: auto;
+    padding: 0;
+}
+.aside-right .banner-block a {
+    float: left;
+    width: 100%;
+}
+.aside-right .banner-block a img {
+    float: left;
+}
+.aside-right .b-add {
+    background: none repeat scroll 0 0 #FEF1D3;
+    border-color: #F5DCA4;
+    padding: 0 15px;
+    position: relative;
+}
+.aside-right .b-add .block-title {
+    color: #111111;
+    font-size: 12px;
+    line-height: 44px;
+    margin: 0;
+}
+.aside-right .b-add .form-btn {
+    background-position: 0 -150px;
+    color: #FFFFFF;
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    height: 24px;
+    line-height: 22px;
+    padding-left: 28px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 73px;
+}
+.DPADBrandImage {
+    margin-bottom: 5px;
+    position: relative;
+}
+.DPADBrandImage .ad-container {
+    position: absolute;
+}
+.DPADBrandImage .ad-container li {
+    height: 140px;
+    overflow: hidden;
+    width: 240px;
+}
+.ms-bot-pushup {
+    border-top: 1px solid #F9EDBE;
+    bottom: -38px;
+    height: 37px;
+    position: fixed;
+    width: 100%;
+}
+.ms-bot-close {
+    cursor: pointer;
+    height: 16px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 16px;
+}
+.ms-bot-pushup .inner {
+    color: #996633;
+    font-family: 'Microsoft YaHei',sans-serif;
+    font-size: 15px;
+    margin: 0 auto;
+    padding-top: 7px;
+    position: relative;
+    width: 400px;
+}
+.msPinSite {
+    cursor: pointer;
+    left: 35px;
+    position: absolute;
+    top: 8px;
+}
+

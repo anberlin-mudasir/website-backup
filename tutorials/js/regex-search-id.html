@@ -1,0 +1,21 @@
+<script type="text/javascript">
+function go()
+{
+    var hasId = new RegExp("mtgt_*");
+    var got=document.getElementsByTagName("*");
+    var element;
+    for (var i=0; (element = got[i])!=null; i++)
+    {
+        var elementId=element.id;
+        if (elementId && hasId.test(elementId))
+        {
+            alert(elementId);
+            element.style.display='none';
+        }
+    }
+}
+</script>
+<div id="mtgt_1"> hello 1 </div> 
+<div id="mtgt_2"> hello 2 </div> 
+<div id="mtgt_3"> hello 3 </div> 
+<input type="button" value="eliminate!" onclick="go()"/>

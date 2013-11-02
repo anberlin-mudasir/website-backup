@@ -1,0 +1,28 @@
+<html>
+<head>
+<script type="text/javascript">
+function myAlert2(aString) { 
+    //this function takes parameter
+    // it also returns a value
+    window.alert("Welcome " + aString);
+    return 34;
+}
+function myAlert4() {
+    return 2*myAlert2("here");
+}
+function combine(str1, str2)
+{
+    return str1+" != "+str2;
+}
+</script>
+</head>
+<body>
+<script type="text/javascript">
+document.write("<p>");
+document.write("The result return by my function myAlert4 is: "+myAlert4());
+document.write("</p><p>");
+document.write("The new string generated from 'A' and 'B' is: "+combine('A','B'));
+document.write("</p>");
+</script>
+</body>
+</html>

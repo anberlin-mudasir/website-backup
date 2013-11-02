@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JavaScript 弹出输入框 prompt</title>
+</head>
+<script language="javascript" type="text/javascript">
+        function addnew()
+        {
+            var   ret   =   prompt("请输入内容！","");  
+              if   (ret   ==   null)  
+              {  
+                  return false;
+              }  
+              else   if   (ret.replace(/^\s+|\s+$/g,"")   ==   "")  
+              {
+                alert("输入内容为空！");  
+                 return false;
+              }
+              document.getElementById("TextBox1").value=ret;
+        }
+    </script>
+<body>
+<input type="text" name="TextBox1" id="TextBox1" />
+<input type="button" value="add" onclick="addnew()"/>
+
+</body>
+</html>

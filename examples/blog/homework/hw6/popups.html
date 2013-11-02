@@ -1,0 +1,30 @@
+<html>
+<head>
+   <script language="javascript">
+   function redict() { // CONFIRM 
+       var url = prompt("Where to go?", "http://"); 
+       if (url)
+           location=url;
+   }
+   </script>
+</head>
+
+
+<body>
+<h1>And today's nonsense is ...</h1>
+Mr Pudding says: Do you want to go to 
+<a href="#" onMouseOver="self.status='Off to the Lemon; return true';"
+            onMouseOut="self.status='';" >the Lemon</a>?
+<br />or would you prefer the  
+<a href="#" onMouseOver="self.status='Ah.... I see that you prefer the lime; return true';"
+            onMouseOut="self.status='';">the Lime</a>?
+
+<p>
+Wanna try another page? Click the picture below.<br />
+<a href="#" onClick="redict(); return false"><img border=1 
+width=201 src="img/redict.gif" title="Let's try another page!"></a> 
+</p>
+
+
+</body>
+</html>

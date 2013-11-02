@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="cookbook.xsl"?>
+<cookbook>
+  <recipe>
+    <name>Rhubarb and Custard</name>
+    <ingredient>
+      <name>Milk</name>
+      <amount>15</amount>
+      <unit>ml</unit>
+    </ingredient>
+    <ingredient>
+      <name>Rhubarb</name>
+      <amount>700</amount>
+      <unit>g</unit>
+    </ingredient>
+    <ingredient>
+      <name>Custard Powder</name>
+      <amount>8</amount>
+      <unit>tbs</unit>
+    </ingredient>
+    <preparation>Mix together and put in oven proof dish</preparation>
+    <cooking>Heat in a moderate oven for 40 mins</cooking>
+  </recipe>
+
+  <recipe>
+    <name>Basic poached eggs</name>
+    <ingredient>
+      <name>eggs</name>
+      <amount>4</amount>
+      <unit></unit>
+    </ingredient>
+    <ingredient>
+      <name>white vinegar</name>
+      <amount>2</amount>
+      <unit>tsp</unit>
+    </ingredient>
+    <preparation>Serve poached eggs with toasted brioche, Turkish or sourdough bread. Or try poached eggs on top of toasted English muffins, with basil pesto and sliced leg ham.</preparation>
+    <cooking>Serve eggs on toast, sprinkled with chives and seasoned to taste with salt and pepper, or use in one of the recipes on the following pages.</cooking>
+  </recipe>
+
+
+  <recipe>
+    <name>Little devils</name>
+    <ingredient>
+      <name>hard-boiled eggs</name>
+      <amount>4</amount>
+      <unit></unit>
+    </ingredient>
+    <ingredient>
+      <name>tablespoon whole-egg mayonnaise</name>
+      <amount>1</amount>
+      <unit></unit>
+    </ingredient>
+    <ingredient>
+      <name>tablespoon finely chopped fresh chives </name>
+      <amount>1</amount>
+      <unit></unit>
+    </ingredient>
+    <ingredient>
+      <name>teaspoon dijon mustard</name>
+      <amount>1/2</amount>
+      <unit></unit>
+    </ingredient>
+    <preparation>Using a teaspoon, scoop yolks into a bowl. Using a fork, lightly mash.</preparation>
+    <cooking>To ensure centred yolks in hard-boiled eggs, gently stir eggs constantly while cooking.</cooking>
+  </recipe>
+
+</cookbook>

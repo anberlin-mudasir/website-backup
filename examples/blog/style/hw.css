@@ -1,0 +1,58 @@
+.ans
+{
+    color:gray;
+    padding:5px;
+    border-style:dashed;
+    border-width:1px;
+}
+.emph-alt
+{
+    color:orange;
+}
+.sqlsrc
+{
+    padding:0px 0px 0px 10px;
+    color:black;
+}
+div.box
+{
+    padding:5px;
+    border-style:dashed;
+    border-width:1px;
+}
+div.box-center
+{
+    text-align:center;
+    padding:5px;
+    border-style:dashed;
+    border-width:1px;
+}
+div.center
+{
+    text-align:center;
+    padding:5px;
+}
+.center table
+{
+    margin-left:auto;
+    margin-right:auto;
+}
+/* a fancy link wrapped as a box */
+a.box:link,a.box:visited
+{
+display:block;
+font-weight:bold;
+color:#FFFFFF;
+background-color:#111111;
+text-align:center;
+padding:4px;
+text-decoration:none;
+width:80px;
+font-size:0.7em;
+margin: auto;
+}
+a.box:hover,a.box:active
+{
+background-color:#555555;
+}
+

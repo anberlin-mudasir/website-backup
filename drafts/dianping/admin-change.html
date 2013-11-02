@@ -1,0 +1,171 @@
+<html>
+<head>
+  <link href="css/base.css" type="text/css" rel="stylesheet"/>
+  <link href="css/user.css" type="text/css" rel="stylesheet"/>
+  <link href="css/shop-min.css" type="text/css" rel="stylesheet"/>
+  <link href="css/login.css" type="text/css" rel="stylesheet"/>
+</head>
+<script type="text/javascript">
+   <!--    
+	function checkSubmit2(){
+		var q = document.getElementById("contents");
+		var bok = true;
+		var i,j;
+		var tastearr = new Array("酸","甜","苦","辣","咸","淡","麻","鲜");
+		if(q.Name.value == "" || q.Ingredients.value == ""
+		|| q.Price.value == "" 
+		|| q.Description.value == "")
+		{bok = false;}
+		
+		q.allTaste.value = "";
+		q.allTasteInC.value = "";
+		for(i = 0;i <= 7;i ++){
+			if(q.Taste[i].checked){
+				q.allTaste.value += q.Taste[i].value;
+				q.allTasteInC.value += tastearr[i];
+				for(j = i +1;j <= 7;j ++){
+					if(q.Taste[j].checked){
+					q.allTaste.value += ' ';
+					q.allTaste.value += q.Taste[j].value;
+					q.allTasteInC.value += ' ';
+					q.allTasteInC.value += tastearr[j];
+					}
+				}
+				break;
+			}
+		}
+		if("" == q.allTasteInC.value)
+			bok = false;
+		
+		
+		if(false == bok)
+		{
+			window.alert("不能有空项");
+			q.Name.focus();
+			return false; 
+		}
+		
+	 ////////////////////////////////////////
+    return true;
+   } // checkSubmit
+  //  -->
+</script>
+<body>
+
+<div class="header-bar">
+  <div class="inner Fix">
+    <span class="tagline">北京大学餐饮信息查询系统欢迎您 ,</span>
+    <ul class="user-action hd-menu">
+      <li class="user-login first mi">
+        root 
+      </li>
+    </ul>
+    <ul class="quick-menu hd-menu">
+      <li class="first mi">
+        <a href="#">注销</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="main_w">
+  <br />
+  <div class="content_n">
+    <div class="memberBox">
+      <h3>修改菜肴</h3>
+    </div>
+    <div class="feedList">
+      <div class="section">
+        <div id="cont-reg" class="block login-form">
+          <div class="pop-win-inner">
+            <form id="contents" method="post" action="#">
+              <div class="form-block">
+                <label class="label" for="name">名字：</label>
+                <input name="Name" id="name" class="form-default" type="text" placeholder="菜名" />
+
+              </div>
+              <div class="form-block">
+                <label class="label" for="ingredient">原料：</label>
+                <input name="Ingredients" id="ingredient" class="form-default" type="text" placeholder="如有多种请用空格分开"/>
+              </div>
+              <div class="form-block">
+                <label class="label" for="price">价格：</label>
+                <input name="Price" id="price" class="form-default" type="text" placeholder="每两价格"/>
+              </div>
+              <div class="form-block">
+                <label class="label" for="picture">图片：</label>
+                <input name="Url_of_image" id="picture" class="form-default" type="file"/>
+              </div>
+
+              <div class="form-block">
+                <label class="label" for="description">描述：</label>
+                <textarea rows="4" name="Description" id="description" class="form-default"> </textarea>
+              </div>
+              <div class="form-block">
+                <label class="label" for="taste">口味：</label>
+                <div>
+                  <input type="checkbox" value="2" name="Taste"/>酸
+                  <input type="checkbox" value="3" name="Taste"/>甜
+                  <input type="checkbox" value="5" name="Taste"/>苦
+                  <input type="checkbox" value="7" name="Taste"/>辣 <br/>
+                  <input type="checkbox" value="11" name="Taste"/>咸
+                  <input type="checkbox" value="13" name="Taste"/>淡
+                  <input type="checkbox" value="17" name="Taste"/>麻 
+                  <input type="checkbox" value="19" name="Taste"/>鲜
+                  <input type="hidden" value="" name="allTaste">
+                  <input type="hidden" value="" name="allTasteInC">
+                </div>
+              </div>
+              <div class="form-block">
+                <label class="label" for="taste">菜系：</label>
+                <input type = "radio"  name = "Style"  value = "1"  /> 鲁菜
+                <input type = "radio"  name = "Style"  value = "2"  /> 川菜
+                <input type = "radio"  name = "Style"  value = "3"  /> 苏菜
+                <input type = "radio"  name = "Style"  value = "4"  /> 粤菜
+                <input type = "radio"  name = "Style"  value = "5"  /> 浙菜
+                <input type = "radio"  name = "Style"  value = "6"  /> 闽菜
+                <input type = "radio"  name = "Style"  value = "7"  /> 湘菜
+                <input type = "radio"  name = "Style"  value = "8"  /> 徽菜
+                <input type = "radio"  name = "Style"  value = "9"  /> 东北菜
+                <input type = "radio"  name = "Style"  value = "10" /> 其他
+                <input type = "hidden"  name = "allStyle"  value = "" />
+                </select>
+              </div>
+              <div class="form-block">
+                <label class="label" for="canteen">食堂：</label>
+                <input type="radio" value="2" name="Canteen">学一
+                <input type="radio" value="3" name="Canteen"/>学五
+                <input type="radio" value="5" name="Canteen"/>艺园
+                <input type="radio" value="7" name="Canteen"/>家园 <br/>
+                <input type="radio" value="11" name="Canteen"/>农园
+                <input type="radio" value="13" name="Canteen"/>燕南
+                <input type="radio" value="19" name="Canteen"/>佟园 
+                <input type="radio" value="17" name="Canteen"/>康博思
+              </div>
+
+              <div class="block form-btn-block form-block form-content-block">
+                <span class="btn-type-b btn-fn-c">
+                  <a class="form-btn" href="javascript:if(checkSubmit2())document.getElementById('contents').submit()">修改菜肴</a>
+                </span>
+                <span class="btn-type-b btn-fn-c">
+                  <a class="form-btn" href="javascript:document.getElementById('contents').reset()">重置</a>
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="asider_n">
+    <div class="box tools">
+      <p>
+        <span class="item itoolsStyle">
+          <a class="B" href="#">返回</a>
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+<body>
+<p>Quite a fancy timer</p>
+<div id="divExample" style="width: 200px; height:300px; overflow:auto;">
+<script type="text/javascript">
+var i = 0
+var iDir = 1;
+var intStop = .25*60*1000;
+var timeStart = new Date();
+function AddRow(){
+    var newDiv = document.createElement("div");
+    newDiv.style.backgroundColor = "rgb(" + i*1 + "," + i*3 + "," + i*2 + ")";
+    newDiv.style.color = "#FFFFFF";
+    i+=iDir;
+    if(i==75||i==0)
+        iDir*=-1;
+    var d = new Date();
+    newDiv.innerHTML = d.getHours().fPad(1) + ":" +
+    d.getMinutes().fPad(1) + ":" +
+    d.getSeconds().fPad(1) + ":" +
+    d.getMilliseconds().fPad(3);
+    var objDiv = document.getElementById("divExample");
+    objDiv.innerHTML="";
+    objDiv.appendChild(newDiv);
+    objDiv.scrollTop = objDiv.scrollHeight;
+    if(d - timeStart >= intStop){
+        window.clearInterval(timer);
+    }
+}
+var timer = window.setInterval("AddRow()",1);
+Number.prototype.fPad = function(intD){
+    var strNum = this.toString();
+    for(var j=strNum.length;j<intD;j++){
+        strNum = "0" + strNum;
+    }
+    return strNum;
+} 
+</script>
+</body>
+</html>

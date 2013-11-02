@@ -1,0 +1,106 @@
+div.container
+{
+width:100%;
+margin:0px 0px 0px 0px;
+border:1px solid gray;
+line-height:150%;
+}
+div.header
+{
+background: url(bg.jpg) repeat-x scroll 0 0 #FFFFFF;
+font: bold 20px 'Trebuchet MS', Sans-serif;
+color: #E0E0E0;
+padding: 1px;
+text-align: center;
+clear:both;
+height:78px;
+}
+div.footer
+{
+background: url('gradientbg2.jpg') repeat-x scroll 0 0 #F2F2F2;
+color: #101010;
+font-family: Arial,Helvetica,sans-serif;
+font-size: 10px;
+text-align: right;
+padding: 5px;
+clear:both;
+}
+div.content
+{
+top:10%;
+left:20%;
+right:20%;
+border-left:1px dotted gray;
+border-right:1px dotted gray;
+padding:10px;
+width:60%;
+margin:auto;
+}
+div.wrap
+{
+background: url('gradientbg.jpg') repeat-x scroll 0 0 #FFFFFF;
+}
+.boxwrap
+{
+    padding: 0px 10px 10px 10px;
+    border-style: dotted; 
+    border-width: 1px; 
+}
+.boxwrap-alt
+{
+    padding: 0px 10px 10px 10px;
+    border-style: dotted; 
+    border-width: 1px; 
+    height: 200px;
+}
+
+/* a fancy link wrapped as a box */
+a.box:link,a.box:visited
+{
+display:block;
+font-weight:bold;
+color:#FFFFFF;
+background-color:#111111;
+width:350px;
+text-align:center;
+padding:4px;
+text-decoration:none;
+font-size:0.7em;
+margin: auto;
+}
+a.box:hover,a.box:active
+{
+background-color:#555555;
+}
+a.alt:link,a.alt:visited
+{
+display:block;
+font-weight:bold;
+color:#FFFFFF;
+background-color:#111111;
+text-align:center;
+padding:4px;
+text-decoration:none;
+font-size:0.7em;
+}
+a.alt:hover,a.alt:active
+{
+background-color:#555555;
+}
+
+input.x
+{
+background-image: url("close-button.png");
+width:22px;
+height:22px;
+text-indent:-9999px;
+outline:none;
+}
+input.x:link,input.x:visited
+{
+background-image: url("close-button.png");
+}
+input.x:hover,input.x:active
+{
+background-image: url("close-button2.png");
+}

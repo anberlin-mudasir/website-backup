@@ -1,0 +1,245 @@
+ body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+  background-image: url(../img/hexellence.png);
+  background-repeat: repeat-all;
+}
+.form-signin {
+  max-width: 300px;
+  padding: 19px 29px 29px;
+  margin: 0 auto 20px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin input[type="text"],
+.form-signin input[type="password"] {
+  font-size: 12px;
+  height: auto;
+  margin-bottom: 15px;
+  padding: 5px 5px;
+}
+
+.navbar-fixed-top .brand {
+  //padding-right: 0;
+  //padding-left: 0;
+  //margin-left: 20px;
+  //float: right;
+  font-weight: bold;
+  color: #FFF;
+  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
+  -webkit-transition: all .2s linear;
+     -moz-transition: all .2s linear;
+          transition: all .2s linear;
+}
+.navbar-fixed-top .brand:hover {
+  //text-decoration: none;
+  color: #000;
+}
+
+.spec-block {
+  position: relative;
+  margin: 15px 0;
+  padding: 39px 19px 14px;
+  *padding-top: 19px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+/* Remove spacing between an example and it's code */
+.spec-block + .prettyprint {
+  margin-top: -20px;
+  padding-top: 15px;
+}
+
+/* Echo out a label for the example */
+.spec-block:after {
+  content: ">>>";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  color: #9da0a4;
+  -webkit-border-radius: 4px 0 4px 0;
+     -moz-border-radius: 4px 0 4px 0;
+          border-radius: 4px 0 4px 0;
+}
+.extra-block {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top:1px dashed #E4E4E4;
+}
+
+/*把样例的下拉表单去了*/
+.form-actions {
+    background-color:transparent;
+    border-top: 1px dashed #e3e3e3;
+}
+.well {
+    background-color: #f5f5f5;
+}
+
+.clearfix:after {
+    content:"."; display:block; height:0; clear:both; visibility:hidden 
+}
+.signup-twoside {
+    width:865px; 
+    margin:0 auto;
+}
+.signup-left {
+    padding-right: 10px; 
+    border-right:1px solid #e3e3e3;
+    float:left;
+    width:554px;}
+.signup-right {
+    margin-top: 80px; 
+    padding-left:3px ;
+    width:250px;
+    float:right;
+}
+.main-left {
+}
+.main-middle {
+    border-left: 1px solid #aaaaaa;
+    padding: 0 0 0 30px;
+}
+.main-right {
+}
+
+.area {
+  background-color: #f5f5f5;
+  display: block;
+  padding: 4px;
+  line-height: 20px;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+     -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+  -webkit-transition: all 0.2s ease-in-out;
+     -moz-transition: all 0.2s ease-in-out;
+       -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+}
+
+a.area:hover {
+  border-color: #0088cc;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+     -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+          box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+}
+
+.area > img {
+  display: block;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.area .caption {
+  padding: 9px;
+  color: #555555;
+}
+.accordion-group a {
+    margin-top:6px;
+    margin-right:10px;
+}
+.accordion-group button {
+    margin-top:6px;
+    margin-right:10px;
+}
+
+.allread a {
+    color: gray;
+}
+.disabled a{
+    color: white;
+}
+
+img.usr {
+    height:64px;
+    width:64px;
+}
+
+li img.usr {
+    height:32px;
+    width:32px;
+}
+
+img.msg {
+    height:32px;
+    width:32px;
+}
+img.recommend {
+    height:36px;
+    width:36px;
+}
+td.button i {
+    height:32px;
+    height:32px;
+}
+
+div.recommend {
+    padding: 15px;
+}
+
+textarea.msg {
+    margin: 1px 0px 0px; 
+    padding: 5px; 
+    //border-style: none; 
+    //border-width: 0px; 
+    width:100%;
+    font-size: 14px; 
+    font-family: Tahoma,宋体; 
+    word-wrap: break-word; 
+    line-height: 18px; 
+    resize: none;
+    overflow-y: auto; 
+    overflow-x: hidden; 
+    outline: medium none;
+}
+
+table.fixed { 
+    table-layout:fixed; 
+}
+table.fixed td { 
+    overflow: hidden; 
+    word-break:break-all;
+}
+
+.icon-misc {
+  background-image: url("../img/glyphicons-halflings-green.png");
+}
+#name-succeed,
+#name-fail,
+#name-info,
+#pwd-succeed,
+#pwd-fail,
+#pwd-info,
+#rpwd-succeed,
+#rpwd-fail,
+#rpwd-info {
+    display:none;
+}
+
+#hidden {
+    display:none;
+}

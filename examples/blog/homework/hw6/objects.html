@@ -1,0 +1,44 @@
+<html>
+<head>
+<script type="text/javascript">
+var holidays=[];    // global
+function Holiday(destination, duration, cost, agent) {
+    this.destination = destination; //"this" used in same sense as Java
+    this.duration    = duration;
+    this.cost        = cost;
+    this.agent       = agent;     
+}
+function makeHoliday(dest, dur, cost, agent) {
+    hol = new Holiday(dest, dur, cost, agent);
+    holidays.push(hol);
+}
+function displayHolidays() {
+    var head=["Destination","Duration","Cost","Agent"];
+    document.write("<table border='1'>");
+    document.write("<tbody>");
+    document.write("<tr><th>"+head.join("</th><th>")+"</th></tr>");
+    for (var i=0; i<holidays.length; i++)
+    {
+        var s=[];
+        document.write("<tr><td>");            
+        s.push(holidays[i].destination);
+        s.push(holidays[i].duration);
+        s.push(holidays[i].cost);
+        s.push(holidays[i].agent);
+        document.write(s.join("</td><td>"))
+        document.write("</td></tr>");            
+    }
+    document.write("</tbody>");
+    document.write("</table>");
+}
+</script>
+</head>
+<body>
+<script type="text/javascript">
+makeHoliday("Toronto", "2 Weeks", "$400", "Mark");
+makeHoliday("Tokyo", "1 Week", "$500", "Alex");
+makeHoliday("Hong Kong", "1 Week", "$300", "Bob");
+displayHolidays();
+</script>
+</body>
+</html>

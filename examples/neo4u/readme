@@ -1,0 +1,2 @@
+make sure 'identicon/' has mod 777
+$ cd backend; make all run

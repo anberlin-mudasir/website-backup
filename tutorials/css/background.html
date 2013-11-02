@@ -1,0 +1,56 @@
+<html>
+<head>
+<style type="text/css" >
+body
+{
+    /* properties available: */
+    /********
+    background-color
+    background-image
+    background-repeat
+    background-attachment
+    background-position
+    ********/
+
+    /* background-color:#d0e4fe; */ /* blue background */
+    /* background-color:#b0c4de; */ /* dark blue background */
+
+    /* image background with x-axis repeat */
+    /* background: url("img/gradientbg.jpg") repeat-x scroll 0 0 #FFFFFF; */
+
+    /* img bg with fixed position */
+    /* background-image:url('img/smiley.gif');
+    background-repeat:no-repeat;
+    background-attachment:fixed; */
+    
+    /* img location, and all the properties are set*/
+    /* background:#ffffff url('img/img_tree.png') no-repeat right top;
+    margin-right:200px; */
+}
+.container
+{
+    text-align:center;  /* doesn't seem to make sense? */
+}
+.center_div
+{
+    border:1px solid gray; /* border of the container */
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;     /* width of this div relative to the browser size*/
+    background-color:#d0f0f6;
+    text-align:left;
+    padding:8px;    /* padding of left and right*/
+}
+</style>
+</head>
+<body>
+<h1>title</h1>
+<p>hello world</p>
+<div class="container">
+<div class="center_div">
+<h1>title-with-container</h1>
+<p>hello container!</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,3 @@
+setup config.php
+WB_AKEY: replace with your App Key
+WB_SKEY: replace with your App Secret

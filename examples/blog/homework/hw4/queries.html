@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Hw3</title>
+<link href="css/style.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="../../share/prototype.lite.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+var elems;
+var TYPE_PARTY=1;
+var TYPE_GUEST=2;
+function init()
+{
+    elems=document.getElementsByClassName('table_row');
+    document.getElementById('query').removeAttribute('disabled');
+}
+function wrapinit()
+{
+    init();
+    document.getElementById('query').disabled='disabled';
+}
+function show(type)
+{
+    hideForms();
+    if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+    }
+    else {// code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange=function() {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+            var res=xmlhttp.responseText;
+            if (type==TYPE_PARTY)
+                document.getElementById("result").innerHTML="<caption><h3>Party information</h3></caption>";
+            else if (type==TYPE_GUEST)
+                document.getElementById("result").innerHTML="<caption><h3>Guest information</h3></caption>";
+            
+            document.getElementById("result").innerHTML+=res;
+            document.getElementById("resultwrap").style.height="100%";
+            init();
+        }
+    }
+    xmlhttp.open("POST","show-table.php",true);
+    xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    if (type==TYPE_PARTY)
+        xmlhttp.send("table=party");
+    else if (type==TYPE_GUEST)
+        xmlhttp.send("table=guest");
+}
+function hideForms()
+{
+    document.getElementById('formwrap').style.display='none';
+    document.getElementById('jp-form').style.display='none';
+    document.getElementById('qp-form').style.display='none';
+}
+function hideRows()
+{
+    var len=elems.length;
+    for (var i=0; i<len; i++)
+    {
+        elems[i].style.display='none';
+    }
+}
+function filter()
+{
+    hideRows();
+    
+    var len=elems.length;
+    var query=document.getElementById('query').value;
+    query=query.toLowerCase().split(/\s+/);
+    
+    for (var i=0; i<len; i++)
+    {
+        var hide=false;
+        for (var j=0; j<query.length; ++j) 
+        {
+            if (elems[i].innerHTML.toLowerCase().indexOf(query[j])==-1) 
+            {
+                hide=true;
+                break;
+            }
+        }
+        if (hide && query.length)
+            elems[i].style.display='none';
+        else
+            elems[i].style.display='table-row';
+    }
+}
+function showAppend(type)
+{
+    show(2);
+    hideForms();
+    if (type==TYPE_GUEST)
+    {
+        document.getElementById('formwrap').style.display='block';
+        document.getElementById('jp-form').style.display='block';
+    }
+}
+function showRemove(type)
+{
+    show(2);
+    hideForms();
+    if (type==TYPE_GUEST)
+    {
+        document.getElementById('formwrap').style.display='block';
+        document.getElementById('qp-form').style.display='block';
+    }
+}
+function append() {
+    var name;
+    var age;
+    var gender;
+    var mail;
+    var party;
+    if (document.jp.gender[0].checked==true)
+        gender="male";
+    else
+        gender="female";
+    name=document.jp.name.value;
+    age=document.jp.age.value;
+    mail=document.jp.mail.value;
+    party=document.jp.party.value;
+    if (!name || !mail || !party || isNaN(party))
+    {
+        alert("Well...you fogot some infomation?");
+        return;
+    }
+    if (!age || isNaN(age) || age < 0 || age > 120)
+    {
+        alert("oh, I assume age to be 0~120..");
+        return;
+    }
+    var req="name="+name+"&age="+age+"&mail="+mail+"&gender="+gender+"&party="+party;
+    var content=[name,age,gender,mail];
+    if (window.XMLHttpRequest)
+    {// code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {// code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange=function()
+    {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+            var id=xmlhttp.responseText;
+            if (isNaN(id))
+            {
+                alert(id);
+                return;
+            }
+            var new_row="<tr class='table_row'><td>";
+            new_row+=id+"</td><td>";
+            new_row+=content.join("</td><td>");
+            new_row+="</td></tr>";
+            document.getElementById("result").innerHTML+=new_row;
+        }
+    }
+    xmlhttp.open("POST","queries-append.php",true);
+    xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xmlhttp.send(req);
+}
+function remove() {
+    var name;
+    var mail;
+    var party;
+    name=document.qp.name.value;
+    mail=document.qp.mail.value;
+    party=document.qp.party.value;
+    if (!name || !mail || !party || isNaN(party))
+    {
+        alert("Well...you fogot some infomation?");
+        return;
+    }
+    var req="name="+name+"&mail="+mail+"&party="+party;
+    var content=[name,mail];
+    if (window.XMLHttpRequest)
+    {// code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {// code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange=function()
+    {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+            var res=xmlhttp.responseText;
+            var id=res.split(/\s+/);
+            if (id.length && isNaN(id[0]))
+            { 
+                alert(res);
+                return;
+            }
+            var len=id.length;
+            for (var i=0; i<len; i++)
+            {
+                var rid="row_"+id[i];
+                document.getElementById(rid).style.display='none';
+            }
+        }
+    }
+    xmlhttp.open("POST","queries-remove.php",true);
+    xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xmlhttp.send(req);
+}
+/*]]>*/
+</script>
+</head>
+
+<body onload="wrapinit()">
+<div id="top" class="container">
+<div class="header"><h1>MySQL Queries</h1></div>
+<div class="wrap">
+<div class="content"> 
+    <p style="text-align:center">Here provides several type of queries to access server-side database.<br/>You can use filter to get specified rows.</p>
+    <table border='0' class="boxwrap-alt" style="margin:auto">
+    <tr><td>
+    <table style="border-width:2px;border-style:none;margin:auto">
+    <tbody>
+      <tr><td>
+        <a class="alt" href="#top" onclick="show(1)" style="width:120px">
+        Party information 
+        </a>
+      </td><td>
+        <a class="alt" href="#top" onclick="show(2)" style="width:120px">
+        Guest information 
+        </a>
+      </td><td>
+        <a class="alt" href="#top" onclick="showAppend(2)" style="width:120px">
+        Join party
+        </a>
+      </td><td>
+        <a class="alt" href="#top" onclick="showRemove(2)" style="width:120px">
+        Quit party
+        </a>
+      </td></tr>
+    </tbody>
+    </table>
+    <div id="formwrap" class="boxwrap" style="display:none;">
+      <form class="form" id="jp-form" name='jp' style="display:none;" action="javascript:append(2)">  
+      <b>Your information will be added to the guest list.</b>
+      <h4>Your name?</h4><input type="text" value="" name="name"/>
+      <h4>Your age?</h4><input type="text" value="" name="age"/>
+      <h4>Your gender?</h4>
+      <input type="radio" value="male" name="gender" checked/> Male
+      <input type="radio" value="female" name="gender"/> Female
+      <h4>Your E-mail?</h4><input type="text" value="" name="mail"/>
+      <h4>Party Num?</h4><input type="text" value="" name="party"/>
+      <br/>
+      <br/>
+      <input type="submit" value="Submit Order!"/>
+      <input type="reset" value="Clear the form?"/>
+      </form>
+      <form class="form" id="qp-form" name='qp' style="display:none;" action="javascript:remove(2)">  
+      <b>Your information will be removed from the guest list if you quit all the parties.</b>
+      <h4>Your name?</h4><input type="text" value="" name="name"/>
+      <h4>Your E-mail?</h4><input type="text" value="" name="mail"/>
+      <h4>Party Num?</h4><input type="text" value="" name="party"/>
+      <br/>
+      <br/>
+      <input type="submit" value="Submit Order!"/>
+      <input type="reset" value="Clear the form?"/>
+      </form>
+    </div>
+    <div id="resultwrap" class="boxwrap-alt">
+      <table id="result" border="1" style="margin:auto">
+      </table>
+    </div>
+    </td></tr>
+    <tr><td>
+    <span style="font-size:0.7em">filter: </span>
+    <input id="query" size="25" type="text" value="" oninput="filter()" />
+    </td></tr>
+    </table>
+</div>
+</div>
+<div class="footer">
+<p>powered by Billy</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Baidu 地名搜索</title>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.2"></script>
+</head>
+<body>
+    <input type="text" id="query" />
+    <input type="button" value="搜索地名" onclick="search()"/>
+    <div style="width:600px;height:500px;border:1px solid gray" id="container"></div>
+    <div id="results" style="font-size:13px;margin-top:10px;"></div>
+</body>
+</html>
+<script type="text/javascript">
+var map = new BMap.Map("container");
+map.centerAndZoom(new BMap.Point(116.404, 39.915), 15);
+map.centerAndZoom(new BMap.Point(116.404, 39.915),12);
+map.enableScrollWheelZoom();                    // 中键改变视图级别
+map.addControl(new BMap.NavigationControl());   // 控制鱼骨，可选
+window.openInfoWinFuns = null;
+var options = {onSearchComplete: callback_search};
+var local = new BMap.LocalSearch(map, options);
+
+// 点击链接时的动作设置
+function callback_search(results)
+{
+    if (local.getStatus() == BMAP_STATUS_SUCCESS)
+    {
+        var s = [];
+        s.push('<div style="font-family: arial,sans-serif; border: 1px solid rgb(153, 153, 153); font-size: 12px;">');
+        s.push('<div style="background: none repeat scroll 0% 0% rgb(255, 255, 255);">');
+        s.push('<ol style="list-style: none outside none; padding: 0pt; margin: 0pt;">');
+        openInfoWinFuns = [];
+        for (var i = 0; i < results.getCurrentNumPois(); i ++){
+            var marker = addMarker(results.getPoi(i).point,i);
+            var openInfoWinFun = addInfoWindow(marker,results.getPoi(i),i);
+            openInfoWinFuns.push(openInfoWinFun);
+            var selected = "";
+            if(i == 0){
+                selected = "background-color:#f0f0f0;";
+                //openInfoWinFun(); // 打开第一条搜索结果
+            }
+            s.push('<li id="list' + i + '" style="margin: 2px 0pt; padding: 0pt 5px 0pt 3px; cursor: pointer; overflow: hidden; line-height: 17px;' + selected + '" onclick="openInfoWinFuns[' + i + ']()">');
+            //s.push('<li id="list' + i + '" style="margin: 2px 0pt; padding: 0pt 5px 0pt 3px; cursor: pointer; overflow: hidden; line-height: 17px;' + selected + '">');
+            s.push('<span style="width:1px;background:url(http://api.map.baidu.com/bmap/red_labels.gif) 0 ' + ( 2 - i*20 ) + 'px no-repeat;padding-left:10px;margin-right:3px"> </span>');
+            s.push('<span style="color:#00c;text-decoration:underline">' + results.getPoi(i).title.replace(new RegExp(results.keyword,"g"),'<b>' + results.keyword + '</b>') + '</span>');
+            s.push('<span style="color:#666;"> - ' + results.getPoi(i).address + '</span>');
+            s.push('</li>');
+            s.push('');
+        }
+        s.push('</ol></div></div>');
+        document.getElementById("results").innerHTML = s.join("");
+    }
+}
+
+// 添加红色的标注
+function addMarker(point, index){
+    var myIcon = new BMap.Icon("http://api.map.baidu.com/img/markers.png", new BMap.Size(23, 25), {
+        offset: new BMap.Size(10, 25),
+        imageOffset: new BMap.Size(0, 0 - index * 25)
+    });
+    var marker = new BMap.Marker(point, {icon: myIcon});
+    map.addOverlay(marker);
+    return marker;
+}
+
+// 添加信息窗口
+function addInfoWindow(marker,poi,index){
+    var maxLen = 10;
+    var name = null;
+    if(poi.type == BMAP_POI_TYPE_NORMAL){
+        name = "地址：  "
+    }else if(poi.type == BMAP_POI_TYPE_BUSSTOP){
+        name = "公交：  "
+    }else if(poi.type == BMAP_POI_TYPE_SUBSTOP){
+        name = "地铁：  "
+    }
+    var infoWindowTitle = '<div style="font-weight:bold;color:#CE5521;font-size:14px" id=title'+index+'>'+poi.title+'</div>';
+    var infoWindowHtml = [];
+    infoWindowHtml.push('<table cellspacing="0" style="table-layout:fixed;width:100%;font:12px arial,simsun,sans-serif"><tbody>');
+    infoWindowHtml.push('<tr>');
+    infoWindowHtml.push('<td style="vertical-align:top;line-height:16px;width:38px;white-space:nowrap;word-break:keep-all">' + name + '</td>');
+    infoWindowHtml.push('<td style="vertical-align:top;line-height:16px">' + poi.address + ' </td>');
+    infoWindowHtml.push('</tr>');
+    infoWindowHtml.push('<td style="vertical-align:top;line-height:16px"><input type="button" value="确认" onclick="confirm_result('+index+')"/></td>');
+    infoWindowHtml.push('<td id=addr'+index+' style="display:none">'+poi.address+'</td>');
+    infoWindowHtml.push('<td id=lng'+index+' style="display:none">'+poi.point.lng+'</td>');
+    infoWindowHtml.push('<td id=lat'+index+' style="display:none">'+poi.point.lat+'</td>');
+    infoWindowHtml.push('<td id=phone'+index+' style="display:none">'+poi.phoneNumber+'</td>');
+    infoWindowHtml.push('<td id=post'+index+' style="display:none">'+poi.postcode+'</td>');
+    infoWindowHtml.push('</tbody></table>');
+    var infoWindow = new BMap.InfoWindow(infoWindowHtml.join(""),{title:infoWindowTitle,width:200}); 
+    var openInfoWinFun = function(){
+        marker.openInfoWindow(infoWindow);
+        for(var cnt = 0; cnt < maxLen; cnt++){
+            if(!document.getElementById("list" + cnt)){continue;}
+            if(cnt == index){
+                document.getElementById("list" + cnt).style.backgroundColor = "#f0f0f0";
+                document.getElementById("query").value=document.getElementById("title" + cnt).innerHTML;
+                document.getElementById('confirm').disabled=false;
+            }else{
+                document.getElementById("list" + cnt).style.backgroundColor = "#fff";
+            }
+        }
+    }
+    marker.addEventListener("click", openInfoWinFun);
+    return openInfoWinFun;
+}
+function search()
+{
+    query=document.getElementById("query").value;
+    if  (query == null)  
+        return false;
+    else if (query.replace(/^\s+|\s+$/g,"")=="")  
+        return false;
+
+    local.clearResults();
+    map.clearOverlays();
+    local.search(query);
+}
+function confirm_result(idx)
+{
+    var title="title="+document.getElementById("title"+idx).innerHTML;
+    var addr="addr="+document.getElementById("addr"+idx).innerHTML;
+    var lng="lng="+document.getElementById("lng"+idx).innerHTML;
+    var lat="lat="+document.getElementById("lat"+idx).innerHTML;
+    var phone="phone="+document.getElementById("phone"+idx).innerHTML;
+    var post="post="+document.getElementById("post"+idx).innerHTML;
+    var s=[];
+    s.push(title);
+    s.push(addr);
+    s.push(lng);
+    s.push(lat);
+    s.push(phone);
+    s.push(post);
+    replace(s,"null","undefined");
+    
+    xmlhttp=new XMLHttpRequest();
+    
+    xmlhttp.onreadystatechange=function() {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+            alert("Result:\n"+xmlhttp.responseText);
+        }
+    }
+    
+    xmlhttp.open("POST","query.cgi",true);
+    xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xmlhttp.send(s.join("&"));
+}
+function replace(arrayName,replaceTo, replaceWith)
+{
+    for(var i=0; i<arrayName.length;i++ )
+    {  
+        if(arrayName[i]==replaceTo)
+        arrayName.splice(i,1,replaceWith);  
+    }  
+}
+</script>

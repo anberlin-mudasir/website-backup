@@ -1,0 +1,22 @@
+<head>
+<script src="suggest.js" type="text/javascript"></script>
+<link href="suggest.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+<!--
+var list = [ 'Java', 'JavaScript', 'Perl', 'Ruby', 'PHP', 'Python', 'C', 'C++', '.NET',
+'MySQL', 'Oracle', 'PostgreSQL'];
+var start = function(){new Suggest.Local("text", "suggest", list);};
+window.addEventListener ?
+window.addEventListener('load', start, false) :
+window.attachEvent('onload', start);
+//--> 
+</script>
+</head>
+<html>
+<body>
+<div style="margin-left:30px; margin-top:4px;">
+    <input type="text" style="display: block" size="40" autocomplete="off" value="" name="pattern" id="text">
+    <div style="display:none;" id="suggest"></div>
+</div>
+</body>
+</html>

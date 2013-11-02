@@ -1,0 +1,30 @@
+<html>
+<body>
+<button onclick=javascript:switchElement()>switch</button>
+<table border=1>
+<tr>
+    <td valign="top">
+    This is always visible
+    </td>
+    <td id="aaa" valign="top">
+    Well, sometimes visible
+    </td>
+</tr>
+</table>
+</body>
+
+<script type="text/javascript">
+    var aaa=document.getElementById("aaa");
+    aaa.style.display='none';
+
+    function switchElement()
+    {
+        var ttt=document.getElementById("aaa");
+        if (ttt.style.display=='block')
+            ttt.style.display='none';
+        else 
+            ttt.style.display='block';
+    }
+</script>
+</html>
+
