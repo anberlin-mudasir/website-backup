@@ -44,7 +44,7 @@ void *processor(void *) {
 
     reply = segment(util, query, 1);
 
-    printf("[%d] %s\n", id, query.c_str());
+    fprintf(stderr, "[%d] %s\n", id, query.c_str());
 
     tcpWrite(selffd, reply);
     tcpClose(selffd);

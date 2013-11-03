@@ -43,7 +43,8 @@ trim:
 	@./obj/trim < remote/phone.ori > remote/phone.trim
 
 run:
-	@./obj/main 12345 3
+	@date>>err.log
+	@while :; do ./obj/main 12345 3 2>>err.log ; done
 
 test: test1 test2 test3 test4 test5
 
@@ -59,8 +60,9 @@ test5:
 	@head -5 data/pku_test.txt | tail -1 | ./obj/client localhost 12345 
 
 train-dict-clear:
+	@7za x include/Data-empty.7z -oinclude
 	@rm include/Data -rf
-	@cp -r include/Data-empty include/Data
+	@mv include/Data-empty include/Data
 train-dict-1:
 	@./obj/train ./dict/dict.1.txt
 train-dict-2:
