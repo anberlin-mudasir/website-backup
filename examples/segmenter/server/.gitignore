@@ -1,0 +1,7 @@
+*.swp
+local/
+remote
+bugs/
+eval/
+obj/
+include/Data/
