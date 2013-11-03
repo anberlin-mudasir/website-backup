@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns = "http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>北京大学餐饮信息管理系统--用户登录</title>
+  <link href="css/base.css" type="text/css" rel="stylesheet"/>
+  <link href="css/index.css" type="text/css" rel="stylesheet"/>
+  <script type="text/javascript">
+  <!--
+    function fixPos()
+    {
+       var width=400;
+       var up=100;
+       document.getElementById("pop").style.width=width+"px";
+       document.getElementById("pop").style.left=((document.body.clientWidth-width)/2)+"px";
+       document.getElementById("pop").style.top=up+"px";
+    }
+    function autologin()
+    {
+        document.getElementById('authuser').value="guest";
+        document.getElementById('authpassword').value="guest";
+        document.loginform.submit();
+    }
+    function checkSubmit()
+    {
+        if (document.loginform.useername.value!="" && 
+            document.loginform.password.value!="")    
+            return true;
+        else
+            return false;
+    }
+    window.onload=fixPos;
+    window.onresize=fixPos;
+  -->
+  </script>
+  <style type="text/css">
+  body
+  {
+    background-image:url(css/peking.png);
+    background-repeat:no-repeat;
+    background-position:;
+  }
+  </style>
+</head>
+<body>
+
+<div class="header-bar">
+  <div class="inner Fix">
+    <span class="tagline">北京大学餐饮信息查询系统欢迎您</span>
+  </div>
+</div>
+
+<div id="pop" class="pop-win pop-login " style="width: 400px; left: 431px; top: 100px;">
+  <div class="ele-wrap wrap" style="visibility: visible;">
+    <div class="dialog-title">北京大学餐饮信息查询系统
+      <span class="title-misc">用户登录 </span>
+    </div>
+  <div class="dialog-cont">
+    <div class="pop-win-inner">
+      <form name="loginform" method="post" action="php/login_redict.php">
+      <div class="form-block">
+        <label class="label" for="authuser">帐号：</label>
+        <input id="authuser" name="useername" class="form-txt form-default" type="text" placeholder="" tabindex="1">
+      </div>
+      <div class="form-block">
+        <label class="label" for="authpassword">密码：</label>
+        <input id="authpassword" name="password" class="form-txt" type="password" tabindex="2">
+      </div>
+      <div class="form-btn-block">
+        <span class="btn-type-b btn-fn-c">
+          <a class="form-btn" tabindex="4" href="javascript:if(checkSubmit()==true)document.loginform.submit()">登录</a>
+        </span>
+      </div>
+      <div class="pop-win-misc">
+        <span class="note">
+          <a href="php/guest/User_reg.php">注册用户</a>
+        </span>
+        或
+        <span class="note">
+          <a href="#pop" onclick="autologin()">游客登录</a>
+        </span>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

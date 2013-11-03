@@ -1,0 +1,5 @@
+For Database configuration: see file: mysql
+
+For old versions of php, the function "date_default_timezone_set()" may be undefined.
+please comment it when necessary.
+

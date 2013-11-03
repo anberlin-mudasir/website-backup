@@ -1,0 +1,113 @@
+.min-price
+{
+    color: #CC0000;
+    font-weight: bold;
+}
+.min-score
+{
+    color: #DD7700;
+    font-weight: bold;
+}
+.min-canteen
+{
+    color: #999999;
+    font-weight: bold;
+}
+.min-des
+{
+    color: #222222;
+    font-weight: bold;
+}
+.min-table
+{
+    margin-right:10px;
+}
+.min-table tr td
+{
+    padding:10px;
+}
+.min-table tr td strong
+{
+    font-size:16px;
+}
+.min-table tr td p,.min-table tr td span
+{
+    font-size:12px;
+}
+.min-del
+{
+    color: #DD0000;
+    font: 10px/1.5 Arial,sans-serif;
+}
+.min-del-pick
+{
+    background: none repeat scroll 0 0 #FFF9F1;
+    border: 1px solid #EFE0D7;
+    padding:6px
+}
+.min-del-box{
+    clear: both;
+    float: right;
+    font-size: 12px;
+    padding: 5px;
+    text-align: right;
+}
+.min-del-box a.min-del:link, a.min-del:visited, a.min-del:active {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DD0000;
+    color: #DD0000;
+    float: left;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 100%;
+    margin-left: 2px;
+    padding: 4px 6px;
+    text-decoration: none;
+}
+.min-del-box a.min-del:hover {
+    background: none repeat scroll 0 0 #DD0000;
+    border: 1px solid #DDEE00;
+    color: #FFFFFF;
+    font-size: 12px;
+    padding: 4px 6px;
+    text-decoration: none;
+}
+.min-marked
+{
+    cursor: default;
+}
+.min-mark-box
+{
+    clear: both;
+    float: right;
+    font-size: 12px;
+    padding: 5px;
+    text-align: right;
+}
+.min-fail
+{
+    background: none repeat scroll 0 0 #FFF9F1;
+    border: 1px solid #EFE0D7;
+    color: #DD0000;
+}
+.min-succeed
+{
+    border: 1px solid #EFE0D7;
+    color: #DD0000;
+}
+.min-gray
+{
+    color:#999999;
+}
+.feedTip a
+{
+    color: #0000FF;
+}
+.feedTip a:link, a:visited, a:active
+{
+    text-decoration:none; 
+}
+.feedTip a:hover
+{
+    text-decoration:underline; 
+}
