@@ -28,6 +28,7 @@ if ($token) {
 <p>authorization succeed</p>
 
 <p>Click <a href="userinfo.php">here</a> to see user information.</p>
+<p>Click <a href="renrenlist.php">here</a> to see your posts.</p>
 
 <br />
 <?php

@@ -170,6 +170,7 @@ class RennClientBase {
 		$params ['state'] = $state;
 		$params ['display'] = $display;
 		$params ['x_renew'] = $forcelogin;
+		$params ['scope'] = 'read_user_status publish_feed status_update';
 		return self::AUTHORIZATION_ENDPOINT . "?" . http_build_query ( $params );
 	}
 	

@@ -37,6 +37,6 @@ foreach ($dump as $key => $value) {
 }
 ?>
 <hr>
-<a href="index.php">back</a>
+<a href="callback.php">back</a>
 </body>
 </html>
