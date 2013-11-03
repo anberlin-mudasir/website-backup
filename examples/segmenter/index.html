@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Segment demo</title>
+</head>
+<body>
+
+<textarea name="text" id="text" style="width:300; height:300">
+3.15：安卓手机软件抓取用户隐私成潜规则，我去！！我还刚想买安卓的勒！ http://t.cn/zt7bziq
+
+@bloodbosco_zcx @_2222b小姐 @sky丶jt @邹志豪- 你们说三星好还是iphone好？？[害羞][害羞][害羞] 我在这里:http://t.cn/zjtpoam
+</textarea> 
+<br>
+<a href="#" onclick="submit()">Submit</a> <span style="width=20px; border=solid"></span>
+<a href="#" onclick="flush()">Clear</a>
+
+
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/xmlhttp.js"></script>
+
+<script> 
+function flush() {
+  var text = "好吧，来一段新的句子";
+  $("#text").val(text);
+}
+function submit() {
+  var text = $("#text").val();
+  var target = "/cgi-bin/proxy.cgi";
+  var req = "text=" + text;
+  var callback = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+      var resp = xmlhttp.responseText;
+      resp = $.trim(resp);
+      $("#text").val(resp);
+    }
+  }
+  xmlhttp_req(target, req, callback);
+}
+</script>
+
+</body>
+</html>
